@@ -1,0 +1,34 @@
+gnome-shell-extension-arc-menu (49-1) unstable; urgency=medium
+
+  [ Edward Betts ]
+  * d/{control,copyright,watch}: Update upstream URL
+
+  [ Jonathan Carter ]
+  * New upstream release
+  * Update debhelper-compat to level 13
+  * Remove *.css from debian/install (no longed needed)
+  * Override executable permissions in debian/rules
+
+ -- Jonathan Carter <jcc@debian.org>  Thu, 22 Oct 2020 12:59:28 +0200
+
+gnome-shell-extension-arc-menu (45-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #956168)
+  * Update standards version to 4.5.0
+  * Declare Rules-Requires-Root: no
+  * Update required gnome-shell version to 3.36 or higher
+  * Update copyright years
+
+ -- Jonathan Carter <jcc@debian.org>  Fri, 17 Apr 2020 21:55:36 +0200
+
+gnome-shell-extension-arc-menu (38.3-dev-2) unstable; urgency=medium
+
+  * Initial source-only upload
+
+ -- Jonathan Carter <jcc@debian.org>  Fri, 10 Jan 2020 19:13:17 +0200
+
+gnome-shell-extension-arc-menu (38.3-dev-1) unstable; urgency=medium
+
+  * Initial release (Closes: #942310)
+
+ -- Jonathan Carter <jcc@debian.org>  Tue, 12 Nov 2019 11:18:01 +0000
