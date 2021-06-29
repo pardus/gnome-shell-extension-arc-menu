@@ -1,6 +1,6 @@
 {
 "extension-id": "arcmenu",
-"uuid": "arcmenu@arcmenu.com",
+"uuid": "arc-menu@pardus.org.tr",
 "settings-schema": "org.gnome.shell.extensions.arcmenu",
 "gettext-domain": "arcmenu",
 "name": "ArcMenu",
