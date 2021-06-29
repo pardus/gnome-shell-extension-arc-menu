@@ -342,7 +342,7 @@ var MENU_STYLES = {
     ]
 };
 
-var ArcMenu_SettingsCommand = 'gnome-extensions prefs arcmenu@arcmenu.com';
+var ArcMenu_SettingsCommand = 'gnome-extensions prefs arc-menu@pardus.org.tr';
 
 // Path to some files
 var RESTART_ICON = {

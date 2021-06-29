@@ -1,4 +1,4 @@
-project('arc-menu',
+project('arcmenu',
   version: '3.38.8',
   license: 'GPL3'
 )

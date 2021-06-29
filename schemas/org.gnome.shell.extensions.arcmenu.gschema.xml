@@ -559,7 +559,7 @@
     </key>
     <key name="pinned-app-list" type="as">
       <default>["ArcMenu_WebBrowser","WebBrowser", "WebBrowser","Terminal", "", "org.gnome.Terminal.desktop",
-                "ArcMenu Settings", "ArcMenu_ArcMenuIcon", "gnome-extensions prefs arcmenu@arcmenu.com"]</default>
+                "ArcMenu Settings", "ArcMenu_ArcMenuIcon", "gnome-extensions prefs arc-menu@pardus.org.tr"]</default>
       <summary>List of Apps Pinned to Menu</summary>
       <description>List of Apps Pinned to Menu</description>
     </key>
