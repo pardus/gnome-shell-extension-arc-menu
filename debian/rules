@@ -1,21 +1,16 @@
 #!/usr/bin/make -f
 
-# Get version number using pkg-info
-include /usr/share/dpkg/pkg-info.mk
-BASEDIR=debian/gnome-shell-extension-arc-menu/usr/share/gnome-shell/extensions/arc-menu@linxgem33.com
+include /usr/share/dpkg/default.mk
 
 %:
-	dh $@
+	dh $@ --with gnome
 
-# We don't have jslint, so override the test
-override_dh_auto_test:
+override_dh_fixperms:
+	dh_fixperms
+	find debian -name '*.js' -exec chmod 0755 {} +
+	find debian -name '*.css' -exec chmod 0755 {} +
+	find debian -name '*.json' -exec chmod 0755 {} +
 
-override_dh_auto_install:
 
 override_dh_install:
 	dh_install
-	rm -f $(BASEDIR)/po/*~
-	chmod 640 $(BASEDIR)/metadata.json $(BASEDIR)/media/icons/arc-menu-logo.svg \
-		$(BASEDIR)/media/icons/arc-menu-symbolic.svg \
-		$(BASEDIR)/media/icons/menu_icons/*.svg \
-		$(BASEDIR)/media/icons/settings_icons/fine-tune-symbolic.svg

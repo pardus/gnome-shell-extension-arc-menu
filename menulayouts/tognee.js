@@ -1,11 +1,11 @@
 /*
- * Arc Menu - A traditional application menu for GNOME 3
+ * ArcMenu - A traditional application menu for GNOME 3
  *
- * Arc Menu Lead Developer
+ * ArcMenu Lead Developer and Maintainer
  * Andrew Zaech https://gitlab.com/AndrewZaech
  *
- * Arc Menu Founder/Maintainer/Graphic Designer
- * LinxGem33 https://gitlab.com/LinxGem33
+ * ArcMenu Founder, Former Maintainer, and Former Graphic Designer
+ * LinxGem33 https://gitlab.com/LinxGem33 - (No Longer Active)
  *
  * tognee Layout Created By: tognee https://gitlab.com/tognee
  * 
@@ -139,7 +139,7 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
             overlay_scrollbars: true,
             style_class: 'small-vfade'
         });    
-        this.shortcutsScrollBox.set_policy(Gtk.PolicyType.EXTERNAL, Gtk.PolicyType.EXTERNAL);
+        this.shortcutsScrollBox.set_policy(St.PolicyType.EXTERNAL, St.PolicyType.EXTERNAL);
         this.shortcutsScrollBox.add_actor(this.shortcutsBox);
         this.quickBox.add(this.shortcutsScrollBox);
 
@@ -152,7 +152,7 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         
 
         //Add Application Shortcuts to menu (Software, Settings, Tweaks, Terminal)
-        let SOFTWARE_TRANSLATIONS = [_("Software"), _("Settings"), _("Tweaks"), _("Terminal"), _("Activities Overview"), _("Arc Menu Settings")];
+        let SOFTWARE_TRANSLATIONS = [_("Software"), _("Settings"), _("Tweaks"), _("Terminal"), _("Activities Overview"), _("ArcMenu Settings")];
         let applicationShortcuts = this._settings.get_value('application-shortcuts-list').deep_unpack();
         for(let i = 0; i < applicationShortcuts.length; i++){
             let applicationName = applicationShortcuts[i][0];
@@ -169,7 +169,7 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
             y_align: Clutter.ActorAlign.END,
             x_align: Clutter.ActorAlign.CENTER
         });
-        this.actionsScrollBox.set_policy(Gtk.PolicyType.EXTERNAL, Gtk.PolicyType.EXTERNAL);
+        this.actionsScrollBox.set_policy(St.PolicyType.EXTERNAL, St.PolicyType.EXTERNAL);
         this.actionsScrollBox.clip_to_allocation = true;
 
         //create new section for Power, Lock, Logout, Suspend Buttons
@@ -199,6 +199,12 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
             this.actionsBox.add(suspend.actor);
             sessionButtonVisible = true;
         }
+        if(this._settings.get_boolean('show-restart-button')){
+            let restart = new MW.RestartButton(this);
+            this._updateButtonSize(restart);
+            this.actionsBox.add(restart.actor);
+            sessionButtonVisible = true;
+        }      
         if(this._settings.get_boolean('show-power-button')){
             let power = new MW.PowerButton(this);
             this._updateButtonSize(power);
@@ -238,53 +244,12 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
     }
 
     _displayPlaces() {
-        var SHORTCUT_TRANSLATIONS = [_("Home"), _("Documents"), _("Downloads"), _("Music"), _("Pictures"), _("Videos"), _("Computer"), _("Network")];
         let directoryShortcuts = this._settings.get_value('directory-shortcuts-list').deep_unpack();
         for (let i = 0; i < directoryShortcuts.length; i++) {
             let directory = directoryShortcuts[i];
-            let placeInfo, placeButtonItem;
-            if(directory[2]=="ArcMenu_Home"){
-                let homePath = GLib.get_home_dir();
-                placeInfo = new MW.PlaceInfo(Gio.File.new_for_path(homePath), _("Home"));
-                placeButtonItem = new MW.PlaceButtonItem(this, placeInfo);
-            }
-            else if(directory[2]=="ArcMenu_Computer"){
-                placeInfo = new PlaceDisplay.RootInfo();
-                placeInfo.icon = placeInfo.icon.to_string();
-                placeButtonItem = new MW.PlaceButtonItem(this, placeInfo);
-            }
-            else if(directory[2]=="ArcMenu_Network"){
-                placeInfo = new PlaceDisplay.PlaceInfo('network',Gio.File.new_for_uri('network:///'), _('Network'),'network-workgroup-symbolic');
-                placeInfo.icon = placeInfo.icon.to_string();
-                placeButtonItem = new MW.PlaceButtonItem(this, placeInfo);
-            }
-            else if(directory[2].startsWith("ArcMenu_")){
-                let path = directory[2].replace("ArcMenu_",'');
-
-                if(path === "Documents")
-                    path = imports.gi.GLib.UserDirectory.DIRECTORY_DOCUMENTS;
-                else if(path === "Downloads")
-                    path = imports.gi.GLib.UserDirectory.DIRECTORY_DOWNLOAD;
-                else if(path === "Music")
-                    path = imports.gi.GLib.UserDirectory.DIRECTORY_MUSIC;
-                else if(path === "Pictures")
-                    path = imports.gi.GLib.UserDirectory.DIRECTORY_PICTURES;
-                else if(path === "Videos")
-                    path = imports.gi.GLib.UserDirectory.DIRECTORY_VIDEOS;
-
-                path = GLib.get_user_special_dir(path);
-                if (path != null){
-                    placeInfo = new MW.PlaceInfo(Gio.File.new_for_path(path), _(directory[0]));
-                    placeButtonItem = new MW.PlaceButtonItem(this, placeInfo)
-                }
-            }
-            else{
-                let path = directory[2];
-                placeInfo = new MW.PlaceInfo(Gio.File.new_for_path(path), _(directory[0]), (directory[1] !== "ArcMenu_Folder") ? directory[1] : null);
-                placeButtonItem = new MW.PlaceButtonItem(this, placeInfo);
-            }
-            this._updateButtonSize(placeButtonItem);
-            this.shortcutsBox.add_actor(placeButtonItem.actor);
+            let placeMenuItem = this.createMenuItem(directory, Constants.MenuItemType.BUTTON);
+            this._updateButtonSize(placeMenuItem);
+            this.shortcutsBox.add_actor(placeMenuItem.actor);
         }
     }
 
@@ -336,6 +301,12 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
     displayCategoryAppList(appList, category){
         super.displayCategoryAppList(appList, category);
         this.activeCategoryType = Constants.CategoryType.CATEGORY_APP_LIST;
+        this.backButton.actor.show();
+    }
+
+    displayRecentFiles(){
+        super.displayRecentFiles();
+        this.activeCategoryType = Constants.CategoryType.RECENT_FILES; 
         this.backButton.actor.show();
     }
 

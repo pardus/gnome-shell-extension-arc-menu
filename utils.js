@@ -1,11 +1,11 @@
 /*
- * Arc Menu - A traditional application menu for GNOME 3
+ * ArcMenu - A traditional application menu for GNOME 3
  *
- * Arc Menu Lead Developer
+ * ArcMenu Lead Developer and Maintainer
  * Andrew Zaech https://gitlab.com/AndrewZaech
  * 
- * Arc Menu Founder/Maintainer/Graphic Designer
- * LinxGem33 https://gitlab.com/LinxGem33
+ * ArcMenu Founder, Former Maintainer, and Former Graphic Designer
+ * LinxGem33 https://gitlab.com/LinxGem33 - (No Longer Active)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -51,8 +51,8 @@ function getMenuLayout(button, layout){
             return new MenuLayout.ubuntudash.createMenu(button); 
         case Constants.MENU_LAYOUT.Budgie:
             return new MenuLayout.budgie.createMenu(button);
-        case Constants.MENU_LAYOUT.Windows:
-            return new MenuLayout.windows.createMenu(button);
+        case Constants.MENU_LAYOUT.Insider:
+            return new MenuLayout.insider.createMenu(button);
         case Constants.MENU_LAYOUT.Runner:
             return new MenuLayout.runner.createMenu(button);
         case Constants.MENU_LAYOUT.Chromebook:
@@ -61,13 +61,103 @@ function getMenuLayout(button, layout){
             return new MenuLayout.raven.createMenu(button);
         case Constants.MENU_LAYOUT.Tognee:
             return new MenuLayout.tognee.createMenu(button);
-        case Constants.MENU_LAYOUT.RavenExtended:
-            return new MenuLayout.ravenExtended.createMenu(button);
-        case Constants.MENU_LAYOUT.Dashboard:
-            return new MenuLayout.dashboard.createMenu(button);
         case Constants.MENU_LAYOUT.Plasma:
             return new MenuLayout.plasma.createMenu(button);
+        case Constants.MENU_LAYOUT.Windows:
+            return new MenuLayout.windows.createMenu(button);
+        default:
+            return new MenuLayout.arcmenu.createMenu(button);    
     }
+}
+
+function getCategoryDetails(currentCategory){
+    let name, gicon, iconName, fallbackIconName;
+    let categoryMatchFound = false;
+    for(let entry of Constants.CATEGORIES){
+        if(entry.Category === currentCategory){
+            categoryMatchFound = true;
+            name = entry.Name;
+            if(entry.Icon.startsWith(Me.path))
+                gicon = Gio.icon_new_for_string(entry.Icon);
+            else
+                iconName = entry.Icon;
+            return [name, gicon, iconName, fallbackIconName];
+        }
+    }
+    if(currentCategory === Constants.CategoryType.HOME_SCREEN){
+        name = _("Home Screen");  
+        gicon = Gio.icon_new_for_string(Me.path + '/media/icons/menu_icons/homescreen-symbolic.svg');
+        return [name, gicon, iconName, fallbackIconName];
+    }
+    else if(!categoryMatchFound){
+        name = currentCategory.get_name();
+        gicon = currentCategory.get_icon() ? currentCategory.get_icon() : null;
+        fallbackIconName = currentCategory.get_icon() ? currentCategory.get_icon().to_string() : null;
+        return [name, gicon, iconName, fallbackIconName];
+    }
+}
+
+function activateCategory(currentCategory, menuLayout, menuItem, extraParams = false){
+    if(currentCategory === Constants.CategoryType.HOME_SCREEN){
+        menuLayout.activeCategory = _("Pinned Apps");
+        menuLayout.displayFavorites();
+    }
+    else if(currentCategory === Constants.CategoryType.PINNED_APPS)
+        menuLayout.displayFavorites();
+    else if(currentCategory === Constants.CategoryType.FREQUENT_APPS){
+        menuLayout.setFrequentAppsList(menuItem);
+        menuLayout.displayCategoryAppList(menuItem.appList, null, extraParams ? menuItem : null);  
+    }
+    else if(currentCategory === Constants.CategoryType.ALL_PROGRAMS)
+        menuLayout.displayCategoryAppList(menuItem.appList, currentCategory, extraParams ? menuItem : null);  
+    else if(currentCategory === Constants.CategoryType.RECENT_FILES)
+        menuLayout.displayRecentFiles();   
+    else
+        menuLayout.displayCategoryAppList(menuItem.appList, null, extraParams ? menuItem : null);   
+
+    menuLayout.activeCategoryType = currentCategory;  
+}
+
+function getMenuButtonIcon(settings, path){
+    let iconType = settings.get_enum('menu-button-icon');
+
+    if(iconType === Constants.MENU_BUTTON_ICON.Custom){
+        if(path && GLib.file_test(path, GLib.FileTest.IS_REGULAR))
+            return path;
+    }
+    else if(iconType === Constants.MENU_BUTTON_ICON.Distro_Icon){
+        let iconEnum = settings.get_int('distro-icon');
+        path = Me.path + Constants.DISTRO_ICONS[iconEnum].path;
+        if(Constants.DISTRO_ICONS[iconEnum].path === 'start-here-symbolic')
+            return 'start-here-symbolic';
+        else if(GLib.file_test(path, GLib.FileTest.IS_REGULAR))
+            return path;   
+    }
+    else{
+        let iconEnum = settings.get_int('arc-menu-icon');
+        path = Me.path + Constants.MENU_ICONS[iconEnum].path;
+        if(GLib.file_test(path, GLib.FileTest.IS_REGULAR))
+            return path;
+    }
+
+    global.log("ArcMenu - Menu Button Icon Error! Set to System Default.");
+    return 'start-here-symbolic';
+}
+
+function setGridLayoutStyle(layout, actor, box){
+    if(layout === Constants.MENU_LAYOUT.Elementary || layout === Constants.MENU_LAYOUT.UbuntuDash)
+        actor.style = "width: 95px; height: 95px;";
+    else
+        actor.style = "width: 80px; height: 80px;"
+    actor.style += "text-align: center; border-radius: 4px; padding: 5px; spacing: 0px";    
+    box.style = "padding: 0px; margin: 0px; spacing: 0px;";
+}
+
+function getGridIconSize(layout){
+    if(layout === Constants.MENU_LAYOUT.Elementary || layout === Constants.MENU_LAYOUT.UbuntuDash)
+        return 52;
+    else
+        return 36;
 }
 
 function findSoftwareManager(){
@@ -249,12 +339,12 @@ function getDashToPanelPosition(settings, index){
 }
 
 function getStylesheet(){
-    let stylesheet = Gio.File.new_for_path(GLib.get_home_dir() + "/.local/share/arc-menu/stylesheet.css");
+    let stylesheet = Gio.File.new_for_path(GLib.get_home_dir() + "/.local/share/arcmenu/stylesheet.css");
 
     if(!stylesheet.query_exists(null)){
-        GLib.spawn_command_line_sync("mkdir " + GLib.get_home_dir() + "/.local/share/arc-menu");
-        GLib.spawn_command_line_sync("touch " + GLib.get_home_dir() + "/.local/share/arc-menu/stylesheet.css");
-        stylesheet = Gio.File.new_for_path(GLib.get_home_dir() + "/.local/share/arc-menu/stylesheet.css");
+        GLib.spawn_command_line_sync("mkdir " + GLib.get_home_dir() + "/.local/share/arcmenu");
+        GLib.spawn_command_line_sync("touch " + GLib.get_home_dir() + "/.local/share/arcmenu/stylesheet.css");
+        stylesheet = Gio.File.new_for_path(GLib.get_home_dir() + "/.local/share/arcmenu/stylesheet.css");
     }
 
     return stylesheet;
@@ -357,7 +447,8 @@ function createStylesheet(settings){
     let plasmaSelectedItemColor = settings.get_string('plasma-selected-color');
     let plasmaSelectedItemBackgroundColor = settings.get_string('plasma-selected-background-color');
     let plasmaSearchBarTop = settings.get_enum('searchbar-default-top-location');
-    let tooltipStyle = '';
+    let disableMenuButtonActiveIndicator = settings.get_boolean('disable-menu-button-active-indicator');
+    let tooltipStyle;
     let plasmaButtonStyle = plasmaSearchBarTop === Constants.SearchbarLocation.TOP ? 'border-top-width: 2px;' : 'border-bottom-width: 2px;';
     if(customarcMenu){
         tooltipStyle = ".tooltip-menu-item{\nbox-shadow:0 0 0 1px " + modifyColorLuminance(menuColor, 0.10) + ";\nfont-size:" + fontSize + "pt;\npadding: 2px 5px;\nmin-height: 0px;"
@@ -366,6 +457,22 @@ function createStylesheet(settings){
     else
         tooltipStyle = ".tooltip-menu-item{\npadding: 2px 5px;\nmax-width:550px;\nmin-height: 0px;\n}\n\n";
     
+    let menuButtonStyle = '';
+    if(settings.get_boolean('override-menu-button-color'))
+        menuButtonStyle += ".arc-menu-icon, .arc-menu-text, .arc-menu-arrow{\ncolor: " + menuButtonColor + ";\n}\n\n";
+    if(settings.get_boolean('override-menu-button-hover-background-color'))
+        menuButtonStyle += ".arc-menu-panel-menu:hover{\nbackground-color: " + menuButtonHoverBackgroundcolor + ";\n}\n\n";
+    if(settings.get_boolean('override-menu-button-hover-color'))
+        menuButtonStyle += ".arc-menu-panel-menu:hover .arc-menu-icon, .arc-menu-panel-menu:hover .arc-menu-text"
+                            +", .arc-menu-panel-menu:hover .arc-menu-arrow{\ncolor: " + menuButtonHoverColor + ";\n}\n\n";
+    if(settings.get_boolean('override-menu-button-active-color'))
+        menuButtonStyle += ".arc-menu-icon:active, .arc-menu-text:active, .arc-menu-arrow:active{\ncolor: " + menuButtonActiveColor + ";\n}\n\n";
+    if(settings.get_boolean('override-menu-button-active-background-color'))
+        menuButtonStyle += ".arc-menu-panel-menu:active{\nbackground-color: " + menuButtonActiveBackgroundcolor + ";\n" + (disableMenuButtonActiveIndicator ? "box-shadow: none;\n" : '') + "}\n\n";
+    else
+        menuButtonStyle += ".arc-menu-panel-menu:active{\n" + (disableMenuButtonActiveIndicator ? "box-shadow: none;\n" : '') + "}\n\n"
+
+
     let stylesheetCSS = "#arc-search{\nwidth: " + leftPanelWidth + "px;\n}\n\n"
         +".arc-menu-status-text{\ncolor:" + menuForegroundColor + ";\nfont-size:" + fontSize + "pt;\n}\n\n"                                                     
         +".search-statustext{\nfont-size:11pt;\n}\n\n"    
@@ -379,21 +486,19 @@ function createStylesheet(settings){
                             +"color:" + menuForegroundColor + ";\nbackground-color:" + menuColor + ";\n}\n\n"
         +".arc-search-entry:focus{\nborder-color:" + highlightColor + ";\nborder-width: 1px;\nbox-shadow: inset 0 0 0 1px " + modifyColorLuminance(highlightColor, 0.05) + ";\n}\n\n"
         +".arc-search-entry StLabel.hint-text{\ncolor: " + modifyColorLuminance(menuForegroundColor, 0, 0.3) + ";\n}\n\n"
+                
+        + menuButtonStyle
         
-        +".arc-menu-icon, .arc-menu-text, .arc-menu-arrow{\ncolor: " + menuButtonColor + ";\n}\n\n"
-        +".arc-menu-panel-menu:hover{\nbackground-color: " + menuButtonHoverBackgroundcolor + ";\n}\n\n"
-        +".arc-menu-panel-menu:hover .arc-menu-icon, .arc-menu-panel-menu:hover .arc-menu-text"
-                +", .arc-menu-panel-menu:hover .arc-menu-arrow{\ncolor: " + menuButtonHoverColor + ";\n}\n\n"
-        +".arc-menu-icon:active, .arc-menu-text:active, .arc-menu-arrow:active{\ncolor: " + menuButtonActiveColor + ";\n}\n\n"
-        +".arc-menu-panel-menu:active{\nbackground-color: " + menuButtonActiveBackgroundcolor + ";\nbox-shadow: none;\n}\n\n"
-
         +"#arc-menu-plasma-button{\n" + plasmaButtonStyle + ";\nborder-color: transparent;\n}\n\n"
         +"#arc-menu-plasma-button:active-item, .arc-menu-plasma-button:active{\nbackground-color: " + plasmaSelectedItemBackgroundColor + ";\n"
             + plasmaButtonStyle + "\nborder-color: " + plasmaSelectedItemColor + ";\n}\n\n"
 
         +"StScrollView .small-vfade{\n-st-vfade-offset: 44px;\n}\n\n"
 
-        +".arc-menu-button{\n-st-icon-style: symbolic;\nmin-height: 0px;\nmin-width: 0px;\nborder-radius: 26px;\npadding: 13px;\n}\n\n"
+        +".arc-menu-eject-button{\n-st-icon-style: symbolic;\nbackground-color: transparent;\nmin-width: 16px;\nmin-height: 0px;\nborder-radius: 6px;\npadding: 0px 13px;\n}\n\n"
+        +".arc-menu-eject-button:hover{\nbackground-color: rgba(186, 196,201, 0.1);\n}\n\n"
+
+        +".arc-menu-button{\n-st-icon-style: symbolic;\nmin-height: 0px;\nmin-width: 16px;\nborder-radius: 26px;\npadding: 13px;\n}\n\n"
 
         +".arc-menu-action{\nmargin: 1px;\nbackground-color: transparent;\nbox-shadow: none;\ncolor:" + menuForegroundColor + ";\nborder-width: 1px;\n"
                             +"border-color: transparent;\n}\n\n"
@@ -405,11 +510,6 @@ function createStylesheet(settings){
         +".arc-menu-menu-item-text-indicator{\nbackground-color: " + indicatorTextBackgroundColor + ";\n}\n\n"
 
         +tooltipStyle
-
-        +".arc-menu-dashboard .app-well-app .overview-icon{\ncolor: " + menuForegroundColor + ";\n}\n\n"
-        +".arc-menu-dashboard .app-well-app:focus .overview-icon{\ncolor: " + highlightForegroundColor + ";\nbackground-color:" + highlightColor + ";\n}\n\n"
-        +".arc-menu-dashboard .app-well-app:hover .overview-icon{\ncolor: " + highlightForegroundColor + ";\nbackground-color:" + highlightColor + ";\n}\n\n"
-        +".arc-menu-dashboard .search-statustext{\ncolor: " + menuForegroundColor + ";\n}\n\n"
 
         +".arc-menu{\n-boxpointer-gap: " + gapAdjustment + "px;\nmin-width: 15em;\ncolor: #D3DAE3;\nborder-image: none;\n"
                         +"box-shadow: none;\nfont-size:" + fontSize + "pt;\n}\n\n"

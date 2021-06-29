@@ -1,10 +1,10 @@
 # Basic Makefile
 
-UUID = arc-menu@linxgem33.com
-BASE_MODULES = AUTHORS convenience.js COPYING extension.js helper.js metadata.json README.md utils.js 
+UUID = arcmenu@arcmenu.com
+BASE_MODULES = convenience.js COPYING extension.js helper.js metadata.json README.md utils.js 
 EXTRA_MODULES = constants.js controller.js menuButton.js menuWidgets.js placeDisplay.js prefs.js prefsWidgets.js search.js
 
-MENU_LAYOUTS = arcmenu.js baseMenuLayout.js brisk.js budgie.js chromebook.js dashboard.js elementary.js gnomemenu.js mint.js plasma.js raven.js ravenExtended.js redmond.js runner.js simple.js simple2.js tognee.js ubuntudash.js whisker.js windows.js
+MENU_LAYOUTS = arcmenu.js baseMenuLayout.js brisk.js budgie.js chromebook.js elementary.js gnomemenu.js insider.js mint.js plasma.js raven.js redmond.js runner.js simple.js simple2.js tognee.js ubuntudash.js whisker.js windows.js
 MENU_TWEAKS = menulayouts/tweaks/tweaks.js
 
 TOLOCALIZE = $(EXTRA_MODULES) $(addprefix menulayouts/, $(MENU_LAYOUTS)) $(MENU_TWEAKS)
@@ -15,7 +15,7 @@ ifeq ($(strip $(DESTDIR)),)
 else
 	INSTALLBASE = $(DESTDIR)/usr/share/gnome-shell/extensions
 endif
-INSTALLNAME = arc-menu@linxgem33.com
+INSTALLNAME = arcmenu@arcmenu.com
 
 # The command line passed variable VERSION is used to set the version string
 # in the metadata and in the generated zip-file. If no VERSION is passed, the
@@ -36,19 +36,19 @@ clean:
 
 extension: ./schemas/gschemas.compiled $(MSGSRC:.po=.mo)
 
-./schemas/gschemas.compiled: ./schemas/org.gnome.shell.extensions.arc-menu.gschema.xml
+./schemas/gschemas.compiled: ./schemas/org.gnome.shell.extensions.arcmenu.gschema.xml
 	glib-compile-schemas ./schemas/
 
-potfile: ./po/arc-menu.pot
+potfile: ./po/arcmenu.pot
 
 mergepo: potfile
 	for l in $(MSGSRC); do \
-		msgmerge -U $$l ./po/arc-menu.pot; \
+		msgmerge -U $$l ./po/arcmenu.pot; \
 	done;
 
-./po/arc-menu.pot: $(TOLOCALIZE)
+./po/arcmenu.pot: $(TOLOCALIZE)
 	mkdir -p po
-	xgettext -k_ -kN_ --from-code utf-8 -o po/arc-menu.pot --package-name "Arc Menu" $(TOLOCALIZE)
+	xgettext -k_ -kN_ --from-code utf-8 -o po/arcmenu.pot --package-name "ArcMenu" $(TOLOCALIZE)
 
 ./po/%.mo: ./po/%.po
 	msgfmt -c $< -o $@
@@ -81,7 +81,7 @@ _build: all
 		lf=_build/locale/`basename $$l .mo`; \
 		mkdir -p $$lf; \
 		mkdir -p $$lf/LC_MESSAGES; \
-		cp $$l $$lf/LC_MESSAGES/arc-menu.mo; \
+		cp $$l $$lf/LC_MESSAGES/arcmenu.mo; \
 	done;
 ifneq ($(COMMIT),)
 	sed -i '/"version": .*,/a "commit": "$(COMMIT)",'  _build/metadata.json;

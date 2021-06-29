@@ -1,11 +1,11 @@
 /*
- * Arc Menu - A traditional application menu for GNOME 3
+ * ArcMenu - A traditional application menu for GNOME 3
  *
- * Arc Menu Lead Developer
+ * ArcMenu Lead Developer and Maintainer
  * Andrew Zaech https://gitlab.com/AndrewZaech
  * 
- * Arc Menu Founder/Maintainer/Graphic Designer
- * LinxGem33 https://gitlab.com/LinxGem33
+ * ArcMenu Founder, Former Maintainer, and Former Graphic Designer
+ * LinxGem33 https://gitlab.com/LinxGem33 - (No Longer Active)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -45,8 +45,8 @@ const Hostname1 = Gio.DBusProxy.makeProxyWrapper(Hostname1Iface);
 const MEDIUM_ICON_SIZE = 25;
 const SMALL_ICON_SIZE = 16;
 
-var PlaceMenuItem = GObject.registerClass(class ArcMenu_PlaceMenuItem2 extends MW.ArcMenuPopupBaseMenuItem{
-    _init(info, menuLayout) {
+var PlaceMenuItem = GObject.registerClass(class Arc_Menu_PlaceMenuItem2 extends MW.ArcMenuPopupBaseMenuItem{
+    _init(menuLayout, info) {
         super._init(menuLayout);
         this._info = info;
         this._menuLayout = menuLayout;
@@ -68,7 +68,10 @@ var PlaceMenuItem = GObject.registerClass(class ArcMenu_PlaceMenuItem2 extends M
                 icon_name: 'media-eject-symbolic',
                 style_class: 'popup-menu-icon'
             });
-            this._ejectButton = new St.Button({ child: this._ejectIcon });
+            this._ejectButton = new St.Button({ 
+                child: this._ejectIcon,
+                style_class: 'arc-menu-eject-button'
+            });
             this._ejectButton.connect('clicked', info.eject.bind(info));
             this.box.add_child(this._ejectButton);
         }
@@ -103,7 +106,7 @@ var PlaceMenuItem = GObject.registerClass(class ArcMenu_PlaceMenuItem2 extends M
     }
 });
 
-var PlaceInfo = class ArcMenu_PlaceInfo2 {
+var PlaceInfo = class Arc_Menu_PlaceInfo2 {
     constructor() {
         this._init.apply(this, arguments);
     }
@@ -224,7 +227,7 @@ var PlaceInfo = class ArcMenu_PlaceInfo2 {
 }
 Signals.addSignalMethods(PlaceInfo.prototype);
 
-var RootInfo = class ArcMenu_RootInfo extends PlaceInfo {
+var RootInfo = class Arc_Menu_RootInfo extends PlaceInfo {
     _init() {
         super._init('devices', Gio.File.new_for_path('/'), _('Computer'));
 
@@ -269,7 +272,7 @@ var RootInfo = class ArcMenu_RootInfo extends PlaceInfo {
 };
 
 
-var PlaceDeviceInfo = class ArcMenu_PlaceDeviceInfo extends PlaceInfo {
+var PlaceDeviceInfo = class Arc_Menu_PlaceDeviceInfo extends PlaceInfo {
     _init(kind, mount) {
         this._mount = mount;
         super._init(kind, mount.get_root(), mount.get_name());
@@ -320,7 +323,7 @@ var PlaceDeviceInfo = class ArcMenu_PlaceDeviceInfo extends PlaceInfo {
     }
 };
 
-var PlaceVolumeInfo = class ArcMenu_PlaceVolumeInfo extends PlaceInfo {
+var PlaceVolumeInfo = class Arc_Menu_PlaceVolumeInfo extends PlaceInfo {
     _init(kind, volume) {
         this._volume = volume;
         super._init(kind, volume.get_activation_root(), volume.get_name());
@@ -354,7 +357,7 @@ const DEFAULT_DIRECTORIES = [
     GLib.UserDirectory.DIRECTORY_VIDEOS,
 ];
 
-var PlacesManager = class ArcMenu_PlacesManager {
+var PlacesManager = class Arc_Menu_PlacesManager {
     constructor() {
         this._places = {
             special: [],
@@ -654,7 +657,7 @@ var PlacesManager = class ArcMenu_PlacesManager {
 Signals.addSignalMethods(PlacesManager.prototype);
 
 //Trash can class implemented from Dash to Dock https://github.com/micheleg/dash-to-dock/blob/master/locations.js
-var Trash = class ArcMenu_Trash {
+var Trash = class Arc_Menu_Trash {
     constructor(menuItem) {
         this._menuItem = menuItem;
         let trashPath = GLib.get_home_dir() + '/.local/share/Trash/files/';

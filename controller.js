@@ -1,11 +1,11 @@
 /*
- * Arc Menu - A traditional application menu for GNOME 3
+ * ArcMenu - A traditional application menu for GNOME 3
  *
- * Arc Menu Lead Developer
+ * ArcMenu Lead Developer and Maintainer
  * Andrew Zaech https://gitlab.com/AndrewZaech
  * 
- * Arc Menu Founder/Maintainer/Graphic Designer
- * LinxGem33 https://gitlab.com/LinxGem33
+ * ArcMenu Founder, Former Maintainer, and Former Graphic Designer
+ * LinxGem33 https://gitlab.com/LinxGem33 - (No Longer Active)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -47,13 +47,12 @@ var MenuSettingsController = class {
         });
         this.currentMonitorIndex = 0;
         this._activitiesButton = Main.panel.statusArea.activities;
+        this.enableHotkey = panelIndex === 0 ? true : false;
 
         if(this.arcMenuPlacement == Constants.ArcMenuPlacement.PANEL){
-            this.isMainPanel = panelIndex;
             this._menuButton = new MenuButton.MenuButton(settings, this.arcMenuPlacement, panel);
         }
         else if(this.arcMenuPlacement == Constants.ArcMenuPlacement.DASH){
-            this.isMainPanel = panelIndex == 0 ? true : false;
             this._menuButton = new MenuButton.MenuButton(settings, this.arcMenuPlacement, panel, panelIndex);
             this.menuButtonAdjustedActor = this._menuButton.container;
             this._configureActivitiesButton();
@@ -61,7 +60,7 @@ var MenuSettingsController = class {
             
         this._settingsControllers = settingsControllers
         this._hotCornerManager = new Helper.HotCornerManager(this._settings,() => this.toggleMenus());
-        if(this.isMainPanel){
+        if(this.enableHotkey){
             this._menuHotKeybinder = new Helper.MenuHotKeybinder(() => this._onHotkey());
             this._keybindingManager = new Helper.KeybindingManager(this._settings); 
         }
@@ -71,7 +70,7 @@ var MenuSettingsController = class {
     // Load and apply the settings from the arc-menu settings
     _applySettings() {
         this._updateHotCornerManager();
-        if(this.isMainPanel)
+        if(this.enableHotkey)
             this._updateHotKeyBinder();
         this._setButtonAppearance();
         this._setButtonText();
@@ -93,7 +92,7 @@ var MenuSettingsController = class {
             this._settings.connect('changed::arc-menu-icon', this._setButtonIcon.bind(this)),
             this._settings.connect('changed::custom-menu-button-icon', this._setButtonIcon.bind(this)),
             this._settings.connect('changed::custom-menu-button-icon-size', this._setButtonIconSize.bind(this)),
-            this._settings.connect('changed::button-icon-padding', this._setButtonIconPadding.bind(this)),
+            this._settings.connect('changed::button-padding', this._setButtonIconPadding.bind(this)),
             this._settings.connect('changed::enable-menu-button-arrow', this._setMenuButtonArrow.bind(this)),
             this._settings.connect('changed::enable-custom-arc-menu', this._updateStyle.bind(this)),
             this._settings.connect('changed::remove-menu-arrow', this._updateStyle.bind(this)),
@@ -106,6 +105,7 @@ var MenuSettingsController = class {
             this._settings.connect('changed::disable-recently-installed-apps', this._reload.bind(this)),
             this._settings.connect('changed::extra-categories', this._reload.bind(this)),
             this._settings.connect('changed::show-power-button', this._reload.bind(this)),
+            this._settings.connect('changed::show-restart-button', this._reload.bind(this)),
             this._settings.connect('changed::show-logout-button', this._reload.bind(this)),
             this._settings.connect('changed::show-lock-button', this._reload.bind(this)),
             this._settings.connect('changed::show-external-devices', this._reload.bind(this)),
@@ -238,7 +238,7 @@ var MenuSettingsController = class {
             this._menuButton._loadFavorites();
         //If the active category is Pinned Apps, redisplay the new Pinned Apps
         if(this._menuButton.MenuLayout && (this._menuButton.MenuLayout.activeCategoryType === Constants.CategoryType.PINNED_APPS || 
-                this._menuButton.MenuLayout.activeCategoryType === Constants.CategoryType.HOME_SCREEN || layout === Constants.MENU_LAYOUT.Dashboard))
+                this._menuButton.MenuLayout.activeCategoryType === Constants.CategoryType.HOME_SCREEN))
             this._menuButton._displayFavorites();  
     }
 
@@ -267,7 +267,7 @@ var MenuSettingsController = class {
     }
 
     _updateHotKeyBinder() {
-        if (this.isMainPanel) {
+        if (this.enableHotkey) {
             let hotkeySettingsKey = 'menu-keybinding-text';
             let menuKeyBinding = '';
             let hotKeyPos = this._settings.get_enum('menu-hotkey');
@@ -369,11 +369,13 @@ var MenuSettingsController = class {
                     menuButtonWidget.hidePanelText();
                     menuButtonWidget.showPanelIcon();
                     menuButtonWidget.showPanelText();
+                    menuButtonWidget.setPanelTextStyle('padding-left: 3px;');
                     break;
                 case Constants.MENU_APPEARANCE.Text_Icon:
                     menuButtonWidget.hidePanelIcon();
                     menuButtonWidget.hidePanelText();
                     menuButtonWidget.showPanelText();
+                    menuButtonWidget.setPanelTextStyle('padding-right: 3px;');
                     menuButtonWidget.showPanelIcon();
                     break;
                 case Constants.MENU_APPEARANCE.None:
@@ -420,29 +422,9 @@ var MenuSettingsController = class {
         let path = this._settings.get_string('custom-menu-button-icon');
         let menuButtonWidget = this._menuButton.menuButtonWidget;
         let stIcon = menuButtonWidget.getPanelIcon();
-        let iconEnum = this._settings.get_enum('menu-button-icon');
-        if(iconEnum == Constants.MENU_BUTTON_ICON.Custom){
-            stIcon.set_icon_name('start-here-symbolic');
-            if (path && GLib.file_test(path, GLib.FileTest.IS_REGULAR))
-                stIcon.set_gicon(Gio.icon_new_for_string(path));
-            else{
-                global.log("ArcMenu - Custom Menu Icon Error! Set to System Default.")
-            }
-        }
-        else if(iconEnum == Constants.MENU_BUTTON_ICON.Distro_Icon){
-            iconEnum = this._settings.get_int('distro-icon');
-            path = Me.path + Constants.DISTRO_ICONS[iconEnum].path;
-            if (GLib.file_test(path, GLib.FileTest.IS_REGULAR))
-                stIcon.set_gicon(Gio.icon_new_for_string(path));
-        }
-        else{
-            iconEnum = this._settings.get_int('arc-menu-icon');
-            path = Me.path + Constants.MENU_ICONS[iconEnum].path;
-            if(Constants.MENU_ICONS[iconEnum].path === 'start-here-symbolic')
-                stIcon.set_icon_name('start-here-symbolic');
-            else if(GLib.file_test(path, GLib.FileTest.IS_REGULAR))
-                stIcon.set_gicon(Gio.icon_new_for_string(path));
-        }
+        
+        let iconString = Utils.getMenuButtonIcon(this._settings, path);
+        stIcon.set_gicon(Gio.icon_new_for_string(iconString));
     }
 
     // Update the icon of the menu button as specified in the settings
@@ -457,10 +439,11 @@ var MenuSettingsController = class {
     }
     _setButtonIconPadding() {
         if(this.arcMenuPlacement == Constants.ArcMenuPlacement.PANEL){
-            let menuButtonWidget = this._menuButton.menuButtonWidget;
-            let stIcon = menuButtonWidget.getPanelIcon();
-            let iconPadding = this._settings.get_int('button-icon-padding');
-            stIcon.style = "padding: 0 "+iconPadding+"px;";
+            let padding = this._settings.get_int('button-padding');
+            if(padding > -1)
+                this._menuButton.style = "-natural-hpadding: " + (padding  * 2 ) + "px; -minimum-hpadding: " + padding + "px;";
+            else
+                this._menuButton.style = null;
         }
     }
 
@@ -531,14 +514,14 @@ var MenuSettingsController = class {
     // Add the menu button to the main panel
     _addMenuButtonToMainPanel() {
         let [menuPosition, order] = this._getMenuPositionTuple();
-        this.panel.addToStatusArea('arc-menu', this._menuButton, order, menuPosition);
+        this.panel.addToStatusArea('ArcMenu', this._menuButton, order, menuPosition);
     }
 
     // Remove the menu button from the main panel
     _removeMenuButtonFromMainPanel() {
         this.panel.menuManager.removeMenu(this._menuButton.arcMenu);
         this.panel.menuManager.removeMenu(this._menuButton.arcMenuContextMenu);
-        this.panel.statusArea['arc-menu'] = null;
+        this.panel.statusArea['ArcMenu'] = null;
     }
 
     // Enable the menu button
@@ -606,7 +589,7 @@ var MenuSettingsController = class {
     }
 
     _isButtonEnabled() {
-        return this.panel.statusArea['arc-menu'] !== null;
+        return this.panel.statusArea['ArcMenu'] !== null;
     }
 
     // Destroy this object
@@ -650,7 +633,7 @@ var MenuSettingsController = class {
             this._disableButton();
         }
 
-        if(this.isMainPanel){
+        if(this.enableHotkey){
             this.disconnectKeyRelease();
             this._menuHotKeybinder.destroy();
             this._keybindingManager.destroy();

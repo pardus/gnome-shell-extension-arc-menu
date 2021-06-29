@@ -1,11 +1,11 @@
 /*
- * Arc Menu - A traditional application menu for GNOME 3
+ * ArcMenu - A traditional application menu for GNOME 3
  *
- * Arc Menu Lead Developer
+ * ArcMenu Lead Developer and Maintainer
  * Andrew Zaech https://gitlab.com/AndrewZaech
  * 
- * Arc Menu Founder/Maintainer/Graphic Designer
- * LinxGem33 https://gitlab.com/LinxGem33
+ * ArcMenu Founder, Former Maintainer, and Former Graphic Designer
+ * LinxGem33 https://gitlab.com/LinxGem33 - (No Longer Active)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -71,6 +71,10 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         if(this._settings.get_boolean('show-suspend-button')){
             let suspend = new MW.SuspendButton( this);
             this.actionsBox.add(suspend.actor);
+        }
+        if(this._settings.get_boolean('show-restart-button')){
+            let restart = new MW.RestartButton(this);
+            this.actionsBox.add(restart.actor);
         }
         if(this._settings.get_boolean('show-power-button')){
             let power = new MW.PowerButton( this);

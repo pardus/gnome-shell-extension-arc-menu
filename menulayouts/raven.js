@@ -1,11 +1,11 @@
 /*
- * Arc Menu - A traditional application menu for GNOME 3
+ * ArcMenu - A traditional application menu for GNOME 3
  *
- * Arc Menu Lead Developer
+ * ArcMenu Lead Developer and Maintainer
  * Andrew Zaech https://gitlab.com/AndrewZaech
  * 
- * Arc Menu Founder/Maintainer/Graphic Designer
- * LinxGem33 https://gitlab.com/LinxGem33
+ * ArcMenu Founder, Former Maintainer, and Former Graphic Designer
+ * LinxGem33 https://gitlab.com/LinxGem33 - (No Longer Active)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -175,12 +175,12 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         this.shortcutsBox.add(this.shortcutsGrid);
 
         //Add Application Shortcuts to menu (Software, Settings, Tweaks, Terminal)
-        let SOFTWARE_TRANSLATIONS = [_("Software"), _("Settings"), _("Tweaks"), _("Terminal"), _("Activities Overview"), _("Arc Menu Settings")];
+        let SOFTWARE_TRANSLATIONS = [_("Software"), _("Settings"), _("Tweaks"), _("Terminal"), _("Activities Overview"), _("ArcMenu Settings")];
         let applicationShortcuts = this._settings.get_value('application-shortcuts-list').deep_unpack();
         for(let i = 0; i < applicationShortcuts.length; i++){
             let applicationName = applicationShortcuts[i][0];
             let shortcutMenuItem = new MW.ShortcutMenuItem(this, _(applicationName), applicationShortcuts[i][1], applicationShortcuts[i][2]);
-            shortcutMenuItem.setAsIcon();
+            shortcutMenuItem.setAsGridIcon();
             this.appShortcuts.push(shortcutMenuItem);
         }
 
@@ -293,6 +293,21 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         }
         if(!this.subMainBox.contains(this.weatherBox))
             this.subMainBox.add(this.weatherBox);
+    }
+
+    displayRecentFiles(){
+        super.displayRecentFiles();
+        let favsLabel = new PopupMenu.PopupMenuItem(_("Recent Files"), {
+            hover: false,
+            can_focus: false
+        });  
+        favsLabel.remove_actor(favsLabel._ornamentLabel)
+        favsLabel.actor.style = "padding-left: 10px;";
+        favsLabel.actor.add_style_pseudo_class = () => { return false;};
+        favsLabel.actor.add(this._createHorizontalSeparator(Constants.SEPARATOR_STYLE.MAX));
+        favsLabel.label.style = 'font-weight: bold;';
+        this.applicationsBox.insert_child_at_index(favsLabel, 0);
+        this.activeCategoryType = Constants.CategoryType.RECENT_FILES;
     }
 
     displayCategoryAppList(appList){
