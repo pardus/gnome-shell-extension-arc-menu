@@ -1,3 +1,16 @@
+gnome-shell-extension-arc-menu (338.8pardus1) unstable; urgency=medium
+
+  * Import upstream version 3.38-8
+  * Use meson_build, Update arcmenu.pot, tr.po
+  * Update static uuids
+  * Remove gitlab from menuButton
+  * Add maintainer and Disable paypal due to no access from Turkey
+  * Add pardus.software tp SofwareManagerIDS
+  * Update pot file
+  * Update Turkish translations
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Wed, 30 Jun 2021 00:36:11 +0300
+
 gnome-shell-extension-arc-menu (49-1) unstable; urgency=medium
 
   [ Edward Betts ]
