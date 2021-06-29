@@ -371,6 +371,8 @@ var DistroIconsDisclaimer = '<i>"All brand icons are trademarks of their respect
                                 '\n\n•   <b>Red Hat, Inc.©</b> - Copyright 2020 name and logo';
 
 
+var MAINTAINERS = '<b>Fatih Altun</b> | <a href="mailto:fatih.altun@pardus.org.tr">fatih.altun@pardus.org.tr</a>\nPardus Developers | <a href="mailto:gelistirici@pardus.org.tr">gelistirici@pardus.org.tr</a>';
+
 var DEVELOPERS = '<b>Andrew Zaech</b> <a href="https://gitlab.com/AndrewZaech">@AndrewZaech</a>\nLead Project Developer and Maintainer\t' +
                 '\n\n<b>LinxGem33</b> aka <b>Andy C</b> <a href="https://gitlab.com/LinxGem33">@LinxGem33</a> - <b>(Inactive)</b>\nArcMenu Founder - Former Maintainer - Former Digital Art Designer';
 var TRANSLATORS = '<b>Thank you to all translators!</b>\n<a href="https://gitlab.com/arcmenu/ArcMenu#please-refer-to-the-wiki-section-for-a-translation-guide">Full List of Translators</a>';
