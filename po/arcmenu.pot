@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-29 20:02+0300\n"
+"POT-Creation-Date: 2021-06-29 21:15+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "All Programs"
 msgstr ""
 
-#: constants.js:69 prefs.js:40 prefs.js:5826 menulayouts/plasma.js:136
+#: constants.js:69 prefs.js:40 prefs.js:5836 menulayouts/plasma.js:136
 #: menulayouts/raven.js:51 menulayouts/raven.js:214
 #: menulayouts/ubuntudash.js:52 menulayouts/ubuntudash.js:330
 #: menulayouts/windows.js:504 menulayouts/tweaks/tweaks.js:898
@@ -278,26 +278,22 @@ msgid ""
 msgstr ""
 
 #: menuButton.js:745 menuWidgets.js:1184 menuWidgets.js:1850 prefs.js:281
-#: prefs.js:381 prefs.js:550 prefs.js:5893 menulayouts/arcmenu.js:191
+#: prefs.js:381 prefs.js:550 prefs.js:5903 menulayouts/arcmenu.js:191
 #: menulayouts/plasma.js:180 menulayouts/raven.js:178
 #: menulayouts/redmond.js:174 menulayouts/tognee.js:155
 #: menulayouts/ubuntudash.js:196 menulayouts/windows.js:146
 msgid "ArcMenu Settings"
 msgstr ""
 
-#: menuButton.js:755 prefs.js:5677
-msgid "ArcMenu GitLab Page"
-msgstr ""
-
-#: menuButton.js:772
+#: menuButton.js:773
 msgid "Dash to Panel Settings"
 msgstr ""
 
-#: menuButton.js:779
+#: menuButton.js:780
 msgid "Dash to Dock Settings"
 msgstr ""
 
-#: menuButton.js:783
+#: menuButton.js:784
 msgid "Ubuntu Dock Settings"
 msgstr ""
 
@@ -367,7 +363,7 @@ msgstr ""
 msgid "Leave"
 msgstr ""
 
-#: menuWidgets.js:1228 prefs.js:5828
+#: menuWidgets.js:1228 prefs.js:5838
 msgid "Categories"
 msgstr ""
 
@@ -420,7 +416,7 @@ msgstr ""
 msgid "Type to search…"
 msgstr ""
 
-#: menuWidgets.js:2930 prefs.js:5835 menulayouts/plasma.js:141
+#: menuWidgets.js:2930 prefs.js:5845 menulayouts/plasma.js:141
 msgid "Applications"
 msgstr ""
 
@@ -599,7 +595,7 @@ msgstr ""
 msgid "Shortcut Path:"
 msgstr ""
 
-#: prefs.js:755 prefs.js:5814 menulayouts/tweaks/tweaks.js:443
+#: prefs.js:755 prefs.js:5824 menulayouts/tweaks/tweaks.js:443
 msgid "General"
 msgstr ""
 
@@ -1359,7 +1355,7 @@ msgstr ""
 msgid "Show all Nautilus bookmarks in ArcMenu"
 msgstr ""
 
-#: prefs.js:5193 prefs.js:5819
+#: prefs.js:5193 prefs.js:5829
 msgid "Misc"
 msgstr ""
 
@@ -1473,67 +1469,75 @@ msgstr ""
 msgid "Donate to the ArcMenu Project"
 msgstr ""
 
+#: prefs.js:5677
+msgid "ArcMenu GitLab Page"
+msgstr ""
+
 #: prefs.js:5691
-msgid "Developers"
+msgid "Maintainers"
 msgstr ""
 
 #: prefs.js:5693
-msgid "Translators"
+msgid "Developers"
 msgstr ""
 
 #: prefs.js:5695
-msgid "Contributors"
+msgid "Translators"
 msgstr ""
 
 #: prefs.js:5697
+msgid "Contributors"
+msgstr ""
+
+#: prefs.js:5699
 msgid "Artwork"
 msgstr ""
 
-#: prefs.js:5815 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:88
+#: prefs.js:5825 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:88
 msgid "Menu Layout"
 msgstr ""
 
-#: prefs.js:5816
+#: prefs.js:5826
 msgid "Menu Theme"
 msgstr ""
 
-#: prefs.js:5817 prefs.js:5825
+#: prefs.js:5827 prefs.js:5835
 msgid "Menu Settings"
 msgstr ""
 
-#: prefs.js:5818
+#: prefs.js:5828
 msgid "Button Appearance"
 msgstr ""
 
-#: prefs.js:5820
+#: prefs.js:5830
 msgid "About"
 msgstr ""
 
-#: prefs.js:5827 menulayouts/raven.js:329 menulayouts/ubuntudash.js:452
+#: prefs.js:5837 menulayouts/raven.js:329 menulayouts/ubuntudash.js:452
 msgid "Shortcuts"
 msgstr ""
 
-#: prefs.js:5829
+#: prefs.js:5839
 msgid "Fine-Tune"
 msgstr ""
 
-#: prefs.js:5834
+#: prefs.js:5844
 msgid "Directories"
 msgstr ""
 
-#: prefs.js:5836
+#: prefs.js:5846
 msgid "Session Buttons"
 msgstr ""
 
-#: prefs.js:5837
+#: prefs.js:5847
 msgid "Extra Shortcuts"
 msgstr ""
 
-#: prefs.js:5917
+#: prefs.js:5927
 msgid "Error - Invalid Shortcut"
 msgstr ""
 
-#: prefs.js:5918
+#: prefs.js:5928
 msgid "Invalid Shortcut"
 msgstr ""
 
