@@ -747,7 +747,7 @@ var ArcMenuContextMenu = class Arc_Menu_ArcMenuContextMenu extends PopupMenu.Pop
             Util.spawnCommandLine(Constants.ArcMenu_SettingsCommand);
         });
         this.addMenuItem(item);
-
+        /*
         item = new PopupMenu.PopupSeparatorMenuItem();
         item._separator.style_class='arc-menu-sep';
         this.addMenuItem(item);
@@ -757,6 +757,7 @@ var ArcMenuContextMenu = class Arc_Menu_ArcMenuContextMenu extends PopupMenu.Pop
             Util.spawnCommandLine('xdg-open ' + Me.metadata.url);
         });
         this.addMenuItem(item);
+        */
     }
     open(animation){
         if(this._menuButton.dtpPanel && !this._menuButton.dtpNeedsRelease && this._menuButton.arcMenuPlacement === Constants.ArcMenuPlacement.PANEL){
