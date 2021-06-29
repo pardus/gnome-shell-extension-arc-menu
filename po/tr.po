@@ -10,24 +10,26 @@
 # Importent Note For Turkish Translators
 # Lütfen Gnome Takımı tarafından tamamlanmış olan GNOME ve GNOME Shell çevirilerini temel alınız.
 # Lütfen çeviri üstünde değişiklik yapmadan önce Sabri Ünal (son çevirmen) arkadaşa bildirimde bulununuz.
+# Fatih Altun <fatih.altun@pardus.org.tr>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Arc-Menu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-29 20:02+0300\n"
-"PO-Revision-Date: 2020-02-08 13:41+0300\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: TR\n"
-"Language: tr_TR\n"
+"POT-Creation-Date: 2021-06-29 21:15+0300\n"
+"PO-Revision-Date: 2021-06-30 00:35+0300\n"
+"Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
+"Language-Team: Turkish <gelistirici@pardus.org.tr>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #: constants.js:66 menuWidgets.js:1195
 msgid "Favorites"
-msgstr "Favriler"
+msgstr "Favoriler"
 
 #: constants.js:67 menulayouts/tweaks/tweaks.js:900
 msgid "Frequent Apps"
@@ -41,7 +43,7 @@ msgstr "Sık Kullanılanlar"
 msgid "All Programs"
 msgstr "Tüm Programlar"
 
-#: constants.js:69 prefs.js:40 prefs.js:5826 menulayouts/plasma.js:136
+#: constants.js:69 prefs.js:40 prefs.js:5836 menulayouts/plasma.js:136
 #: menulayouts/raven.js:51 menulayouts/raven.js:214
 #: menulayouts/ubuntudash.js:52 menulayouts/ubuntudash.js:330
 #: menulayouts/windows.js:504 menulayouts/tweaks/tweaks.js:898
@@ -50,115 +52,103 @@ msgstr "Sabitlenmiş Uygulamalar"
 
 #: constants.js:70 menulayouts/raven.js:300 menulayouts/ubuntudash.js:423
 msgid "Recent Files"
-msgstr ""
+msgstr "Son Dosyalar"
 
 #: constants.js:295 menuWidgets.js:3047 prefs.js:5636
-#, fuzzy
 msgid "ArcMenu"
-msgstr "Arc Menü"
+msgstr "ArcMenu"
 
 #: constants.js:295
-#, fuzzy
 msgid "ArcMenu Tweaks"
-msgstr "Arc Menü Ayarları"
+msgstr "ArcMenu İnce Ayarları"
 
 #: constants.js:296
 msgid "Brisk Menu Style"
-msgstr "Brisk Menü Stili"
+msgstr "Brisk Menü Stilia"
 
 #: constants.js:296
-#, fuzzy
 msgid "Brisk Menu Style Tweaks"
-msgstr "Brisk Menü Stili"
+msgstr "Brisk Menü Stili İnce Ayarları"
 
 #: constants.js:297
 msgid "Whisker Menu Style"
 msgstr "Whisker Menü Stili"
 
 #: constants.js:297
-#, fuzzy
 msgid "Whisker Menu Style Tweaks"
-msgstr "Whisker Menü Stili"
+msgstr "Whisker Menü Stili İnce Ayarları"
 
 #: constants.js:298
 msgid "GNOME Menu Style"
 msgstr "GNOME Menü Stili"
 
 #: constants.js:298
-#, fuzzy
 msgid "GNOME Menu Style Tweaks"
-msgstr "GNOME Menü Stili"
+msgstr "GNOME Menü Stili İnce Ayarları"
 
 #: constants.js:299
 msgid "Mint Menu Style"
 msgstr "Mint Menü Stili"
 
 #: constants.js:299
-#, fuzzy
 msgid "Mint Menu Style Tweaks"
-msgstr "Mint Menü Stili"
+msgstr "Mint Menü Stili İnce Ayarları"
 
 #: constants.js:300
 msgid "Budgie Style"
 msgstr "Budgie Stili"
 
 #: constants.js:300
-#, fuzzy
 msgid "Budgie Style Tweaks"
-msgstr "Budgie Stili"
+msgstr "Budgie Stili İnce Ayarları"
 
 #: constants.js:303
 msgid "Ubuntu Dash Style"
 msgstr "Ubuntu Dash Stili"
 
 #: constants.js:303
-#, fuzzy
 msgid "Ubuntu Dash Style Tweaks"
-msgstr "Ubuntu Dash Stili"
+msgstr "Ubuntu Dash Stili İnce Ayarları"
 
 #: constants.js:304
 msgid "Plasma Style"
-msgstr ""
+msgstr "Plasma Stili"
 
 #: constants.js:304
 msgid "Plasma Style Tweaks"
-msgstr ""
+msgstr "Plasma Stili İnce Ayarları"
 
 #: constants.js:305
 msgid "tognee Menu"
 msgstr "Tognee Menü"
 
 #: constants.js:305
-#, fuzzy
 msgid "tognee Menu Tweaks"
-msgstr "Tognee Menü"
+msgstr "Tognee Menü İnce Ayarları"
 
 #: constants.js:306
-#, fuzzy
 msgid "Insider Menu"
-msgstr "Tognee Menü"
+msgstr "Insider Menü"
 
 #: constants.js:306
 msgid "Insider Menu Tweaks"
-msgstr ""
+msgstr "Insider Menü İnce Ayarları"
 
 #: constants.js:307
 msgid "Redmond Menu Style"
 msgstr "Redmond Menü Stili"
 
 #: constants.js:307
-#, fuzzy
 msgid "Redmond Menu Style Tweaks"
-msgstr "Redmond Menü Stili"
+msgstr "Redmond Menü Stili İnce Ayarları"
 
 #: constants.js:308
 msgid "Windows 10 Style"
 msgstr "Windows 10 Stili"
 
 #: constants.js:308
-#, fuzzy
 msgid "Windows 10 Style Tweaks"
-msgstr "Windows 10 Stili"
+msgstr "Windows 10 Stili İnce Ayarları"
 
 #: constants.js:311
 msgid "Elementary Menu Style"
@@ -326,28 +316,22 @@ msgstr ""
 "bir stile sahiptir."
 
 #: menuButton.js:745 menuWidgets.js:1184 menuWidgets.js:1850 prefs.js:281
-#: prefs.js:381 prefs.js:550 prefs.js:5893 menulayouts/arcmenu.js:191
+#: prefs.js:381 prefs.js:550 prefs.js:5903 menulayouts/arcmenu.js:191
 #: menulayouts/plasma.js:180 menulayouts/raven.js:178
 #: menulayouts/redmond.js:174 menulayouts/tognee.js:155
 #: menulayouts/ubuntudash.js:196 menulayouts/windows.js:146
-#, fuzzy
 msgid "ArcMenu Settings"
-msgstr "Arc Menü Ayarları"
+msgstr "ArcMenu Ayarları"
 
-#: menuButton.js:755 prefs.js:5677
-#, fuzzy
-msgid "ArcMenu GitLab Page"
-msgstr "Arc Menu GitLab Sayfası"
-
-#: menuButton.js:772
+#: menuButton.js:773
 msgid "Dash to Panel Settings"
 msgstr "Dash to Panel Ayarları"
 
-#: menuButton.js:779
+#: menuButton.js:780
 msgid "Dash to Dock Settings"
 msgstr "Dash to Dock Ayarları"
 
-#: menuButton.js:783
+#: menuButton.js:784
 msgid "Ubuntu Dock Settings"
 msgstr "Ubuntu Dock Ayarları"
 
@@ -384,14 +368,12 @@ msgid "Add to Favorites"
 msgstr "Favorilere Ekle"
 
 #: menuWidgets.js:297 menuWidgets.js:346
-#, fuzzy
 msgid "Unpin from ArcMenu"
-msgstr "Menuden sabitlemeyi kaldır"
+msgstr "ArcMenu'den sabitlemeyi kaldır"
 
 #: menuWidgets.js:311
-#, fuzzy
 msgid "Pin to ArcMenu"
-msgstr "Menüsüye Sabitle"
+msgstr "ArcMenu'ye sabitle"
 
 #: menuWidgets.js:324
 msgid "Show Details"
@@ -417,9 +399,9 @@ msgstr "Ekstralar"
 
 #: menuWidgets.js:1217 menulayouts/plasma.js:149
 msgid "Leave"
-msgstr ""
+msgstr "Ayrıl"
 
-#: menuWidgets.js:1228 prefs.js:5828
+#: menuWidgets.js:1228 prefs.js:5838
 msgid "Categories"
 msgstr "Kategoriler"
 
@@ -434,7 +416,7 @@ msgstr "Kapat"
 
 #: menuWidgets.js:1305 prefs.js:463 prefs.js:5091
 msgid "Restart"
-msgstr ""
+msgstr "Yeniden Başlat"
 
 #: menuWidgets.js:1314 prefs.js:461 prefs.js:5075 menulayouts/mint.js:231
 #: menulayouts/plasma.js:347 menulayouts/ubuntudash.js:245
@@ -472,7 +454,7 @@ msgstr "Yeni"
 msgid "Type to search…"
 msgstr "Aramak için yazın…"
 
-#: menuWidgets.js:2930 prefs.js:5835 menulayouts/plasma.js:141
+#: menuWidgets.js:2930 prefs.js:5845 menulayouts/plasma.js:141
 msgid "Applications"
 msgstr "Uygulamalar"
 
@@ -532,16 +514,16 @@ msgstr "“%s” sürücüsü çıkartılamadı:"
 #: placeDisplay.js:447 menulayouts/baseMenuLayout.js:396
 #: menulayouts/baseMenuLayout.js:436 menulayouts/ubuntudash.js:234
 msgid "Home"
-msgstr ""
+msgstr "Ev"
 
 #: placeDisplay.js:717 prefs.js:331 prefs.js:459
 #: menulayouts/baseMenuLayout.js:472 menulayouts/baseMenuLayout.js:474
 msgid "Trash"
-msgstr ""
+msgstr "Çöp"
 
 #: placeDisplay.js:727 placeDisplay.js:733
 msgid "Empty Trash"
-msgstr ""
+msgstr "Çöpü Boşalt"
 
 #: prefs.js:51 prefs.js:722 prefs.js:1359 prefs.js:1543 prefs.js:2641
 #: prefs.js:3101 prefs.js:3433 prefs.js:3496 prefs.js:3797 prefs.js:4498
@@ -599,7 +581,6 @@ msgid "Run Command..."
 msgstr "Komut Çalıştır..."
 
 #: prefs.js:383
-#, fuzzy
 msgid "Show All Applications"
 msgstr "Tüm Uygulamaları Göster"
 
@@ -640,9 +621,8 @@ msgid "Icon:"
 msgstr "Simge:"
 
 #: prefs.js:670
-#, fuzzy
 msgid "Browse..."
-msgstr "Tümüne göz at"
+msgstr "Gözat..."
 
 #: prefs.js:675 prefs.js:2133 prefs.js:2141 prefs.js:2145
 msgid "Select an Icon"
@@ -656,7 +636,7 @@ msgstr "Uç Birim Komutu:"
 msgid "Shortcut Path:"
 msgstr "Kısayol Yolu:"
 
-#: prefs.js:755 prefs.js:5814 menulayouts/tweaks/tweaks.js:443
+#: prefs.js:755 prefs.js:5824 menulayouts/tweaks/tweaks.js:443
 msgid "General"
 msgstr "Genel"
 
@@ -698,14 +678,12 @@ msgid "Key Press"
 msgstr "Basılacak Tuş"
 
 #: prefs.js:851
-#, fuzzy
 msgid "Hotkey Options"
-msgstr "Kısayol etkinleştirmek"
+msgstr "Kısayol Seçenekleri"
 
 #: prefs.js:861
-#, fuzzy
 msgid "Choose a Hotkey for ArcMenu"
-msgstr "Arc Menü için özel kısayol ayarla"
+msgstr "ArcMenu için özel kısayol ayarla"
 
 #: prefs.js:870
 msgid "Left Super Key"
@@ -1213,9 +1191,8 @@ msgid "Disable Tooltips"
 msgstr "Araç İpuçlarını Devre Dışı Bırak"
 
 #: prefs.js:2954
-#, fuzzy
 msgid "Disable all tooltips in ArcMenu"
-msgstr "Tüm araç ipuçlarını Arc Menü'de devre dışı bırak"
+msgstr "ArcMenu'daki tüm araç ipuçlarını devre dışı bırakın"
 
 #: prefs.js:2971 prefs.js:4398
 msgid "Enable Vertical Separator"
@@ -1247,9 +1224,8 @@ msgid "Clear All"
 msgstr "Tümünü Temizle"
 
 #: prefs.js:3051
-#, fuzzy
 msgid "Clear all applications marked \"New\""
-msgstr "\"Yeni\" olarak işaretlenmiş tüm Uygulamaları temizle"
+msgstr "\"Yeni\" olarak işaretlenmiş tüm uygulamaları temizle"
 
 #: prefs.js:3170
 msgid "Disable Category Arrows"
@@ -1276,9 +1252,8 @@ msgid "Disable current theme menu arrow pointer"
 msgstr "Geçerli tema menüsü ok işaretçisini devre dışı bırak"
 
 #: prefs.js:3242
-#, fuzzy
 msgid "Alphabetize 'All Programs' Category"
-msgstr "'Tüm Programlar'ı alfabetikleştir"
+msgstr "'Tüm Programlar' Kategorisini Alfabetik Yap"
 
 #: prefs.js:3262 prefs.js:3279
 msgid "Multi-Lined Labels"
@@ -1290,9 +1265,8 @@ msgid "Enable/Disable multi-lined labels on large application icon layouts."
 msgstr "Büyük uygulama simgilerini etkinleştir"
 
 #: prefs.js:3296
-#, fuzzy
 msgid "Recently Installed Application Indicators"
-msgstr "Son Yüklenen Uygulamalar Göstergesini Devre Dışı Bırak"
+msgstr "Son Yüklenen Uygulama Göstergeleri"
 
 #: prefs.js:3307
 msgid "Category Indicator Color"
@@ -1463,32 +1437,28 @@ msgid "External Devices"
 msgstr "Harici Aygıtlar"
 
 #: prefs.js:5157
-#, fuzzy
 msgid "Show all connected external devices in ArcMenu"
-msgstr "Bağlı tüm harici aygıtları Arc Menü'de göster"
+msgstr "ArcMenu'da bağlı tüm harici cihazları göster"
 
 #: prefs.js:5170 menulayouts/plasma.js:291 menulayouts/windows.js:192
 msgid "Bookmarks"
 msgstr "Yer İmleri"
 
 #: prefs.js:5176
-#, fuzzy
 msgid "Show all Nautilus bookmarks in ArcMenu"
-msgstr "Tüm Nautilus (dosyalar) yer imlerini Arc Menü'de Göster"
+msgstr "ArcMenu'da tüm Nautilus yer imlerini göster"
 
-#: prefs.js:5193 prefs.js:5819
+#: prefs.js:5193 prefs.js:5829
 msgid "Misc"
 msgstr "Çeşitli"
 
 #: prefs.js:5197
-#, fuzzy
 msgid "Export or Import Settings"
-msgstr "Arc Menü Ayarlarını İçe veya Dışa Aktar"
+msgstr "Ayarları Dışa Aktar veya İçe Aktar"
 
 #: prefs.js:5207
-#, fuzzy
 msgid "All ArcMenu Settings"
-msgstr "Arc Menü Ayarları"
+msgstr "Tüm Arc Menü Ayarları"
 
 #: prefs.js:5218
 #, fuzzy
@@ -1508,9 +1478,8 @@ msgid "Import from File"
 msgstr "Dosyadan İçe Aktar"
 
 #: prefs.js:5232
-#, fuzzy
 msgid "Import ArcMenu settings from a file"
-msgstr "Arc Menü ayarlarını bir dosyadan içe aktar"
+msgstr "ArcMenu ayarlarını bir dosyadan içe aktarın"
 
 #: prefs.js:5236
 msgid "Import settings"
@@ -1521,9 +1490,8 @@ msgid "Export to File"
 msgstr "Dosyaya Dışa Aktar"
 
 #: prefs.js:5268
-#, fuzzy
 msgid "Export and save all your ArcMenu settings to a file"
-msgstr "Tüm Arc Menü ayarlarınızı bir dosyaya dışa aktarın ve kaydedin"
+msgstr "Tüm ArcMenu ayarlarınızı bir dosyaya dışa aktarın ve kaydedin"
 
 #: prefs.js:5272
 msgid "Export settings"
@@ -1579,9 +1547,8 @@ msgid "All ArcMenu settings will be reset to the default value."
 msgstr ""
 
 #: prefs.js:5524
-#, fuzzy
 msgid "ArcMenu Version"
-msgstr "Arc Menü Simgesi"
+msgstr "ArcMenu Sürümü"
 
 #: prefs.js:5541
 #, fuzzy
@@ -1589,9 +1556,8 @@ msgid "Git Commit"
 msgstr "Teslim Et:"
 
 #: prefs.js:5561
-#, fuzzy
 msgid "GNOME Version"
-msgstr "GNOME Uçbirimi"
+msgstr "GNOME Sürümü"
 
 #: prefs.js:5579
 msgid "OS"
@@ -1599,7 +1565,7 @@ msgstr ""
 
 #: prefs.js:5611
 msgid "Session Type"
-msgstr ""
+msgstr "Oturum Türü"
 
 #: prefs.js:5643
 msgid "A Dynamic, Traditional, Modern Menu for GNOME"
@@ -1609,74 +1575,78 @@ msgstr "GNOME için Dinamik, Geleneksel, Modern Menü"
 msgid "Donate to the ArcMenu Project"
 msgstr ""
 
+#: prefs.js:5677
+msgid "ArcMenu GitLab Page"
+msgstr "ArcMenu GitLab Sayfası"
+
 #: prefs.js:5691
-msgid "Developers"
+msgid "Maintainers"
 msgstr ""
 
 #: prefs.js:5693
-msgid "Translators"
+msgid "Developers"
 msgstr ""
 
 #: prefs.js:5695
-msgid "Contributors"
+msgid "Translators"
 msgstr ""
 
 #: prefs.js:5697
-#, fuzzy
+msgid "Contributors"
+msgstr ""
+
+#: prefs.js:5699
 msgid "Artwork"
-msgstr "Ağ"
+msgstr ""
 
-#: prefs.js:5815 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:88
-#, fuzzy
+#: prefs.js:5825 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:88
 msgid "Menu Layout"
-msgstr "Menü Düzeni"
+msgstr ""
 
-#: prefs.js:5816
-#, fuzzy
+#: prefs.js:5826
 msgid "Menu Theme"
-msgstr "Temayı Kaydet"
+msgstr ""
 
-#: prefs.js:5817 prefs.js:5825
-#, fuzzy
+#: prefs.js:5827 prefs.js:5835
 msgid "Menu Settings"
-msgstr "Arc Menü Ayarları"
+msgstr "Menü Ayarları"
 
-#: prefs.js:5818
+#: prefs.js:5828
 #, fuzzy
 msgid "Button Appearance"
 msgstr "Görünüm"
 
-#: prefs.js:5820
+#: prefs.js:5830
 msgid "About"
 msgstr "Hakkında"
 
-#: prefs.js:5827 menulayouts/raven.js:329 menulayouts/ubuntudash.js:452
+#: prefs.js:5837 menulayouts/raven.js:329 menulayouts/ubuntudash.js:452
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: prefs.js:5829
+#: prefs.js:5839
 #, fuzzy
 msgid "Fine-Tune"
 msgstr "İnce Ayar"
 
-#: prefs.js:5834
+#: prefs.js:5844
 msgid "Directories"
 msgstr "Dizinler"
 
-#: prefs.js:5836
+#: prefs.js:5846
 msgid "Session Buttons"
 msgstr "Oturum Düğmeleri"
 
-#: prefs.js:5837
+#: prefs.js:5847
 #, fuzzy
 msgid "Extra Shortcuts"
 msgstr "Kısayolu Düzenle"
 
-#: prefs.js:5917
+#: prefs.js:5927
 msgid "Error - Invalid Shortcut"
 msgstr "Hata - Geçersiz Kısayol"
 
-#: prefs.js:5918
+#: prefs.js:5928
 msgid "Invalid Shortcut"
 msgstr "Geçersiz Kısayol"
 
@@ -1729,7 +1699,7 @@ msgstr "Yazılım"
 #: menulayouts/tognee.js:155 menulayouts/ubuntudash.js:196
 #: menulayouts/windows.js:146
 msgid "Tweaks"
-msgstr "Düzenlemeler"
+msgstr "İnce Ayarlar"
 
 #: menulayouts/baseMenuLayout.js:396 menulayouts/insider.js:70
 #: menulayouts/insider.js:213 menulayouts/mint.js:228
@@ -1758,42 +1728,36 @@ msgid "Files"
 msgstr "Dosyalar"
 
 #: menulayouts/plasma.js:276 menulayouts/windows.js:331
-#, fuzzy
 msgid "Application Shortcuts"
-msgstr "Uygulama Kısayollarını Seç"
+msgstr "Uygulama Kısayolları"
 
 #: menulayouts/plasma.js:280 menulayouts/windows.js:335
 msgid "Places"
-msgstr ""
+msgstr "Yerler"
 
 #: menulayouts/plasma.js:299 menulayouts/windows.js:200
-#, fuzzy
 msgid "Devices"
-msgstr "Harici Aygıtlar"
+msgstr "Aygıtlar"
 
 #: menulayouts/plasma.js:341 menulayouts/windows.js:247
-#, fuzzy
 msgid "Session"
-msgstr "Oturum Düğmeleri"
+msgstr "Oturum"
 
 #: menulayouts/plasma.js:350 menulayouts/windows.js:256
-#, fuzzy
 msgid "System"
-msgstr "Sistem Uygulamaları"
+msgstr "Sistem"
 
 #: menulayouts/plasma.js:357 menulayouts/windows.js:262
 msgid "Restart..."
-msgstr ""
+msgstr "Yeniden Başlat..."
 
 #: menulayouts/plasma.js:361 menulayouts/windows.js:266
-#, fuzzy
 msgid "Power Off..."
-msgstr "Kapat"
+msgstr "Kapat..."
 
 #: menulayouts/windows.js:433
-#, fuzzy
 msgid "Frequent"
-msgstr "Sık Kullanılanlar"
+msgstr "Sık"
 
 #: menulayouts/tweaks/tweaks.js:87
 msgid "Category Activation"
