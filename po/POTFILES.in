@@ -12,8 +12,10 @@ menulayouts/brisk.js
 menulayouts/budgie.js
 menulayouts/chromebook.js
 menulayouts/elementary.js
+menulayouts/eleven.js
 menulayouts/gnomemenu.js
 menulayouts/insider.js
+menulayouts/launcher.js
 menulayouts/mint.js
 menulayouts/plasma.js
 menulayouts/raven.js
@@ -23,6 +25,7 @@ menulayouts/simple.js
 menulayouts/simple2.js
 menulayouts/tognee.js
 menulayouts/ubuntudash.js
+menulayouts/unity.js
 menulayouts/whisker.js
 menulayouts/windows.js
 menulayouts/tweaks/tweaks.js
