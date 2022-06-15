@@ -364,7 +364,7 @@ var MenuStyles = {
     ]
 };
 
-var ArcMenuSettingsCommand = 'gnome-extensions prefs arcmenu@arcmenu.com';
+var ArcMenuSettingsCommand = 'gnome-extensions prefs arc-menu@pardus.org.tr';
 
 var HamburgerIcon = {
     PATH: '/media/icons/menu_icons/hamburger-symbolic.svg'
