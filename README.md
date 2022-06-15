@@ -1,8 +1,8 @@
-![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/new-arcmenu-wide-banner.png)
+![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/ArcMenu_WideBanner.png)
 
 -----
 
-![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/arcmenu-browser.png)
+![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/ArcMenu_Banner.png)
 
 -----
 
@@ -12,23 +12,24 @@ ArcMenu is an application menu for GNOME Shell, designed to provide a more tradi
 
 -----
 
-### Donation
+### Support ArcMenu
 
-ArcMenu is provided free of charge. If you enjoy using ArcMenu and wish to make a donation, feel free to use the link below!
+ArcMenu is provided free of charge. If you enjoy using ArcMenu and wish to help support the project, feel free to use the link below!
 
-[![Donate via Paypal](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/donate-button-alt.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=53CWA7NR743WC&item_name=Donate+to+support+my+work&currency_code=USD&source=url)
+[![Donate via Paypal](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/paypal_donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=53CWA7NR743WC&item_name=Donate+to+support+my+work&currency_code=USD&source=url)
+
 
 -----
 
 #### ArcMenu integrated with [Dash-to-Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
 
-![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/comp-screen-arcmenu-wide.png)
+![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/ArcMenu_Banner.png)
 
 -----
 
 #### ArcMenu integrated with [Dash-to-Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 
-![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/dash-to-dock-inter-screen.png)
+![](https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/ArcMenu_Dash-to-Dock.png)
 
 -----
 
@@ -40,7 +41,7 @@ ArcMenu is provided free of charge. If you enjoy using ArcMenu and wish to make 
 
 <p align="left">
        <a href="https://extensions.gnome.org/extension/3628/arcmenu/" >
-    <img src="https://gitlab.com/LinxGem33/Neon/raw/master/artwork/get-it-ego.png" width="240" style="margin-left: 4px"/>
+    <img src="https://gitlab.com/arcmenu/arcmenu-assets/raw/master/images/get-it-ego.png" width="240" style="margin-left: 4px"/>
     </a>
 
 -----
@@ -70,7 +71,7 @@ There are basic rules of conduct that should be followed at all times by everyon
 -----
 
 [![GNU GPL Image](https://www.gnu.org/graphics/slickgnu.tiny.png)](http://www.gnu.org/licenses/old-licenses/lgpl-2.0.html)  
-### License & Terms ![](https://gitlab.com/LinxGem33/IP-Finder/raw/master/screens/Copyleft-16.png)
+### License & Terms
 
 ArcMenu is available under the terms of the GPL-2.0 license See [`COPYING`](https://gitlab.com/arcmenu/ArcMenu/blob/master/COPYING) for details.
 
@@ -204,11 +205,11 @@ Linux - is the registered trademark of Linus Torvalds in the U.S. and other coun
 
 -----
 
-**- @[Nilvus](https://gitlab.com/Nilvus) - French** | **- @[Etamuk](https://gitlab.com/Etamuk) - German** | **- @[alex4401](https://gitlab.com/alex4401) - Polish** | **- @[frnogueira](https://gitlab.com/frnogueira) - Brazilian Portuguese** | **- @[sigbjokj](https://gitlab.com/sigbjokj) - Norwegian** |
+**- @[Nilvus](https://gitlab.com/Nilvus) - French** | **- @[Etamuk](https://gitlab.com/Etamuk) - German** | **- @[alex4401](https://gitlab.com/alex4401) - Polish** | **- @[frnogueira](https://gitlab.com/frnogueira), @[Z Bed](https://gitlab.com/zbed) - Brazilian Portuguese** | **- @[sigbjokj](https://gitlab.com/sigbjokj), @[sssandum](https://gitlab.com/sssandum) - Norwegian** |
 
 -----
 
- **- @[Ivan](https://gitlab.com/vantu5z) - Russian** | **- @[gkkulik](https://gitlab.com/gkkulik) - Silesian** | **- @[vikaig](https://gitlab.com/vikaig) - Ukrainian** | **- @[jordim](https://gitlab.com/jordim) - Catalan** | **- @[aylinux](https://gitlab.com/aylinux) - Turkish** |
+ **- @[Ivan](https://gitlab.com/vantu5z), @[Ser82-png](https://gitlab.com/Ser82-png) - Russian** | **- @[gkkulik](https://gitlab.com/gkkulik) - Silesian** | **- @[vikaig](https://gitlab.com/vikaig) - Ukrainian** | **- @[jordim](https://gitlab.com/jordim) - Catalan** | **- @[aylinux](https://gitlab.com/aylinux) - Turkish** |
  
 -----
 
@@ -216,11 +217,15 @@ Linux - is the registered trademark of Linus Torvalds in the U.S. and other coun
 
 -----
 
- **- @[Vombato](https://gitlab.com/Vombato) - Italian** | **- @[skygmin](https://gitlab.com/skygmin) - Simplified Chinese** | **- @[vinno97](https://gitlab.com/vinno97) - Dutch** | **- @[artnay](https://gitlab.com/artnay) - Finnish** |  **- @[rimasx](https://gitlab.com/rimasx) - Estonian** |
+ **- @[Vombato](https://gitlab.com/Vombato), @[matguidi](https://gitlab.com/matguidi) - Italian** | **- @[skygmin](https://gitlab.com/skygmin) - Simplified Chinese** | **-@[Vistaus](https://gitlab.com/Vistaus), @[vinno97](https://gitlab.com/vinno97) - Dutch** | **- @[artnay](https://gitlab.com/artnay) - Finnish** |  **- @[rimasx](https://gitlab.com/rimasx) - Estonian** |
  
 -----
 
- **- @[stevendobay](https://gitlab.com/stevendobay) - Hungarian** | **- @[omeritzics](https://gitlab.com/omeritzics) - Hebrew** | **- @[prescott66](https://gitlab.com/prescott66) - Slovak** | **- @[Mejans](https://gitlab.com/Mejans) - Occitan**
+ **- @[stevendobay](https://gitlab.com/stevendobay) - Hungarian** | **- @[omeritzics](https://gitlab.com/omeritzics) - Hebrew** | **- @[prescott66](https://gitlab.com/prescott66) - Slovak** | **- @[Mejans](https://gitlab.com/Mejans) - Occitan** | **- @[KuroeHanako](https://gitlab.com/KuroeHanako) - Korean** |
+
+-----
+
+ **- @[sayuri](https://gitlab.com/sayuri-) - Sinhalese** | **- @[Latgardi](https://gitlab.com/Latgardi) - Belarusian** |
 
 </p>
 </details>

@@ -31,26 +31,30 @@ const MW = Me.imports.menuWidgets;
 const Utils =  Me.imports.utils;
 const _ = Gettext.gettext;
 
-const COLUMN_SPACING = 10;
-const ROW_SPACING = 10;
-const COLUMN_COUNT = 4;
-
 var createMenu = class extends BaseMenuLayout.BaseLayout{
     constructor(mainButton) {
         super(mainButton, {
             Search: true,
-            SearchType: Constants.SearchType.GRID_VIEW,
+            AppType: Constants.AppDisplayType.GRID,
+            SearchType: Constants.AppDisplayType.GRID,
+            GridColumns: 4,
+            ColumnSpacing: 10,
+            RowSpacing: 10,
+            IconGridSize: 36,
+            ListSearchResults_IconSize: 24,
+            IconGridStyle: 'SmallIconGrid',
             VerticalMainBox: true
         });
     }
     createLayout(){
+        super.createLayout();
         this.searchBox = new MW.SearchBox(this);
-        this.searchBox._stEntry.style = "min-height: 0px; border-radius: 18px; padding: 7px 12px;";
-        this._searchBoxChangedId = this.searchBox.connect('changed', this._onSearchBoxChanged.bind(this));
-        this._searchBoxKeyPressId = this.searchBox.connect('key-press-event', this._onSearchBoxKeyPress.bind(this));
-        this._searchBoxKeyFocusInId = this.searchBox.connect('key-focus-in', this._onSearchBoxKeyFocusIn.bind(this));
+        this.searchBox.name = "ArcSearchEntryRound";
+        this._searchBoxChangedId = this.searchBox.connect('search-changed', this._onSearchBoxChanged.bind(this));
+        this._searchBoxKeyPressId = this.searchBox.connect('entry-key-press', this._onSearchBoxKeyPress.bind(this));
+        this._searchBoxKeyFocusInId = this.searchBox.connect('entry-key-focus-in', this._onSearchBoxKeyFocusIn.bind(this));
         if(this._settings.get_enum('searchbar-default-top-location') === Constants.SearchbarLocation.TOP){
-            this.searchBox.actor.style = "margin: 10px; padding-top: 0.0em; padding-bottom: 0.5em;padding-left: 0.4em;padding-right: 0.4em;";
+            this.searchBox.style = "margin: 0px 10px 10px 10px;";
             this.mainBox.add(this.searchBox.actor);
         }
 
@@ -67,25 +71,13 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
             vertical: true
         });
 
-        let layout = new Clutter.GridLayout({ 
-            orientation: Clutter.Orientation.VERTICAL,
-            column_spacing: COLUMN_SPACING,
-            row_spacing: ROW_SPACING 
-        });
-        this.grid = new St.Widget({ 
-            x_expand: true,
-            x_align: Clutter.ActorAlign.CENTER,
-            layout_manager: layout 
-        });
-        layout.hookup_style(this.grid);
-
         this.applicationsScrollBox = this._createScrollBox({
             x_expand: true,
             y_expand: true,
             y_align: Clutter.ActorAlign.START,
             x_align: Clutter.ActorAlign.START,
             overlay_scrollbars: true,
-            style_class: 'apps-menu vfade',
+            style_class:  this.disableFadeEffect ? '' : 'vfade',
             reactive: true
         });   
         this.applicationsScrollBox.style = "width:450px;";   
@@ -93,36 +85,21 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
 
         this.subMainBox.add(this.applicationsScrollBox);
         if(this._settings.get_enum('searchbar-default-top-location') === Constants.SearchbarLocation.BOTTOM){
-            this.searchBox.actor.style = "margin: 10px 10px 0px 10px; padding-left: 0.4em;padding-right: 0.4em;";
+            this.searchBox.style = "margin: 10px 10px 0px 10px;";
             this.mainBox.add(this.searchBox.actor);
         }
         this.loadCategories();
-        this.displayAllApps();
         this.setDefaultMenuView();
     }
 
     setDefaultMenuView(){
         super.setDefaultMenuView();
-        this._displayAppIcons();
+        this.displayAllApps();
     }
 
     loadCategories() {
         this.categoryDirectories = null;
-        this.categoryDirectories = new Map(); 
-
-        let isIconGrid = true;
-        super.loadCategories(MW.CategoryMenuItem, isIconGrid);
-    }
-    
-    _displayAppList(apps) {
-        super._displayAppGridList(apps, COLUMN_COUNT);
-    }
-
-    _displayAppIcons(){
-        this.activeMenuItem = this.grid.layout_manager.get_child_at(0, 0);
-        this.applicationsBox.add(this.grid);
-        if(this.arcMenu.isOpen){
-            this.mainBox.grab_key_focus();
-        }
+        this.categoryDirectories = new Map();
+        super.loadCategories();
     }
 }

@@ -20,10 +20,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-const Me = imports.misc.extensionUtils.getCurrentExtension();
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+
 const {Gio, GObject, Gtk, Meta, Shell} = imports.gi;
 const Constants = Me.imports.constants;
-const Convenience = Me.imports.convenience;
 const Main = imports.ui.main;
 const Util = imports.misc.util;
 
@@ -32,7 +33,7 @@ const WM_KEYBINDINGS_SCHEMA = 'org.gnome.desktop.wm.keybindings';
 
 var MenuHotKeybinder = class {
     constructor(menuToggler) {
-        this._settings = Convenience.getSettings(Me.metadata['settings-schema']);
+        this._settings = ExtensionUtils.getSettings(Me.metadata['settings-schema']);
         this._menuToggler = menuToggler;
 
         this.hotKeyEnabled = false;
@@ -98,7 +99,7 @@ var MenuHotKeybinder = class {
     _setHotKey(){
         let hotKeyPos = this._settings.get_enum('menu-hotkey');
         if(this.hotKeyEnabled){
-            if(hotKeyPos === Constants.HOT_KEY.Super_L){
+            if(hotKeyPos === Constants.HotKey.SUPER_L){
                 Main.wm.allowKeybinding('overlay-key', Shell.ActionMode.NORMAL |
                 Shell.ActionMode.OVERVIEW | Shell.ActionMode.POPUP);
     
@@ -116,7 +117,7 @@ var MenuHotKeybinder = class {
                 else
                     global.log("ArcMenu ERROR - Failed to set Super_L hotkey");
             }
-            else if(hotKeyPos === Constants.HOT_KEY.Super_R){
+            else if(hotKeyPos === Constants.HotKey.SUPER_R){
                 Main.wm.setCustomKeybindingHandler('panel-main-menu', Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW | Shell.ActionMode.POPUP,
                                                     this._menuToggler.bind(this));
             }
@@ -204,13 +205,13 @@ var HotCornerManager = class {
 
     _redisableHotCorners() {
         let hotCornerAction = this._settings.get_enum('hot-corners');
-        if(hotCornerAction == Constants.HOT_CORNERS_ACTION.Disabled) {
+        if(hotCornerAction == Constants.HotCornerAction.DISABLED) {
             this.disableHotCorners();
         }
-        else if(hotCornerAction == Constants.HOT_CORNERS_ACTION.ToggleArcMenu) {
+        else if(hotCornerAction == Constants.HotCornerAction.TOGGLE_ARCMENU) {
             this.modifyHotCorners();
         }
-        else if(hotCornerAction == Constants.HOT_CORNERS_ACTION.Custom) {
+        else if(hotCornerAction == Constants.HotCornerAction.CUSTOM) {
             this.modifyHotCorners();
         }
     }
@@ -246,9 +247,9 @@ var HotCornerManager = class {
                         corner._ripples.playAnimation(corner._x, corner._y);
                     else
                         corner._rippleAnimation();
-                    if(hotCornerAction == Constants.HOT_CORNERS_ACTION.ToggleArcMenu)
+                    if(hotCornerAction == Constants.HotCornerAction.TOGGLE_ARCMENU)
                         this._menuToggler(); 
-                    else if(hotCornerAction == Constants.HOT_CORNERS_ACTION.Custom){
+                    else if(hotCornerAction == Constants.HotCornerAction.CUSTOM){
                         let cmd = this._settings.get_string('custom-hot-corner-cmd');
                         if(cmd == "ArcMenu_ShowAllApplications")
                             Main.overview.viewSelector._toggleAppsPage();

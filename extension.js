@@ -20,17 +20,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-const Me = imports.misc.extensionUtils.getCurrentExtension();
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
 
 const {GLib, Gio, St} = imports.gi;
 const Constants = Me.imports.constants;
 const Controller = Me.imports.controller;
-const Convenience = Me.imports.convenience;
+const Config = imports.misc.config;
+const ShellVersion = parseFloat(Config.PACKAGE_VERSION);
+
 const Main = imports.ui.main;
 const Util = imports.misc.util;
 const Utils = Me.imports.utils;
-
 
 // Initialize panel button variables
 let settings;
@@ -41,11 +42,15 @@ let dockExtension;
 
 // Initialize menu language translations
 function init(metadata) {
-    Convenience.initTranslations(Me.metadata['gettext-domain']);      
+    ExtensionUtils.initTranslations(Me.metadata['gettext-domain']);      
 }
 
 // Enable the extension
 function enable() {
+    if (ShellVersion < 3.36) {
+        throw new Error('GNOME Shell version "' + ShellVersion + '" is not supported. Please visit https://extensions.gnome.org/extension/1228/arc-menu/ which supports GNOME Shell versions 3.14 - 3.34');
+    }
+
     if(imports.gi.Meta.is_wayland_compositor())
         Me.metadata.isWayland = true;
     else
@@ -58,7 +63,7 @@ function enable() {
     Me.stylesheet = stylesheet;
     theme.load_stylesheet(Me.stylesheet);
 
-    settings = Convenience.getSettings(Me.metadata['settings-schema']);
+    settings = ExtensionUtils.getSettings(Me.metadata['settings-schema']);
     settings.connect('changed::multi-monitor', () => _onMultiMonitorChange());
     settings.connect('changed::arc-menu-placement', () => _onArcMenuPlacementChange());
     settingsControllers = [];

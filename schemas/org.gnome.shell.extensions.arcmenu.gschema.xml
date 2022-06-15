@@ -7,11 +7,11 @@
         <value value='3' nick='GnomeMenu'/>
         <value value='4' nick='Mint'/>
         <value value='5' nick='Elementary'/>
-        <value value='6' nick='GnomeDash'/>
+        <value value='6' nick='GnomeOverview'/>
         <value value='7' nick='Simple'/>
         <value value='8' nick='Simple2'/>
         <value value='9' nick='Redmond'/>
-        <value value='10' nick='UbuntuDash'/>
+        <value value='10' nick='Unity'/>
         <value value='11' nick='Budgie'/>
         <value value='12' nick='Insider'/>
         <value value='13' nick='Runner'/>
@@ -20,6 +20,13 @@
         <value value='16' nick='Tognee'/>
         <value value='17' nick='Plasma'/>
         <value value='18' nick='Windows'/>
+        <value value='19' nick='Launcher'/>
+        <value value='20' nick='Eleven'/>
+    </enum>
+    <enum id='org.gnome.shell.extensions.arcmenu.forcemenulocation'>
+        <value value='0' nick='Off'/>
+        <value value='1' nick='TopCentered'/>
+        <value value='2' nick='BottomCentered'/>
     </enum>
     <enum id='org.gnome.shell.extensions.arcmenu.menu-hotkey'>
         <value value='0' nick='Undefined'/>
@@ -87,10 +94,25 @@
       <summary>menu layout</summary>
       <description>Menu Layout</description>
     </key>
+    <key name="force-menu-location" enum="org.gnome.shell.extensions.arcmenu.forcemenulocation">
+      <default>'Off'</default>
+      <summary>Force the menu to a specific location</summary>
+      <description>Force the menu to a specific location</description>
+    </key>
     <key type="b" name="disable-hotkey-onkeyrelease">
       <default>false</default>
       <summary>disable hotkey on key release</summary>
       <description>disable hotkey on key release.</description>
+    </key>
+    <key type="i" name="settings-width">
+      <default>875</default>
+      <summary>ArcMenu Settings Width</summary>
+      <description>ArcMenu Settings Width.</description>
+    </key>
+    <key type="i" name="settings-height">
+      <default>725</default>
+      <summary>ArcMenu Settings Height</summary>
+      <description>ArcMenu Settings Height.</description>
     </key>
     <key type="ab" name="available-placement">
       <default>[true, false, false]</default>
@@ -112,15 +134,15 @@
       <summary>Enable Clocks Widget raven layout</summary>
       <description>Enable Clocks Widget raven layout.</description>
     </key>
-    <key type="b" name="enable-weather-widget-ubuntu">
+    <key type="b" name="enable-weather-widget-unity">
       <default>false</default>
-      <summary>Enable Weather Widget ubuntu layout</summary>
-      <description>Enable Weather Widget ubuntu layout.</description>
+      <summary>Enable Weather Widget Unity layout</summary>
+      <description>Enable Weather Widget Unity layout.</description>
     </key>
-    <key type="b" name="enable-clock-widget-ubuntu">
+    <key type="b" name="enable-clock-widget-unity">
       <default>false</default>
-      <summary>Enable Clocks Widget ubuntu layout</summary>
-      <description>Enable Clocks Widget ubuntu layout.</description>
+      <summary>Enable Clocks Widget Unity layout</summary>
+      <description>Enable Clocks Widget Unity layout.</description>
     </key>
     <key type="b" name="enable-sub-menus">
       <default>false</default>
@@ -132,10 +154,20 @@
       <summary>disable the arrows on category menu items</summary>
       <description>disable the arrows on category menu items</description>
     </key>
-    <key type="b" name="krunner-show-details">
+    <key type="b" name="disable-scrollview-fade-effect">
       <default>false</default>
-      <summary>KRunner layout show larger icon and app details</summary>
-      <description>KRunner layout show larger icon and app details.</description>
+      <summary>disable the fade effect on scrollviews</summary>
+      <description>ddisable the fade effect on scrollviews (may help improve performace)</description>
+    </key>
+    <key type="b" name="apps-show-extra-details">
+      <default>false</default>
+      <summary>Show a larger icon and extra app details</summary>
+      <description>Show a larger icon and extra app details.</description>
+    </key>
+    <key type="b" name="show-search-result-details">
+      <default>false</default>
+      <summary>Show search result description label</summary>
+      <description>Show search result description label.</description>
     </key>
     <key type="b" name="activate-on-hover">
       <default>false</default>
@@ -172,10 +204,10 @@
       <summary>Set Tognee Layout Default View</summary>
       <description>Set Tognee Layout Default View.</description>
     </key>
-    <key type="b" name="enable-ubuntu-homescreen">
+    <key type="b" name="enable-unity-homescreen">
       <default>true</default>
-      <summary>Set Ubuntu Dash layout to display "Home Screen" as default</summary>
-      <description>Set Ubuntu Dash layout to display "Home Screen" as default. False = Show all Apps</description>
+      <summary>Set Unity layout to display "Home Screen" as default</summary>
+      <description>Set Unity layout to display "Home Screen" as default. False = Show all Apps</description>
     </key>
     <key type="b" name="remove-menu-arrow">
       <default>false</default>
@@ -212,15 +244,20 @@
       <summary>Flip menu horizontally</summary>
       <description>Flip menu horizontally</description>
     </key>
+    <key type="b" name="windows-disable-frequent-apps">
+      <default>false</default>
+      <summary>Windows layout - disable frequent apps</summary>
+      <description>Windows layout - disable frequent apps</description>
+    </key>
+    <key type="b" name="windows-disable-pinned-apps">
+      <default>false</default>
+      <summary>Windows layout - disable pinned apps</summary>
+      <description>Windows layout - disable pinned apps</description>
+    </key>
     <key type="b" name="gnome-dash-show-applications">
       <default>false</default>
       <summary>GNOME Dash Layout - Show Applications</summary>
       <description>GNOME Dash Layout - Show Applications</description>
-    </key>
-    <key type="b" name="plasma-show-descriptions">
-      <default>false</default>
-      <summary>Plasma Menu Show Descriptions</summary>
-      <description>Plasma Menu Show Descriptions</description>
     </key>
     <key type="s" name="plasma-selected-color">
       <default>"rgb(61, 174, 235)"</default>
@@ -236,6 +273,31 @@
       <default>true</default>
       <summary>Plasma Menu Hover to activate item</summary>
       <description>Plasma Menu Hover to activate item.</description>
+    </key>
+    <key type="b" name="runner-show-frequent-apps">
+      <default>false</default>
+      <summary>Runner layout - show frequent apps</summary>
+      <description>Runner layout - show frequent apps</description>
+    </key>
+    <key type="b" name="runner-use-theme-gap">
+      <default>false</default>
+      <summary>Runner layout - use current shell theme gap</summary>
+      <description>Runner layout - use current shell theme gap</description>
+    </key>
+    <key type="i" name="runner-menu-height">
+      <default>400</default>
+      <summary>Runner layout - menu height</summary>
+      <description>Runner layout - menu height</description>
+    </key>
+    <key type="i" name="runner-menu-width">
+      <default>500</default>
+      <summary>Runner layout - menu width</summary>
+      <description>Runner layout - menu width</description>
+    </key>
+    <key type="i" name="runner-font-size">
+      <default>0</default>
+      <summary>Runner layout - font size</summary>
+      <description>Runner layout - font size</description>
     </key>
     <key type="b" name="reload-theme">
       <default>false</default>
@@ -352,30 +414,10 @@
       <summary>Show Bookmarks</summary>
       <description>Show Bookmarks.</description>
     </key>
-    <key type="b" name="show-logout-button">
-      <default>true</default>
-      <summary>Show logout button</summary>
-      <description>Show logout button.</description>
-    </key>
-    <key type="b" name="show-lock-button">
-      <default>true</default>
-      <summary>Show lock button</summary>
-      <description>Show lock button.</description>
-    </key>
-    <key type="b" name="show-suspend-button">
-      <default>false</default>
-      <summary>Show suspend button</summary>
-      <description>Show suspend button.</description>
-    </key>
-    <key type="b" name="show-restart-button">
-      <default>true</default>
-      <summary>Show restart button</summary>
-      <description>Show restart button.</description>
-    </key>
-    <key type="b" name="show-power-button">
-      <default>true</default>
-      <summary>Show power button</summary>
-      <description>Show power button.</description>
+    <key name="power-options" type="a(ib)">
+      <default>[(0, true), (1, true), (2, true), (3, true), (4, false), (5, false), (6, false)]</default>
+      <summary>Power Options</summary>
+      <description>See Constants.js PowerOptions</description>
     </key>
     <key type="b" name="multi-monitor">
       <default>false</default>
@@ -392,15 +434,10 @@
       <summary>Override action of activities hot corner</summary>
       <description>Override action of activities hot corner.</description>
     </key>
-    <key type="b" name="restore-activities-button">
+    <key type="b" name="show-activities-button">
       <default>false</default>
-      <summary>Restore Activities Button in panel</summary>
-      <description>Restore Activities Button in panel. Used with "Hidden" ArcMenu icon setting</description>
-    </key>
-    <key type="b" name="disable-activities-button">
-      <default>false</default>
-      <summary>Disable Activities Button in panel</summary>
-      <description>Disable Activities Button in panel.</description>
+      <summary>Show/Hide Activities Button in panel</summary>
+      <description>Show/Hide Activities Button in panel.</description>
     </key>
     <key type="s" name="custom-hot-corner-cmd">
       <default>"sh -c 'notify-send \"$(date)\"'"</default>
@@ -434,8 +471,8 @@
     </key>
       <key name="runner-position" enum="org.gnome.shell.extensions.arcmenu.runner-position">
       <default>'Top'</default>
-      <summary>KRunner Menu Position</summary>
-      <description>KRunner Menu Position.</description>
+      <summary>Runner Menu Position</summary>
+      <description>Runner Menu Position.</description>
     </key>
     <key name="menu-button-appearance" enum="org.gnome.shell.extensions.arcmenu.menu-button-appearance">
       <default>'Icon'</default>
@@ -559,7 +596,7 @@
     </key>
     <key name="pinned-app-list" type="as">
       <default>["ArcMenu_WebBrowser","WebBrowser", "WebBrowser","Terminal", "", "org.gnome.Terminal.desktop",
-                "ArcMenu Settings", "ArcMenu_ArcMenuIcon", "gnome-extensions prefs arc-menu@pardus.org.tr"]</default>
+                "ArcMenu Settings", "ArcMenu_ArcMenuIcon", "gnome-extensions prefs arcmenu@arcmenu.com"]</default>
       <summary>List of Apps Pinned to Menu</summary>
       <description>List of Apps Pinned to Menu</description>
     </key>
@@ -581,15 +618,15 @@
       <summary>List of default directory paths used for links on the right side of ArcMenu</summary>
       <description>List of default directory paths used for links on the right side of ArcMenu.</description>
     </key>
-    <key name="ubuntu-dash-pinned-app-list" type="as">
+    <key name="unity-pinned-app-list" type="as">
       <default>[]</default>
-      <summary>List of Ubuntu-Dash Layout Pinned Apps</summary>
-      <description>List of Ubuntu-Dash Layout Pinned Apps</description>
+      <summary>List of Unity Layout Pinned Apps</summary>
+      <description>List of Uniity Layout Pinned Apps</description>
     </key>
-    <key name="ubuntu-dash-separator-index" type="i">
+    <key name="unity-separator-index" type="i">
       <default>5</default>
-      <summary>Index of Ubuntu-Dash Layout Pinned App Separator</summary>
-      <description>Index of Ubuntu-Dash Layout Pinned App Separator, 0 = none</description>
+      <summary>Index of Unity Layout Pinned App Separator</summary>
+      <description>Index of Unity Layout Pinned App Separator, 0 = none</description>
     </key>
     <key name="brisk-shortcuts-list" type="as">
       <default>["Software","system-software-install-symbolic", "ArcMenu_Software", "Settings","preferences-system-symbolic", "gnome-control-center.desktop"]</default>
@@ -613,6 +650,11 @@
       <summary>List of color-themes</summary>
       <description> List of color themes.
       </description>
+    </key>
+    <key name="prefs-visible-page" type="i">
+      <default>0</default>
+      <summary>Handles which page to open in ArcMenu Settings</summary>
+      <description>See Constants.js PrefsVisiblePage</description>
     </key>
   </schema>
 </schemalist>

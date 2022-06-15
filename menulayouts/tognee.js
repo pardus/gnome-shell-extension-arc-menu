@@ -39,18 +39,23 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
     constructor(mainButton) {
         super(mainButton,{
             Search: true,
-            SearchType: Constants.SearchType.LIST_VIEW,
+            AppType: Constants.AppDisplayType.LIST,
+            SearchType: Constants.AppDisplayType.LIST,
+            GridColumns: 1,
+            ColumnSpacing: 0,
+            RowSpacing: 0,
             VerticalMainBox: true
         });
     }
 
     createLayout(){
+        super.createLayout();
         // Search Box
         this.searchBox = new MW.SearchBox(this);
-        this._searchBoxChangedId = this.searchBox.connect('changed', this._onSearchBoxChanged.bind(this));
-        this._searchBoxKeyPressId = this.searchBox.connect('key-press-event', this._onSearchBoxKeyPress.bind(this));
-        this._searchBoxKeyFocusInId = this.searchBox.connect('key-focus-in', this._onSearchBoxKeyFocusIn.bind(this));
-        this.searchBox._stEntry.style = "min-height: 0px; border-radius: 18px; padding: 7px 12px;"; // Make it round
+        this._searchBoxChangedId = this.searchBox.connect('search-changed', this._onSearchBoxChanged.bind(this));
+        this._searchBoxKeyPressId = this.searchBox.connect('entry-key-press', this._onSearchBoxKeyPress.bind(this));
+        this._searchBoxKeyFocusInId = this.searchBox.connect('entry-key-focus-in', this._onSearchBoxKeyFocusIn.bind(this));
+        this.searchBox.name = "ArcSearchEntryRound"; // Make it round
 
         //subMainBox stores left and right box
         this.subMainBox = new St.BoxLayout({
@@ -76,14 +81,14 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
             x_expand: true,
             y_expand: true,
             y_align: Clutter.ActorAlign.START,
-            style_class: 'apps-menu small-vfade left-scroll-area',
+            style_class: 'left-scroll-area ' + (this.disableFadeEffect ? '' : 'small-vfade'),
             overlay_scrollbars: true,
             reactive:true
         });
         let horizonalFlip = this._settings.get_boolean("enable-horizontal-flip");
 
         if(this._settings.get_enum('searchbar-default-bottom-location') === Constants.SearchbarLocation.TOP){
-            this.searchBox.actor.style = (horizonalFlip ? "margin: 0px 10px 0px 15px;" : "margin: 0px 15px 0px 10px;") + "padding: 0em 0em 0.75em 0em;" ;
+            this.searchBox.style = (horizonalFlip ? "margin: 0px 10px 15px 15px;" : "margin: 0px 15px 15px 10px;");
             this.appBox.add(this.searchBox.actor);
         }
         this.appBox.add(this.applicationsScrollBox);
@@ -100,7 +105,7 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         this.navigateBox.add(this.backButton.actor);
         this.appBox.add(this.navigateBox);
         if(this._settings.get_enum('searchbar-default-bottom-location') === Constants.SearchbarLocation.BOTTOM){
-            this.searchBox.actor.style = (horizonalFlip ? "margin: 0px 10px 0px 15px;" : "margin: 0px 15px 0px 10px;") + "padding: 0.75em 0em 0.25em 0em;";
+            this.searchBox.style = (horizonalFlip ? "margin: 15px 10px 0px 15px;" : "margin: 15px 15px 0px 10px;");
             this.appBox.add(this.searchBox.actor);
         }
         
@@ -118,14 +123,6 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         this.placesShortcuts= this._settings.get_value('directory-shortcuts-list').deep_unpack().length>0;
         this.softwareShortcuts = this._settings.get_value('application-shortcuts-list').deep_unpack().length>0;
 
-        if(!this._settings.get_boolean('disable-user-avatar')){
-          this.user = new MW.CurrentUserButton(this);
-          this._updateButtonSize(this.user);
-          this.quickBox.add(this.user.actor);
-          if (this.placesShortcuts || this.softwareShortcuts)
-            this.quickBox.add(this._createHorizontalSeparator(Constants.SEPARATOR_STYLE.SHORT));
-        }
-
         this.shortcutsBox = new St.BoxLayout({
             vertical: true,
             style: "spacing: 3px; padding-bottom: 5px;"
@@ -137,7 +134,7 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
             x_align: Clutter.ActorAlign.START,
             y_align: Clutter.ActorAlign.FILL,
             overlay_scrollbars: true,
-            style_class: 'small-vfade'
+            style_class: this.disableFadeEffect ? '' : 'small-vfade',
         });    
         this.shortcutsScrollBox.set_policy(St.PolicyType.EXTERNAL, St.PolicyType.EXTERNAL);
         this.shortcutsScrollBox.add_actor(this.shortcutsBox);
@@ -148,7 +145,7 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
 
         //check to see if should draw separator
         if(this.placesShortcuts && this.softwareShortcuts)
-            this.shortcutsBox.add(this._createHorizontalSeparator(Constants.SEPARATOR_STYLE.SHORT));
+            this.shortcutsBox.add(this._createHorizontalSeparator(Constants.SeparatorStyle.SHORT));
         
 
         //Add Application Shortcuts to menu (Software, Settings, Tweaks, Terminal)
@@ -172,50 +169,22 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         this.actionsScrollBox.set_policy(St.PolicyType.EXTERNAL, St.PolicyType.EXTERNAL);
         this.actionsScrollBox.clip_to_allocation = true;
 
-        //create new section for Power, Lock, Logout, Suspend Buttons
+        //create new section for Leave Button
         this.actionsBox = new St.BoxLayout({
             vertical: true,
             x_align: Clutter.ActorAlign.CENTER,
             style: "spacing: 3px;"
         });
-        this.actionsScrollBox.add_actor(this.actionsBox);  
-        let sessionButtonVisible = false;
+        this.actionsScrollBox.add_actor(this.actionsBox);
         
-        if(this._settings.get_boolean('show-logout-button')){
-            let logout = new MW.LogoutButton(this);
-            this._updateButtonSize(logout);
-            this.actionsBox.add(logout.actor);
-            sessionButtonVisible = true;
-        }  
-        if(this._settings.get_boolean('show-lock-button')){
-            let lock = new MW.LockButton(this);
-            this._updateButtonSize(lock);
-            this.actionsBox.add(lock.actor);
-            sessionButtonVisible = true;
-        }
-        if(this._settings.get_boolean('show-suspend-button')){
-            let suspend = new MW.SuspendButton(this);
-            this._updateButtonSize(suspend);
-            this.actionsBox.add(suspend.actor);
-            sessionButtonVisible = true;
-        }
-        if(this._settings.get_boolean('show-restart-button')){
-            let restart = new MW.RestartButton(this);
-            this._updateButtonSize(restart);
-            this.actionsBox.add(restart.actor);
-            sessionButtonVisible = true;
-        }      
-        if(this._settings.get_boolean('show-power-button')){
-            let power = new MW.PowerButton(this);
-            this._updateButtonSize(power);
-            this.actionsBox.add(power.actor);
-            sessionButtonVisible = true;
-        }     
-        if(sessionButtonVisible)
-            this.actionsBox.insert_child_at_index(this._createHorizontalSeparator(Constants.SEPARATOR_STYLE.SHORT), 0);
+        let leaveButton = new MW.LeaveButton(this);
+        this._updateButtonSize(leaveButton);
+        this.actionsBox.add(leaveButton.actor); 
+
+        this.actionsBox.insert_child_at_index(this._createHorizontalSeparator(Constants.SeparatorStyle.SHORT), 0);
         this.quickBox.add(this.actionsScrollBox);
 
-        this.loadFavorites();
+        this.loadPinnedApps();
         this.loadCategories();
         this.setDefaultMenuView();
     }
@@ -227,15 +196,15 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
     }
 
     updateStyle(){
-        let addStyle = this._settings.get_boolean('enable-custom-arc-menu');
+        let customStyle = this._settings.get_boolean('enable-custom-arc-menu');
 
         if(this.user)
-            addStyle ? this.user.actor.add_style_class_name('arc-menu-action') : this.user.actor.remove_style_class_name('arc-menu-action');
+            customStyle ? this.user.actor.add_style_class_name('arc-menu-action') : this.user.actor.remove_style_class_name('arc-menu-action');
 
         if(this.shortcutsBox){
             this.shortcutsBox.get_children().forEach((actor) => {
                 if(actor instanceof St.Button){
-                    addStyle ? actor.add_style_class_name('arc-menu-action') : actor.remove_style_class_name('arc-menu-action');
+                    customStyle ? actor.add_style_class_name('arc-menu-action') : actor.remove_style_class_name('arc-menu-action');
                 }
             });
         }
@@ -271,8 +240,8 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         super.loadCategories();
     }
 
-    displayFavorites(){
-        super.displayFavorites();
+    displayPinnedApps(){
+        super.displayPinnedApps();
         this.activeCategoryType = Constants.CategoryType.PINNED_APPS;
         this.backButton.actor.show();
     }

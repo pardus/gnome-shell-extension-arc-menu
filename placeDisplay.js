@@ -19,6 +19,11 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * 
+ * Credits: This file leverages the work from places-menu extension 
+ * (https://gitlab.gnome.org/GNOME/gnome-shell-extensions/-/tree/master/extensions/places-menu)
+ * and Dash to Dock extension 'location.js' file to implement a trash shortcut
  */
 
 const Me = imports.misc.extensionUtils.getCurrentExtension();
@@ -54,14 +59,14 @@ var PlaceMenuItem = GObject.registerClass(class Arc_Menu_PlaceMenuItem2 extends 
             gicon: info.icon,
             icon_size: SMALL_ICON_SIZE
         });
-        this.box.add_child(this._icon);
+        this.add_child(this._icon);
         this.label = new St.Label({ text: info.name, 
-                                    x_expand: true,
+                                    x_expand: false,
                                     y_expand: true,
                                     x_align: Clutter.ActorAlign.FILL,
                                     y_align: Clutter.ActorAlign.CENTER });
         
-        this.box.add_child(this.label);
+        this.add_child(this.label);
 
         if (info.isRemovable()) {
             this._ejectIcon = new St.Icon({
@@ -73,7 +78,7 @@ var PlaceMenuItem = GObject.registerClass(class Arc_Menu_PlaceMenuItem2 extends 
                 style_class: 'arc-menu-eject-button'
             });
             this._ejectButton.connect('clicked', info.eject.bind(info));
-            this.box.add_child(this._ejectButton);
+            this.add_child(this._ejectButton);
         }
 
         this._changedId = info.connect('changed',
@@ -85,7 +90,7 @@ var PlaceMenuItem = GObject.registerClass(class Arc_Menu_PlaceMenuItem2 extends 
             }
         });
         let layout = this._menuLayout._settings.get_enum('menu-layout');  
-        if(layout === Constants.MENU_LAYOUT.Plasma)
+        if(layout === Constants.MenuLayout.PLASMA)
             this._updateIcon();
     }
    
@@ -349,7 +354,7 @@ var PlaceVolumeInfo = class Arc_Menu_PlaceVolumeInfo extends PlaceInfo {
     }
 };
 
-const DEFAULT_DIRECTORIES = [
+const DefaultDirectories = [
     GLib.UserDirectory.DIRECTORY_DOCUMENTS,
     GLib.UserDirectory.DIRECTORY_PICTURES,
     GLib.UserDirectory.DIRECTORY_MUSIC,
@@ -447,7 +452,7 @@ var PlacesManager = class Arc_Menu_PlacesManager {
                                                 _('Home')));
 
         let specials = [];
-        let dirs = DEFAULT_DIRECTORIES.slice();
+        let dirs = DefaultDirectories.slice();
 
         if (this._settings.get_boolean('show-desktop-icons'))
             dirs.push(GLib.UserDirectory.DIRECTORY_DESKTOP);

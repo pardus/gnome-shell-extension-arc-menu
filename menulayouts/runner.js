@@ -23,7 +23,7 @@
 
 const Me = imports.misc.extensionUtils.getCurrentExtension();
 
-const {Clutter, Gtk, St} = imports.gi;
+const {Clutter, Gtk, Shell, St} = imports.gi;
 const BaseMenuLayout = Me.imports.menulayouts.baseMenuLayout;
 const Constants = Me.imports.constants;
 const Gettext = imports.gettext.domain(Me.metadata['gettext-domain']);
@@ -32,19 +32,21 @@ const MW = Me.imports.menuWidgets;
 const Utils =  Me.imports.utils;
 const _ = Gettext.gettext;
 
-const RUNNER_WIDTH = 500;
-
 var createMenu =  class extends BaseMenuLayout.BaseLayout{
     constructor(mainButton) {
         super(mainButton,{
             Search: true,
-            SearchType: Constants.SearchType.LIST_VIEW,
+            AppType: Constants.AppDisplayType.LIST,
+            SearchType: Constants.AppDisplayType.LIST,
+            GridColumns: 1,
+            ColumnSpacing: 0,
+            RowSpacing: 0,
             VerticalMainBox: true
         });
     }
 
     createLayout(){
-        this.mainBox.style = `max-height: 400px;`;       
+        super.createLayout();
 
         this.dummyCursor = new St.Widget({ width: 0, height: 0, opacity: 0 });
         Main.uiGroup.add_actor(this.dummyCursor);
@@ -55,7 +57,6 @@ var createMenu =  class extends BaseMenuLayout.BaseLayout{
         this.oldFocusActor = this.arcMenu.focusActor;
         this.oldArrowAlignment = this.arcMenu.actor._arrowAlignment;
 
-        this.arcMenu.actor.style = "-arrow-base:0px;-arrow-rise:0px;";
         this.arcMenu.sourceActor = this.dummyCursor;
         this.arcMenu.focusActor = this.dummyCursor;
         this.arcMenu._boxPointer.setPosition(this.dummyCursor, 0.5);
@@ -67,23 +68,22 @@ var createMenu =  class extends BaseMenuLayout.BaseLayout{
             y_expand: true,
             vertical: false
         });
-        this.topBox.style = "width: " + RUNNER_WIDTH + "px; padding-bottom: 0.5em";
 
         this.searchBox = new MW.SearchBox(this);
-        this.searchBox.actor.style = "padding-top: 0.5em; padding-bottom: 0.5em;padding-left: 1em;padding-right: 1em;";
-        this._searchBoxChangedId = this.searchBox.connect('changed', this._onSearchBoxChanged.bind(this));
-        this._searchBoxKeyPressId = this.searchBox.connect('key-press-event', this._onSearchBoxKeyPress.bind(this));
-        this._searchBoxKeyFocusInId = this.searchBox.connect('key-focus-in', this._onSearchBoxKeyFocusIn.bind(this));
-        this.topBox.add(this.searchBox.actor);
-        this.mainBox.add(this.topBox);
+        this.searchBox.style = "margin: 5px 10px 5px 10px;";
+        this._searchBoxChangedId = this.searchBox.connect('search-changed', this._onSearchBoxChanged.bind(this));
+        this._searchBoxKeyPressId = this.searchBox.connect('entry-key-press', this._onSearchBoxKeyPress.bind(this));
+        this._searchBoxKeyFocusInId = this.searchBox.connect('entry-key-focus-in', this._onSearchBoxKeyFocusIn.bind(this));
+        this.runnerTweaksButton = new MW.RunnerTweaksButton(this);
+        this.runnerTweaksButton.actor.x_expand = false;
+        this.runnerTweaksButton.actor.y_expand = false;
+        this.runnerTweaksButton.actor.y_align = Clutter.ActorAlign.CENTER;
+        this.runnerTweaksButton.actor.x_align = Clutter.ActorAlign.CENTER;
+        this.runnerTweaksButton.actor.style = "margin-right: 10px; padding: 8px;";
 
-        this.arcMenuSettingsButton = new MW.ArcMenuSettingsButton(this);
-        this.arcMenuSettingsButton.actor.x_expand = false;
-        this.arcMenuSettingsButton.actor.y_expand = false;
-        this.arcMenuSettingsButton.actor.y_align = Clutter.ActorAlign.CENTER;
-        this.arcMenuSettingsButton.actor.x_align = Clutter.ActorAlign.CENTER;
-        this.arcMenuSettingsButton.actor.style = "margin-right: 1em; padding: 8px;";
-        this.topBox.add(this.arcMenuSettingsButton.actor);
+        this.topBox.add(this.searchBox.actor);
+        this.topBox.add(this.runnerTweaksButton);
+        this.mainBox.add(this.topBox);
 
         this.applicationsScrollBox = this._createScrollBox({
             x_expand: true,
@@ -91,46 +91,101 @@ var createMenu =  class extends BaseMenuLayout.BaseLayout{
             y_align: Clutter.ActorAlign.START,
             x_align: Clutter.ActorAlign.START,
             overlay_scrollbars: true,
-            style_class: 'apps-menu small-vfade',
+            style_class: this.disableFadeEffect ? '' : 'small-vfade',
             reactive:true
-        });      
-        this.applicationsScrollBox.style = "width: " + RUNNER_WIDTH + "px";
+        });
 
         this.mainBox.add(this.applicationsScrollBox);
         this.applicationsBox = new St.BoxLayout({ vertical: true });
         this.applicationsScrollBox.add_actor(this.applicationsBox);
+        this.setDefaultMenuView();
     }
-    
+
+    setDefaultMenuView(){
+        super.setDefaultMenuView();
+        this._clearActorsFromBox();
+        if(this._settings.get_boolean("runner-show-frequent-apps"))
+            this.displayFrequentApps();
+    }
+
+    displayFrequentApps(){
+        let labelRow = this.createLabelRow(_("Frequent Apps"));
+        this.applicationsBox.add(labelRow);
+        let mostUsed = Shell.AppUsage.get_default().get_most_used();
+        let appList = [];
+        for (let i = 0; i < mostUsed.length; i++) {
+            if (mostUsed[i] && mostUsed[i].get_app_info().should_show()){
+                let item = new MW.ApplicationMenuItem(this, mostUsed[i]);
+                appList.push(item);
+            }
+        }
+        let activeMenuItemSet = false;
+        for (let i = 0; i < appList.length; i++) {
+            let item = appList[i];
+            if(item.actor.get_parent())
+                item.actor.get_parent().remove_actor(item.actor);
+            if (!item.actor.get_parent()) 
+                this.applicationsBox.add_actor(item.actor);
+            if(!activeMenuItemSet){
+                activeMenuItemSet = true;  
+                this.activeMenuItem = item;
+                if(this.arcMenu.isOpen){
+                    this.mainBox.grab_key_focus();
+                }
+            }    
+        }
+    }
+
     updateLocation(){
-        this.arcMenu.actor.style = "-arrow-base:0px;-arrow-rise:0px;";
+        if(!this.rise){
+            let themeNode = this.arcMenu.actor.get_theme_node();
+            this.rise = themeNode.get_length('-arrow-rise');
+        }
+        this.arcMenu.actor.style = "-arrow-base:0px; -arrow-rise:0px;";
         this.arcMenu._boxPointer.setSourceAlignment(0.5);
-        this.arcMenu._arrowAlignment = 0.5
+        this.arcMenu._arrowAlignment = 0.5;
         
-        let monitorIndex = Main.layoutManager.findIndexForActor(this.menuButton.menuButtonWidget.actor);
+        let monitorIndex = Main.layoutManager.findIndexForActor(this.menuButton);
         let rect = Main.layoutManager.getWorkAreaForMonitor(monitorIndex);
 
         //Position the runner menu in the center of the current monitor, at top of screen.
         let positionX = Math.round(rect.x + (rect.width / 2));
-        let positionY = rect.y;
+        let positionY = rect.y + (this._settings.get_boolean('runner-use-theme-gap') ? this.rise : 0);
         if(this._settings.get_enum('runner-position') == 1)
             positionY = Math.round(rect.y + (rect.height / 2) - 125);
         this.dummyCursor.set_position(positionX,  positionY);
 
+        if(!this.topBox)
+            return;
+
+        this._runnerWidth = this._settings.get_int("runner-menu-width");
+        this._runnerHeight = this._settings.get_int("runner-menu-height");
+        this._runnerFontSize = this._settings.get_int("runner-font-size");
+        this.mainBox.style = `max-height: ${this._runnerHeight}px;`;
+        if(this._runnerFontSize > 0){
+            this.mainBox.style += `font-size: ${this._runnerFontSize}pt;`
+            this.searchBox.style += `font-size: ${this._runnerFontSize}pt;`
+        }
+        else{
+            this.searchBox.style = "margin: 5px 10px 5px 10px;";
+        }
+        this.topBox.style = `width: ${this._runnerWidth}px;`;
+        this.applicationsScrollBox.style = `width: ${this._runnerWidth}px;`;
     }
     
     updateIcons(){
-        this.newSearch._reset();
+        this.searchResults._reset();
     }
 
     updateStyle(){
         super.updateStyle();
-        let addStyle=this._settings.get_boolean('enable-custom-arc-menu');
-        addStyle ? this.arcMenuSettingsButton.actor.add_style_class_name('arc-menu-action') : this.arcMenuSettingsButton.actor.remove_style_class_name('arc-menu-action');
-        this.arcMenu.actor.style = "-arrow-base:0px;-arrow-rise:0px;";
+        this.arcMenu.actor.style = "-arrow-base:0px; -arrow-rise:0px;";
+        let customStyle = this._settings.get_boolean('enable-custom-arc-menu');
+        customStyle ? this.runnerTweaksButton.actor.add_style_class_name('arc-menu-action') : this.runnerTweaksButton.actor.remove_style_class_name('arc-menu-action');
     }
 
     updateSearch(){
-        this.newSearch._reloadRemoteProviders();
+        this.searchResults._reloadRemoteProviders();
     }
 
     loadCategories(){

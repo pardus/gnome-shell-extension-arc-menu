@@ -37,13 +37,17 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
     constructor(mainButton) {
         super(mainButton, {
             Search: true,
-            SearchType: Constants.SearchType.LIST_VIEW,
+            AppType: Constants.AppDisplayType.LIST,
+            SearchType: Constants.AppDisplayType.LIST,
+            GridColumns: 1,
+            ColumnSpacing: 0,
+            RowSpacing: 0,
+            SupportsCategoryOnHover: true,
             VerticalMainBox: false
         });
     }
     createLayout(){
-        this.actionsBoxStyle = "background-color:rgba(186, 196,201, 0.1); border-color:rgba(186, 196,201, 0.2); border-width: 1px; border-radius: 5px;"
-                                  +"margin: 0px 0px; spacing: 8px; padding: 10px 0px;";
+        super.createLayout();
         //Stores the Pinned Icons on the left side
         this.actionsScrollBox = new St.ScrollView({
             x_expand: false,
@@ -56,16 +60,14 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         this.actionsBox = new St.BoxLayout({ 
             vertical: true
         });
-        this.actionsScrollBox.add_actor( this.actionsBox);
+        this.actionsScrollBox.add_actor(this.actionsBox);
         this.actionsScrollBox.clip_to_allocation = true;
         
-        this.actionsScrollBox.style = "width:62px; margin: 10px 20px 0 20px;";
-        this.actionsBox.style = this.actionsBoxStyle;
+        this.actionsScrollBox.style = "width: 62px; margin: 10px 20px; background-color:rgba(186, 196,201, 0.1); border-color:rgba(186, 196,201, 0.2); border-width: 1px; border-radius: 5px;";
+        this.actionsBox.style = "margin: 0px; spacing: 10px; padding: 21px 0px;";
         //check if custom ArcMenu is enabled
         if( this._settings.get_boolean('enable-custom-arc-menu'))
             this.actionsBox.add_style_class_name('arc-menu');
-        
-        this.loadFavorites();   
 
         this.mainBox.add(this.actionsScrollBox);
         this.rightMenuBox= new St.BoxLayout({ 
@@ -77,11 +79,11 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         this.mainBox.add(this.rightMenuBox);
 
         this.searchBox = new MW.SearchBox(this);
-        this._searchBoxChangedId = this.searchBox.connect('changed', this._onSearchBoxChanged.bind(this));
-        this._searchBoxKeyPressId = this.searchBox.connect('key-press-event', this._onSearchBoxKeyPress.bind(this));
-        this._searchBoxKeyFocusInId = this.searchBox.connect('key-focus-in', this._onSearchBoxKeyFocusIn.bind(this));
+        this._searchBoxChangedId = this.searchBox.connect('search-changed', this._onSearchBoxChanged.bind(this));
+        this._searchBoxKeyPressId = this.searchBox.connect('entry-key-press', this._onSearchBoxKeyPress.bind(this));
+        this._searchBoxKeyFocusInId = this.searchBox.connect('entry-key-focus-in', this._onSearchBoxKeyFocusIn.bind(this));
         if(this._settings.get_enum('searchbar-default-top-location') === Constants.SearchbarLocation.TOP){
-            this.searchBox.actor.style = "margin: 10px 20px 10px 0px; padding-top: 0.0em; padding-bottom: 0.5em;padding-left: 0.0em;padding-right: 0.0em;";
+            this.searchBox.style = "margin: 10px 20px 10px 0px;";
             this.rightMenuBox.add(this.searchBox.actor);
         }
         else
@@ -111,7 +113,7 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         this.applicationsScrollBox = this._createScrollBox({
             y_align: Clutter.ActorAlign.START,
             overlay_scrollbars: true,
-            style_class: 'small-vfade'
+            style_class: this.disableFadeEffect ? '' : 'small-vfade',
         });   
 
         let rightPanelWidth = this._settings.get_int('right-panel-width');
@@ -139,29 +141,30 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
             x_expand: true, 
             y_expand: false,
             y_align: Clutter.ActorAlign.START,
-            style_class: 'apps-menu small-vfade left-scroll-area',
+            style_class: 'left-scroll-area ' + (this.disableFadeEffect ? '' : 'small-vfade'),
             overlay_scrollbars: true
         });
 
         this.leftBox.add(this.categoriesScrollBox);
         this.categoriesBox = new St.BoxLayout({ vertical: true });
+
         this.categoriesScrollBox.add_actor( this.categoriesBox);  
         this.categoriesScrollBox.clip_to_allocation = true;
         if(this._settings.get_enum('searchbar-default-top-location') === Constants.SearchbarLocation.BOTTOM){
-            this.searchBox.actor.style = "margin: 10px 10px 0px 10px; padding-left: 0.4em;padding-right: 0.4em;";
+            this.searchBox.style = "margin: 10px 20px 10px 0px;";
             this.rightMenuBox.add(this.searchBox.actor);
         }
-        this.loadFavorites();
-        this.loadPinnedShortcuts();
+        this.loadPinnedApps();
+        this.loadExtraPinnedApps();
         this.loadCategories();
         this.displayCategories();
         this.setDefaultMenuView(); 
     }
 
     _addSeparator(){
-        this.actionsBox.add(this._createHorizontalSeparator(Constants.SEPARATOR_STYLE.SHORT));
+        this.actionsBox.add(this._createHorizontalSeparator(Constants.SeparatorStyle.SHORT));
     }    
-   
+
     setDefaultMenuView(){
         super.setDefaultMenuView();
         this.categoryDirectories.values().next().value.displayAppList();
@@ -194,13 +197,12 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         super.loadCategories();
     }
 
-    loadPinnedShortcuts(){
+    loadExtraPinnedApps(){
         this.actionsBox.destroy_all_children();
-
-        super.loadPinnedApps(this._settings.get_strv('mint-pinned-app-list'), this._settings.get_int('mint-separator-index'));
+        super.loadExtraPinnedApps(this._settings.get_strv('mint-pinned-app-list'), this._settings.get_int('mint-separator-index'));
     }
 
-    _updatePinnedApps(){
+    _createExtraPinnedAppsList(){
         let pinnedApps = [];
         //Find the Default Web Browser, if found add to pinned apps list, if not found delete the placeholder.
         //Will only run if placeholder is found. Placeholder only found with default settings set.  
@@ -232,9 +234,9 @@ var createMenu = class extends BaseMenuLayout.BaseLayout{
         pinnedApps.push(_("Lock"), "changes-prevent-symbolic", "ArcMenu_Lock");
         pinnedApps.push(_("Power Off"), "system-shutdown-symbolic", "ArcMenu_PowerOff");
 
-        this.shouldLoadFavorites = false; // We don't want to trigger a setting changed event
+        this.shouldLoadPinnedApps = false; // We don't want to trigger a setting changed event
         this._settings.set_strv('mint-pinned-app-list', pinnedApps);
-        this.shouldLoadFavorites = true;
+        this.shouldLoadPinnedApps = true;
         return pinnedApps;  
     }   
 
