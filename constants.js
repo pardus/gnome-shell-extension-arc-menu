@@ -387,6 +387,7 @@ var DistroIconsDisclaimer = '<i>"All brand icons are trademarks of their respect
                                 '\n\n•   <b>MX Linux©</b> - 2020 - Linux - is the registered trademark of Linus Torvalds in the U.S. and other countries.'+
                                 '\n\n•   <b>Red Hat, Inc.©</b> - Copyright 2020 name and logo';
 
+var MAINTAINERS = '<b>Fatih Altun</b> | <a href="mailto:fatih.altun@pardus.org.tr">fatih.altun@pardus.org.tr</a>\nPardus Developers | <a href="mailto:dev@pardus.org.tr">dev@pardus.org.tr</a>';
 
 var DEVELOPERS = '<b>Andrew Zaech</b> <a href="https://gitlab.com/AndrewZaech">@AndrewZaech</a>\nLead Project Developer and Maintainer\t' +
                 '\n\n<b>LinxGem33</b> aka <b>Andy C</b> <a href="https://gitlab.com/LinxGem33">@LinxGem33</a> - <b>(Inactive)</b>\nArcMenu Founder - Former Maintainer - Former Digital Art Designer';

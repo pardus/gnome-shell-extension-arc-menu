@@ -5857,7 +5857,7 @@ var AboutPage = GObject.registerClass(
             });
             
             linksBox.add(projectLinkButton);
-            linksBox.add(donateLinkButton);
+            // linksBox.add(donateLinkButton);
 
             this.creditsScrollWindow = new Gtk.ScrolledWindow({
                 margin_top: 10,
@@ -5869,6 +5869,8 @@ var AboutPage = GObject.registerClass(
             this.creditsScrollWindow.set_min_content_height(200);
             this.creditsFrame = new PW.Notebook();
             this.creditsFrame.scrollable = true;
+            let maintainersPage = new PW.NotebookPage(_("Maintainers"));
+            this.creditsFrame.append_page(maintainersPage);
             let developersPage = new PW.NotebookPage(_("Developers"));
             this.creditsFrame.append_page(developersPage);
             let translatorsPage = new PW.NotebookPage(_("Translators"));
@@ -5878,6 +5880,14 @@ var AboutPage = GObject.registerClass(
             let artworkPage = new PW.NotebookPage(_("Artwork"));
             this.creditsFrame.append_page(artworkPage);
             this.creditsScrollWindow.add_with_viewport(this.creditsFrame);
+            let maintainersLabel = new Gtk.Label({
+                label: _(Constants.MAINTAINERS),
+                use_markup: true,
+                halign: Gtk.Align.START,
+                hexpand: false,
+                vexpand: false,
+            });
+            maintainersPage.add(maintainersLabel);
   	        let creditsLabel = new Gtk.Label({
 		        label: _(Constants.DEVELOPERS),
 		        use_markup: true,
