@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ArcMenu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-29 21:15+0300\n"
+"POT-Creation-Date: 2022-06-15 09:30+0300\n"
 "PO-Revision-Date: 2022-06-15 02:01+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <gelistirici@pardus.org.tr>\n"
@@ -27,1386 +27,1120 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1\n"
 
-#: constants.js:66 menuWidgets.js:1195
+#: constants.js:77
 msgid "Favorites"
 msgstr "Favoriler"
 
-#: constants.js:67 menulayouts/tweaks/tweaks.js:900
+#: constants.js:78 menulayouts/eleven.js:200 menulayouts/eleven.js:285
+#: menulayouts/launcher.js:354 menulayouts/runner.js:112
+#: menulayouts/tweaks/tweaks.js:1105
 msgid "Frequent Apps"
 msgstr "Sık Kullanılan Uygulamalar"
 
-#: constants.js:68 menuWidgets.js:1471 menuWidgets.js:1565
-#: menulayouts/raven.js:53 menulayouts/raven.js:219
-#: menulayouts/ubuntudash.js:54 menulayouts/ubuntudash.js:335
-#: menulayouts/tweaks/tweaks.js:460 menulayouts/tweaks/tweaks.js:586
-#: menulayouts/tweaks/tweaks.js:870
+#: constants.js:79 menuWidgets.js:1809 menulayouts/raven.js:57
+#: menulayouts/raven.js:205 menulayouts/ubuntudash.js:54
+#: menulayouts/ubuntudash.js:335 menulayouts/unity.js:58
+#: menulayouts/unity.js:323 menulayouts/tweaks/tweaks.js:664
+#: menulayouts/tweaks/tweaks.js:769 menulayouts/tweaks/tweaks.js:1077
 msgid "All Programs"
 msgstr "Tüm Programlar"
 
-#: constants.js:69 prefs.js:40 prefs.js:5836 menulayouts/plasma.js:136
-#: menulayouts/raven.js:51 menulayouts/raven.js:214
+#: constants.js:80 menuWidgets.js:1299 prefs.js:6011 menulayouts/eleven.js:218
+#: menulayouts/eleven.js:281 menulayouts/insider.js:191
+#: menulayouts/launcher.js:398 menulayouts/plasma.js:140
+#: menulayouts/raven.js:55 menulayouts/raven.js:200 menulayouts/raven.js:266
 #: menulayouts/ubuntudash.js:52 menulayouts/ubuntudash.js:330
-#: menulayouts/windows.js:504 menulayouts/tweaks/tweaks.js:898
+#: menulayouts/unity.js:56 menulayouts/unity.js:318 menulayouts/unity.js:400
+#: menulayouts/windows.js:448 menulayouts/tweaks/tweaks.js:1103
 msgid "Pinned Apps"
 msgstr "Sabitlenmiş Uygulamalar"
 
-#: constants.js:70 menulayouts/raven.js:300 menulayouts/ubuntudash.js:423
+#: constants.js:81 menulayouts/raven.js:288 menulayouts/ubuntudash.js:423
+#: menulayouts/unity.js:418
 msgid "Recent Files"
 msgstr "Son Dosyalar"
 
-#: constants.js:295 menuWidgets.js:3047 prefs.js:5636
-msgid "ArcMenu"
-msgstr "ArcMenu"
-
-#: constants.js:295
-msgid "ArcMenu Tweaks"
-msgstr "ArcMenu İnce Ayarları"
-
-#: constants.js:296
-msgid "Brisk Menu Style"
-msgstr "Brisk Menü Biçimi"
-
-#: constants.js:296
-msgid "Brisk Menu Style Tweaks"
-msgstr "Brisk Menü Biçimi İnce Ayarları"
-
-#: constants.js:297
-msgid "Whisker Menu Style"
-msgstr "Whisker Menü Biçimi"
-
-#: constants.js:297
-msgid "Whisker Menu Style Tweaks"
-msgstr "Whisker Menü Biçimi İnce Ayarları"
-
-#: constants.js:298
-msgid "GNOME Menu Style"
-msgstr "GNOME Menü Biçimi"
-
-#: constants.js:298
-msgid "GNOME Menu Style Tweaks"
-msgstr "GNOME Menü Biçimi İnce Ayarları"
-
-#: constants.js:299
-msgid "Mint Menu Style"
-msgstr "Mint Menü Biçimi"
-
-#: constants.js:299
-msgid "Mint Menu Style Tweaks"
-msgstr "Mint Menü Biçimi İnce Ayarları"
-
-#: constants.js:300
-msgid "Budgie Style"
-msgstr "Budgie Biçimi"
-
-#: constants.js:300
-msgid "Budgie Style Tweaks"
-msgstr "Budgie Biçimi İnce Ayarları"
-
-#: constants.js:303
-msgid "Ubuntu Dash Style"
-msgstr "Ubuntu Dash Biçimi"
-
-#: constants.js:303
-msgid "Ubuntu Dash Style Tweaks"
-msgstr "Ubuntu Dash Biçimi İnce Ayarları"
-
-#: constants.js:304
-msgid "Plasma Style"
-msgstr "Plasma Biçimi"
-
-#: constants.js:304
-msgid "Plasma Style Tweaks"
-msgstr "Plasma Biçimi İnce Ayarları"
-
-#: constants.js:305
-msgid "tognee Menu"
-msgstr "tognee Menü"
-
-#: constants.js:305
-msgid "tognee Menu Tweaks"
-msgstr "tognee Menü İnce Ayarları"
-
-#: constants.js:306
-msgid "Insider Menu"
-msgstr "Insider Menü"
-
-#: constants.js:306
-msgid "Insider Menu Tweaks"
-msgstr "Insider Menü İnce Ayarları"
-
-#: constants.js:307
-msgid "Redmond Menu Style"
-msgstr "Redmond Menü Biçimi"
-
-#: constants.js:307
-msgid "Redmond Menu Style Tweaks"
-msgstr "Redmond Menü Biçimi İnce Ayarları"
-
-#: constants.js:308
-msgid "Windows 10 Style"
-msgstr "Windows 10 Biçimi"
-
-#: constants.js:308
-msgid "Windows 10 Style Tweaks"
-msgstr "Windows 10 Biçimi İnce Ayarları"
-
-#: constants.js:311
-msgid "Elementary Menu Style"
-msgstr "Elementary Menü Biçimi"
-
-#: constants.js:311
-msgid "Elementary Menu Style Tweaks"
-msgstr "Elementary Menü Biçimi İnce Ayarları"
-
-#: constants.js:312
-msgid "Chromebook Style"
-msgstr "Chromebook Biçimi"
-
-#: constants.js:312
-msgid "Chromebook Style Tweaks"
-msgstr "Chromebook Biçimi İnce Ayarları"
-
-#: constants.js:315
-msgid "KRunner Style"
-msgstr "KRunner Biçimi"
-
-#: constants.js:315
-msgid "KRunner Style Tweaks"
-msgstr "KRunner Biçimi İnce Ayarları"
-
-#: constants.js:316
-msgid "GNOME Dash Style"
-msgstr "GNOME Dash Biçimi"
-
-#: constants.js:316
-msgid "GNOME Dash Style Tweaks"
-msgstr "GNOME Dash Biçimi İnce Ayarları"
-
-#: constants.js:319 constants.js:336
-msgid "Simple Menu Style"
-msgstr "Basit Menü Biçimi"
-
-#: constants.js:319
-msgid "Simple Menu Style Tweaks"
-msgstr "Basit Menü Biçimi İnce Ayarları"
-
-#: constants.js:320
-msgid "Simple Menu 2 Style"
-msgstr "Basit Menü Biçimi 2"
-
-#: constants.js:320
-msgid "Simple Menu 2 Style Tweaks"
-msgstr "Basit Menü Biçimi 2 İnce Ayarları"
-
-#: constants.js:323
-msgid "Raven Menu Style"
-msgstr "Raven Menü Biçimi"
-
-#: constants.js:323
-msgid "Raven Menu Style Tweaks"
-msgstr "Raven Menü Biçimi İnce Ayarları"
-
-#: constants.js:330
-msgid "Traditional"
-msgstr "Geleneksel"
-
-#: constants.js:330
-msgid "Traditional Menu Style"
-msgstr "Geleneksel Menü Biçimi"
-
-#: constants.js:331
-msgid ""
-"Traditional layouts use a familiar style and have a traditional user "
-"experience."
-msgstr ""
-"Geleneksel düzenler tanıdık bir stil kullanır ve geleneksel bir kullanıcı "
-"deneyimine sahiptir."
-
-#: constants.js:332
-msgid "Modern"
-msgstr "Modern"
-
-#: constants.js:332
-msgid "Modern Menu Style"
-msgstr "Modern Menü Biçimi"
-
-#: constants.js:333
-msgid ""
-"Modern layouts use a style and UX based approach with a focus on design and "
-"functionality."
-msgstr ""
-"Modern düzenler, tasarım ve işlevsellik odaklı bir stil ve UX tabanlı bir "
-"yaklaşım kullanır."
-
-#: constants.js:334
-msgid "Touch"
-msgstr "Dokunmatik"
-
-#: constants.js:334
-msgid "Touch Menu Style"
-msgstr "Dokunmatik Menü Biçimi"
-
-#: constants.js:335
-msgid ""
-"Touch layouts contain large menu elements that are well suited for touch "
-"based devices."
-msgstr ""
-"Dokunmatik düzenler, dokunmaya dayalı cihazlar için çok uygun büyük menü "
-"ögeleri içerir."
-
-#: constants.js:336
-msgid "Simple"
-msgstr "Basit"
-
-#: constants.js:337
-msgid ""
-"Simple layouts are designed for mouse based devices and contain simplistic "
-"menu elements."
-msgstr ""
-"Basit düzenler fare tabanlı cihazlar için tasarlanmıştır ve basit menü "
-"ögeleri içerir."
-
-#: constants.js:338
-msgid "Launcher"
-msgstr "Başlatıcı"
-
-#: constants.js:338
-msgid "Launcher Menu Style"
-msgstr "Başlatıcı Menü Biçimi"
-
-#: constants.js:339
-msgid ""
-"Launcher layouts are well suited for keyboard driven devices and provide the "
-"user with quick and simple menu elements."
-msgstr ""
-"Başlatıcı düzenleri klavye ile çalışan cihazlar için çok uygundur ve "
-"kullanıcıya hızlı ve basit menü ögeleri sunar."
-
-#: constants.js:340
-msgid "Alternative"
-msgstr "Alternatif"
-
-#: constants.js:340
-msgid "Alternative Menu Style"
-msgstr "Alternatif Menü Biçimi"
-
-#: constants.js:341
-msgid ""
-"Alternative layouts have an unconventional style that provide a unique user "
-"experience."
-msgstr ""
-"Alternatif düzenler, benzersiz bir kullanıcı deneyimi sağlayan alışılmadık "
-"bir stile sahiptir."
-
-#: menuButton.js:745 menuWidgets.js:1184 menuWidgets.js:1850 prefs.js:281
-#: prefs.js:381 prefs.js:550 prefs.js:5903 menulayouts/arcmenu.js:191
-#: menulayouts/plasma.js:180 menulayouts/raven.js:178
-#: menulayouts/redmond.js:174 menulayouts/tognee.js:155
-#: menulayouts/ubuntudash.js:196 menulayouts/windows.js:146
-msgid "ArcMenu Settings"
-msgstr "ArcMenu Ayarları"
-
-#: menuButton.js:773
-msgid "Dash to Panel Settings"
-msgstr "Dash to Panel Ayarları"
-
-#: menuButton.js:780
-msgid "Dash to Dock Settings"
-msgstr "Dash to Dock Ayarları"
-
-#: menuButton.js:784
-msgid "Ubuntu Dock Settings"
-msgstr "Ubuntu Dock Ayarları"
-
-#: menuWidgets.js:163
-msgid "Open Folder Location"
-msgstr "Klasör Konumunu Aç"
-
-#: menuWidgets.js:179
-msgid "Current Windows:"
-msgstr "Geçerli Pencereler:"
-
-#: menuWidgets.js:197
-msgid "New Window"
-msgstr "Yeni Pencere"
-
-#: menuWidgets.js:207
-msgid "Launch using Dedicated Graphics Card"
-msgstr "Özel Grafik Kartı kullanarak başlatma"
-
-#: menuWidgets.js:252
-msgid "Delete Desktop Shortcut"
-msgstr "Masaüstü Kısayolunu Sil"
-
-#: menuWidgets.js:260
-msgid "Create Desktop Shortcut"
-msgstr "Masaüstü Kısayolu Oluştur"
-
-#: menuWidgets.js:274
-msgid "Remove from Favorites"
-msgstr "Favorilerden çıkar"
-
-#: menuWidgets.js:280
-msgid "Add to Favorites"
-msgstr "Favorilere Ekle"
-
-#: menuWidgets.js:297 menuWidgets.js:346
-msgid "Unpin from ArcMenu"
-msgstr "ArcMenu'den sabitlemeyi kaldır"
-
-#: menuWidgets.js:311
-msgid "Pin to ArcMenu"
-msgstr "ArcMenu'ye Sabitle"
-
-#: menuWidgets.js:324
-msgid "Show Details"
-msgstr "Ayrılntıları Göster"
-
-#: menuWidgets.js:726 menulayouts/arcmenu.js:191 menulayouts/plasma.js:180
-#: menulayouts/raven.js:178 menulayouts/redmond.js:174
-#: menulayouts/tognee.js:155 menulayouts/ubuntudash.js:196
-#: menulayouts/windows.js:146
-msgid "Activities Overview"
-msgstr "Etkinlikler Genel Görünüm"
-
-#: menuWidgets.js:1174 menulayouts/arcmenu.js:191 menulayouts/insider.js:218
-#: menulayouts/mint.js:222 menulayouts/plasma.js:180 menulayouts/raven.js:178
-#: menulayouts/redmond.js:174 menulayouts/tognee.js:155
-#: menulayouts/ubuntudash.js:196 menulayouts/windows.js:146
-msgid "Settings"
-msgstr "Ayarlar"
-
-#: menuWidgets.js:1206
-msgid "Extras"
-msgstr "Ekstralar"
-
-#: menuWidgets.js:1217 menulayouts/plasma.js:149
-msgid "Leave"
-msgstr "Ayrıl"
-
-#: menuWidgets.js:1228 prefs.js:5838
-msgid "Categories"
-msgstr "Kategoriler"
-
-#: menuWidgets.js:1238
-msgid "Users"
-msgstr "Kullanıcılar"
-
-#: menuWidgets.js:1296 prefs.js:462 prefs.js:5107 menulayouts/mint.js:233
-#: menulayouts/ubuntudash.js:247
-msgid "Power Off"
-msgstr "Gücü Kapat"
-
-#: menuWidgets.js:1305 prefs.js:463 prefs.js:5091
-msgid "Restart"
-msgstr "Yeniden Başlat"
-
-#: menuWidgets.js:1314 prefs.js:461 prefs.js:5075 menulayouts/mint.js:231
-#: menulayouts/plasma.js:347 menulayouts/ubuntudash.js:245
-#: menulayouts/windows.js:252
+#: constants.js:196 prefs.js:488 menulayouts/mint.js:233
+#: menulayouts/ubuntudash.js:245 menulayouts/unity.js:238
 msgid "Log Out"
 msgstr "Çıkış"
 
-#: menuWidgets.js:1323 prefs.js:464 prefs.js:5043 menulayouts/plasma.js:353
-#: menulayouts/windows.js:258
-msgid "Suspend"
-msgstr "Beklet"
-
-#: menuWidgets.js:1332 prefs.js:460 prefs.js:5059 menulayouts/mint.js:232
-#: menulayouts/plasma.js:343 menulayouts/ubuntudash.js:246
-#: menulayouts/windows.js:249
+#: constants.js:197 prefs.js:487 menulayouts/mint.js:234
+#: menulayouts/ubuntudash.js:246 menulayouts/unity.js:239
 msgid "Lock"
 msgstr "Kilitle"
 
-#: menuWidgets.js:1515 prefs.js:2657
-msgid "Back"
-msgstr "Geri"
+#: constants.js:198 prefs.js:490
+msgid "Restart"
+msgstr "Yeniden Başlat"
 
-#: menuWidgets.js:1853 menulayouts/arcmenu.js:191 menulayouts/mint.js:221
-#: menulayouts/plasma.js:180 menulayouts/raven.js:178
-#: menulayouts/redmond.js:174 menulayouts/tognee.js:155
-#: menulayouts/ubuntudash.js:196 menulayouts/windows.js:146
-msgid "Terminal"
-msgstr "Uçbirim"
+#: constants.js:199 prefs.js:489 menulayouts/mint.js:235
+#: menulayouts/ubuntudash.js:247 menulayouts/unity.js:240
+msgid "Power Off"
+msgstr "Gücü Kapat"
 
-#: menuWidgets.js:2110
-msgid "New"
-msgstr "Yeni"
+#: constants.js:200 prefs.js:491
+msgid "Suspend"
+msgstr "Beklet"
 
-#: menuWidgets.js:2754 prefs.js:250
-msgid "Type to search…"
-msgstr "Aramak için yazın…"
+#: constants.js:201 prefs.js:492
+msgid "Hybrid Sleep"
+msgstr ""
 
-#: menuWidgets.js:2930 prefs.js:5845 menulayouts/plasma.js:141
+#: constants.js:202 prefs.js:493
+#, fuzzy
+msgid "Hibernate"
+msgstr "Alternatif"
+
+#: constants.js:324 menuWidgets.js:3291 prefs.js:5816
+msgid "ArcMenu"
+msgstr "ArcMenu"
+
+#: constants.js:325
+msgid "Brisk"
+msgstr ""
+
+#: constants.js:326
+msgid "Whisker"
+msgstr ""
+
+#: constants.js:327
+#, fuzzy
+msgid "GNOME Menu"
+msgstr "GNOME Menü Biçimi"
+
+#: constants.js:328
+msgid "Mint"
+msgstr ""
+
+#: constants.js:329
+#, fuzzy
+msgid "Budgie"
+msgstr "Budgie Biçimi"
+
+#: constants.js:332
+msgid "Unity"
+msgstr ""
+
+#: constants.js:333
+#, fuzzy
+msgid "Plasma"
+msgstr "Plasma Biçimi"
+
+#: constants.js:334
+#, fuzzy
+msgid "tognee"
+msgstr "tognee Menü"
+
+#: constants.js:335
+#, fuzzy
+msgid "Insider"
+msgstr "Insider Menü"
+
+#: constants.js:336
+msgid "Redmond"
+msgstr ""
+
+#: constants.js:337
+#, fuzzy
+msgid "Windows"
+msgstr "Yeni Pencere"
+
+#: constants.js:338
+msgid "Eleven"
+msgstr ""
+
+#: constants.js:341
+#, fuzzy
+msgid "Elementary"
+msgstr "Elementary Menü Biçimi"
+
+#: constants.js:342
+#, fuzzy
+msgid "Chromebook"
+msgstr "Chromebook Biçimi"
+
+#: constants.js:345 constants.js:362
+msgid "Launcher"
+msgstr "Başlatıcı"
+
+#: constants.js:346
+#, fuzzy
+msgid "Runner"
+msgstr "KRunner Biçimi"
+
+#: constants.js:347
+#, fuzzy
+msgid "GNOME Overview"
+msgstr "GNOME Sürümü"
+
+#: constants.js:350 constants.js:361
+msgid "Simple"
+msgstr "Basit"
+
+#: constants.js:351
+#, fuzzy
+msgid "Simple 2"
+msgstr "Basit"
+
+#: constants.js:354
+msgid "Raven"
+msgstr ""
+
+#: constants.js:358
+msgid "Traditional"
+msgstr "Geleneksel"
+
+#: constants.js:359
+msgid "Modern"
+msgstr "Modern"
+
+#: constants.js:360
+msgid "Touch"
+msgstr "Dokunmatik"
+
+#: constants.js:363
+msgid "Alternative"
+msgstr "Alternatif"
+
+#: menuButton.js:819 menuWidgets.js:2092 prefs.js:306 prefs.js:407 prefs.js:579
+#: prefs.js:6124 menulayouts/arcmenu.js:196 menulayouts/plasma.js:186
+#: menulayouts/raven.js:171 menulayouts/redmond.js:167
+#: menulayouts/tognee.js:152 menulayouts/ubuntudash.js:196
+#: menulayouts/unity.js:190 menulayouts/windows.js:148
+msgid "ArcMenu Settings"
+msgstr "ArcMenu Ayarları"
+
+#: menuButton.js:825
+msgid "Settings Quick Links:"
+msgstr ""
+
+#: menuButton.js:831
+#, fuzzy
+msgid "Change Menu Layout"
+msgstr "Menü Düzeni"
+
+#: menuButton.js:832
+#, fuzzy
+msgid "Modify Pinned Apps"
+msgstr "Sabitlenmiş Uygulamayı Düzenle"
+
+#: menuButton.js:833
+#, fuzzy
+msgid "Modify Shortcuts"
+msgstr "Kısayolu Düzenle"
+
+#: menuButton.js:834
+#, fuzzy
+msgid "Layout Tweaks"
+msgstr "İnce Ayarlar"
+
+#: menuButton.js:835 prefs.js:6003
+msgid "Button Appearance"
+msgstr "Düğme Görünümü"
+
+#: menuButton.js:841 prefs.js:6005
+msgid "About"
+msgstr "Hakkında"
+
+#: menuButton.js:856
+msgid "Dash to Panel Settings"
+msgstr "Dash to Panel Ayarları"
+
+#: menuButton.js:863
+msgid "Dash to Dock Settings"
+msgstr "Dash to Dock Ayarları"
+
+#: menuButton.js:867
+msgid "Ubuntu Dock Settings"
+msgstr "Ubuntu Dock Ayarları"
+
+#: menuWidgets.js:156
+msgid "Current Windows:"
+msgstr "Geçerli Pencereler:"
+
+#: menuWidgets.js:177
+msgid "New Window"
+msgstr "Yeni Pencere"
+
+#: menuWidgets.js:185
+msgid "Launch using Dedicated Graphics Card"
+msgstr "Özel Grafik Kartı kullanarak başlatma"
+
+#: menuWidgets.js:228
+msgid "Delete Desktop Shortcut"
+msgstr "Masaüstü Kısayolunu Sil"
+
+#: menuWidgets.js:241
+msgid "Create Desktop Shortcut"
+msgstr "Masaüstü Kısayolu Oluştur"
+
+#: menuWidgets.js:262
+msgid "Remove from Favorites"
+msgstr "Favorilerden çıkar"
+
+#: menuWidgets.js:269
+msgid "Add to Favorites"
+msgstr "Favorilere Ekle"
+
+#: menuWidgets.js:291 menuWidgets.js:353
+msgid "Unpin from ArcMenu"
+msgstr "ArcMenu'den sabitlemeyi kaldır"
+
+#: menuWidgets.js:304
+msgid "Pin to ArcMenu"
+msgstr "ArcMenu'ye Sabitle"
+
+#: menuWidgets.js:316
+msgid "Show Details"
+msgstr "Ayrılntıları Göster"
+
+#: menuWidgets.js:335
+msgid "Open Folder Location"
+msgstr "Klasör Konumunu Aç"
+
+#: menuWidgets.js:828 menulayouts/arcmenu.js:196 menulayouts/plasma.js:186
+#: menulayouts/raven.js:171 menulayouts/redmond.js:167
+#: menulayouts/tognee.js:152 menulayouts/ubuntudash.js:196
+#: menulayouts/unity.js:190 menulayouts/windows.js:148
+msgid "Activities Overview"
+msgstr "Etkinlikler Genel Görünüm"
+
+#: menuWidgets.js:1277 menulayouts/arcmenu.js:196 menulayouts/mint.js:224
+#: menulayouts/plasma.js:186 menulayouts/raven.js:171
+#: menulayouts/redmond.js:167 menulayouts/tognee.js:152
+#: menulayouts/ubuntudash.js:196 menulayouts/unity.js:190
+#: menulayouts/windows.js:148
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: menuWidgets.js:1287
+#, fuzzy
+msgid "Configure Runner Layout"
+msgstr "Geçerli Menü Düzeni"
+
+#: menuWidgets.js:1310
+msgid "Extras"
+msgstr "Ekstralar"
+
+#: menuWidgets.js:1321 menulayouts/plasma.js:153
+msgid "Leave"
+msgstr "Ayrıl"
+
+#: menuWidgets.js:1354 menulayouts/plasma.js:370
+msgid "Session"
+msgstr "Oturum"
+
+#: menuWidgets.js:1364 menulayouts/plasma.js:379
+msgid "System"
+msgstr "Sistem"
+
+#: menuWidgets.js:1410
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: menuWidgets.js:1420
+msgid "Users"
+msgstr "Kullanıcılar"
+
+#: menuWidgets.js:1617 menuWidgets.js:3174 menulayouts/launcher.js:167
+#: menulayouts/launcher.js:352 menulayouts/plasma.js:145
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: menuWidgets.js:3035
+#: menuWidgets.js:1677 menuWidgets.js:1694
+#, fuzzy
+msgid "All Apps"
+msgstr "Öntanımlı Uygulamalar"
+
+#: menuWidgets.js:1726 menuWidgets.js:1763 prefs.js:2703
+#: menulayouts/tweaks/tweaks.js:55
+msgid "Back"
+msgstr "Geri"
+
+#: menuWidgets.js:2095 menulayouts/arcmenu.js:196 menulayouts/mint.js:223
+#: menulayouts/plasma.js:186 menulayouts/raven.js:171
+#: menulayouts/redmond.js:167 menulayouts/tognee.js:152
+#: menulayouts/ubuntudash.js:196 menulayouts/unity.js:190
+#: menulayouts/windows.js:148
+msgid "Terminal"
+msgstr "Uçbirim"
+
+#: menuWidgets.js:2372
+msgid "New"
+msgstr "Yeni"
+
+#: menuWidgets.js:3025 prefs.js:275 menulayouts/launcher.js:399
+msgid "Type to search…"
+msgstr "Aramak için yazın…"
+
+#: menuWidgets.js:3279
 msgid "Show Applications"
 msgstr "Uygulamaları Göster"
 
-#: menuWidgets.js:3241
+#: menuWidgets.js:3485
 msgid "Add world clocks…"
 msgstr "Dünya saatleri ekle…"
 
-#: menuWidgets.js:3242
+#: menuWidgets.js:3486
 msgid "World Clocks"
 msgstr "Dünya Saatleri"
 
-#: menuWidgets.js:3350
+#: menuWidgets.js:3594
 msgid "Weather"
 msgstr "Hava Durumu"
 
-#: menuWidgets.js:3470
+#: menuWidgets.js:3714
 msgid "Select a location…"
 msgstr "Bir konum seçin…"
 
-#: menuWidgets.js:3483
+#: menuWidgets.js:3727
 msgid "Loading…"
 msgstr "Yükleniyor…"
 
-#: menuWidgets.js:3493
+#: menuWidgets.js:3737
 msgid "Go online for weather information"
 msgstr "Hava durumu bilgileri için çevrimiçi olun"
 
-#: menuWidgets.js:3495
+#: menuWidgets.js:3739
 msgid "Weather information is currently unavailable"
 msgstr "Hava durumu bilgileri şu anda kullanılamıyor"
 
-#: placeDisplay.js:133
+#: placeDisplay.js:138
 #, javascript-format
 msgid "Failed to launch “%s”"
 msgstr "“%s” başlatılamadı"
 
-#: placeDisplay.js:148
+#: placeDisplay.js:153
 #, javascript-format
 msgid "Failed to mount volume for “%s”"
 msgstr "“%s” bölümü bağlanamadı"
 
-#: placeDisplay.js:232 placeDisplay.js:256 prefs.js:329 prefs.js:457
-#: menulayouts/baseMenuLayout.js:396 menulayouts/plasma.js:145
-#: menulayouts/ubuntudash.js:242
+#: placeDisplay.js:237 placeDisplay.js:261 prefs.js:355 prefs.js:484
+#: menulayouts/baseMenuLayout.js:428 menulayouts/plasma.js:149
+#: menulayouts/ubuntudash.js:242 menulayouts/unity.js:235
 msgid "Computer"
 msgstr "Bilgisayar"
 
-#: placeDisplay.js:321
+#: placeDisplay.js:326
 #, javascript-format
 msgid "Ejecting drive “%s” failed:"
 msgstr "“%s” sürücüsü çıkartılamadı:"
 
-#: placeDisplay.js:447 menulayouts/baseMenuLayout.js:396
-#: menulayouts/baseMenuLayout.js:436 menulayouts/ubuntudash.js:234
+#: placeDisplay.js:452 menulayouts/baseMenuLayout.js:428
+#: menulayouts/baseMenuLayout.js:472 menulayouts/ubuntudash.js:234
+#: menulayouts/unity.js:227
 msgid "Home"
 msgstr "Ev"
 
-#: placeDisplay.js:717 prefs.js:331 prefs.js:459
-#: menulayouts/baseMenuLayout.js:472 menulayouts/baseMenuLayout.js:474
+#: placeDisplay.js:722 prefs.js:357 prefs.js:486
+#: menulayouts/baseMenuLayout.js:489
 msgid "Trash"
 msgstr "Çöp"
 
-#: placeDisplay.js:727 placeDisplay.js:733
+#: placeDisplay.js:732 placeDisplay.js:738
 msgid "Empty Trash"
 msgstr "Çöpü Boşalt"
 
-#: prefs.js:51 prefs.js:722 prefs.js:1359 prefs.js:1543 prefs.js:2641
-#: prefs.js:3101 prefs.js:3433 prefs.js:3496 prefs.js:3797 prefs.js:4498
-#: prefs.js:4596 prefs.js:4822
+#: prefs.js:72 prefs.js:751 prefs.js:1394 prefs.js:1599 prefs.js:2690
+#: prefs.js:3172 prefs.js:3556 prefs.js:3627 prefs.js:3930 prefs.js:4624
+#: prefs.js:4725 prefs.js:4957 prefs.js:5184
 msgid "Apply"
 msgstr "Uygula"
 
-#: prefs.js:64 prefs.js:4832
+#: prefs.js:85 prefs.js:4967
 msgid "Add More Apps"
 msgstr "Daha Fazla Uygulama Ekle"
 
-#: prefs.js:71
-msgid "Browse a list of all applications to add to your Pinned Apps list."
-msgstr ""
-"Sabitlenmiş Uygulamalar listenize eklemek için tüm uygulamalar listesine göz "
-"atın."
-
-#: prefs.js:102 prefs.js:4642 prefs.js:4868
+#: prefs.js:122 prefs.js:4770 prefs.js:5002
 msgid "Add Custom Shortcut"
 msgstr "Özel Kısayol Ekle"
 
-#: prefs.js:109
-msgid "Create a custom shortcut to add to your Pinned Apps list."
-msgstr "Sabitlenmiş Uygulamalar listesine eklemek için özel kısayol oluştur."
-
-#: prefs.js:237
+#: prefs.js:262
 msgid "Add to your Pinned Apps"
 msgstr "Sabitlenmiş Uygulamalara Ekle"
 
-#: prefs.js:239
+#: prefs.js:264
 msgid "Change Selected Pinned App"
 msgstr "Seçili Sabitlenmiş Uygulamaları Değiştir"
 
-#: prefs.js:241
+#: prefs.js:266
 msgid "Select Application Shortcuts"
 msgstr "Uygulama Kısayollarını Seç"
 
-#: prefs.js:243
+#: prefs.js:268
 msgid "Select Directory Shortcuts"
 msgstr "Dizin Kısayollarını Seç"
 
-#: prefs.js:309 prefs.js:722
+#: prefs.js:335 prefs.js:751
 msgid "Add"
 msgstr "Ekle"
 
-#: prefs.js:330 prefs.js:458 menulayouts/baseMenuLayout.js:396
-#: menulayouts/baseMenuLayout.js:452 menulayouts/plasma.js:307
-#: menulayouts/windows.js:208
+#: prefs.js:356 prefs.js:485 menulayouts/baseMenuLayout.js:428
+#: menulayouts/baseMenuLayout.js:480 menulayouts/plasma.js:336
+#: menulayouts/windows.js:214
 msgid "Network"
 msgstr "Ağ"
 
-#: prefs.js:382 prefs.js:1309
+#: prefs.js:408 prefs.js:1345
 msgid "Run Command..."
 msgstr "Komut Çalıştır..."
 
-#: prefs.js:383
+#: prefs.js:409
 msgid "Show All Applications"
 msgstr "Tüm Uygulamaları Göster"
 
-#: prefs.js:432
+#: prefs.js:458
 msgid "Default Apps"
 msgstr "Öntanımlı Uygulamalar"
 
-#: prefs.js:436 prefs.js:514
+#: prefs.js:462 prefs.js:543
 msgid "System Apps"
 msgstr "Sistem Uygulamaları"
 
-#: prefs.js:510
+#: prefs.js:539
 msgid "Presets"
 msgstr "Önayarlar"
 
-#: prefs.js:630 prefs.js:632
+#: prefs.js:659 prefs.js:661
 msgid "Edit Pinned App"
 msgstr "Sabitlenmiş Uygulamayı Düzenle"
 
-#: prefs.js:630 prefs.js:632 prefs.js:634 prefs.js:636
+#: prefs.js:659 prefs.js:661 prefs.js:663 prefs.js:665
 msgid "Add a Custom Shortcut"
 msgstr "Özel Kısayol Ekle"
 
-#: prefs.js:634
+#: prefs.js:663
 msgid "Edit Shortcut"
 msgstr "Kısayolu Düzenle"
 
-#: prefs.js:636
+#: prefs.js:665
 msgid "Edit Custom Shortcut"
 msgstr "Özel Kısayolu Düzenle"
 
-#: prefs.js:643
+#: prefs.js:672
 msgid "Shortcut Name:"
 msgstr "Kısayol Adı:"
 
-#: prefs.js:658
+#: prefs.js:687
 msgid "Icon:"
 msgstr "Simge:"
 
-#: prefs.js:670
+#: prefs.js:699
 msgid "Browse..."
 msgstr "Göz At..."
 
-#: prefs.js:675 prefs.js:2133 prefs.js:2141 prefs.js:2145
+#: prefs.js:704 prefs.js:2159 prefs.js:2163
 msgid "Select an Icon"
 msgstr "Simge seç"
 
-#: prefs.js:707
+#: prefs.js:736
 msgid "Terminal Command:"
 msgstr "Uç Birim Komutu:"
 
-#: prefs.js:714
+#: prefs.js:743
 msgid "Shortcut Path:"
 msgstr "Kısayol Yolu:"
 
-#: prefs.js:755 prefs.js:5824 menulayouts/tweaks/tweaks.js:443
-msgid "General"
-msgstr "Genel"
-
-#: prefs.js:759
+#: prefs.js:802
 msgid "Panel and Dock Options"
 msgstr "Panel ve Rıhtım Seçenekleri"
 
-#: prefs.js:776
+#: prefs.js:819
 msgid "Activities Hot Corner Options"
 msgstr "Etkinlikler Sıcak Köşe Seçenekleri"
 
-#: prefs.js:786 prefs.js:1256
+#: prefs.js:829 prefs.js:1294
 msgid "Modify Activities Hot Corner"
 msgstr "Etkinlikler Sıcak Köşeyi Değiştir"
 
-#: prefs.js:794
-msgid "Modify the action of the Activities Hot Corner"
-msgstr "Etkinlikler Sıcak Köşe eylemini değiştir"
-
-#: prefs.js:806
-msgid "Override the default behavoir of the Activities Hot Corner"
-msgstr "Etkinlikler Sıcak Köşe davranışını geçersiz kıl"
-
-#: prefs.js:825
+#: prefs.js:866
 msgid "Hotkey activation"
 msgstr "Kısayol etkinleştirmek"
 
-#: prefs.js:832
-msgid "Choose a method for the hotkey activation"
-msgstr "Kısayol etkinleştirmek için bir yöntem seçin"
-
-#: prefs.js:834
+#: prefs.js:874
 msgid "Key Release"
 msgstr "Tuş Bırakımı"
 
-#: prefs.js:835
+#: prefs.js:875
 msgid "Key Press"
 msgstr "Tuş Basımı"
 
-#: prefs.js:851
+#: prefs.js:891
 msgid "Hotkey Options"
 msgstr "Kısayol Seçenekleri"
 
-#: prefs.js:861
+#: prefs.js:901
 msgid "Choose a Hotkey for ArcMenu"
 msgstr "ArcMenu için özel kısayol ayarla"
 
-#: prefs.js:870
+#: prefs.js:910
 msgid "Left Super Key"
 msgstr "Sol Süper Tuşu"
 
-#: prefs.js:873
-msgid "Set ArcMenu hotkey to Left Super Key"
-msgstr "ArcMenü kısayol tuşunu Sol Süper Tuş olarak ayarla"
-
-#: prefs.js:877
+#: prefs.js:916
 msgid "Right Super Key"
 msgstr "Sağ Süper Tuşu"
 
-#: prefs.js:881
-msgid "Set ArcMenu hotkey to Right Super Key"
-msgstr "ArcMenü kısayol tuşunu Sağ Süper Tuş olarak ayarla"
-
-#: prefs.js:885
+#: prefs.js:923
 msgid "Custom Hotkey"
 msgstr "Özel Kısayol"
 
-#: prefs.js:889
-msgid "Set a custom hotkey for ArcMenu"
-msgstr "ArcMenu için özel kısayol ayarla"
-
-#: prefs.js:893 menulayouts/tweaks/tweaks.js:551
-#: menulayouts/tweaks/tweaks.js:683
+#: prefs.js:930 menulayouts/tweaks/tweaks.js:734
+#: menulayouts/tweaks/tweaks.js:844
 msgid "None"
 msgstr "Yok"
 
-#: prefs.js:897
-msgid "Clear ArcMenu hotkey, use GNOME default"
-msgstr "ArcMenu kısayolunu temizle, GNOME öntanımlı kısayolunu kullan"
-
-#: prefs.js:958
+#: prefs.js:994
 msgid "Current Hotkey"
 msgstr "Geçerli Kısayol"
 
-#: prefs.js:967
-msgid "Current custom hotkey"
-msgstr "Geçerli özel kısayol"
-
-#: prefs.js:972
+#: prefs.js:1007
 msgid "Modify Hotkey"
 msgstr "Kısayolu Değiştir"
 
-#: prefs.js:975
-msgid "Create your own hotkey combination for ArcMenu"
-msgstr "ArcMenu için kendi kısayolunuzu oluşturun"
-
 # Birebir çeviri değil fakat kullanıldığı yere göre en uygun çeviri bu.
-#: prefs.js:1009
+#: prefs.js:1043
 msgid "Display ArcMenu On"
 msgstr "ArcMenu Nerede Görünsün"
 
-#: prefs.js:1016
-msgid "Choose where to place ArcMenu"
-msgstr "ArcMenu'nün nerede konumlanacağını seç"
-
-#: prefs.js:1020
+#: prefs.js:1053
 msgid "Dash to Dock"
 msgstr "Dash to Dock"
 
-#: prefs.js:1024
+#: prefs.js:1057
 msgid "Ubuntu Dock"
 msgstr "Ubuntu Dock"
 
-#: prefs.js:1027
+#: prefs.js:1060
 msgid "Main Panel"
 msgstr "Ana Panel"
 
-#: prefs.js:1028
+#: prefs.js:1061
 msgid "Dash to Panel"
 msgstr "Dash to Panel"
 
-#: prefs.js:1037
-msgid "Disable Activities Button"
-msgstr "Etkinlikler Düğmesini Devre Dışı Bırak"
-
-#: prefs.js:1038
+#: prefs.js:1070
 msgid "Dash to Dock extension not running!"
 msgstr "Dash to Dock eklentisi çalışmıyor!"
 
-#: prefs.js:1038
+#: prefs.js:1070
 msgid "Enable Dash to Dock for this feature to work."
 msgstr "Bu özelliğin çalışması için Dash to Dock eklentisini etkinleştir."
 
-#: prefs.js:1046 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:402
-msgid "Disable Activities Button in panel"
-msgstr "Etkinlikler Düğmesini panelde devre dışı bırak"
+#: prefs.js:1078
+#, fuzzy
+msgid "Show Activities Button"
+msgstr "Etkinlikler Düğmesini Geri Yükle"
 
-#: prefs.js:1074
+#: prefs.js:1112
 msgid "Main Panel not found!"
 msgstr "Ana Panel bulunamadı!"
 
-#: prefs.js:1075
+#: prefs.js:1113
 msgid "Dash to Panel extension not running!"
 msgstr "Dash to Panel eklentisi çalışmıyor!"
 
-#: prefs.js:1075
+#: prefs.js:1113
 msgid "Enable Dash to Panel for this feature to work."
 msgstr "Bu özelliğin çalışması için Dash to Panel eklentisini etkinleştir."
 
-#: prefs.js:1095
-msgid "Position in panel"
+#: prefs.js:1133
+#, fuzzy
+msgid "Position in Panel"
 msgstr "Paneldeki konumu"
 
-#: prefs.js:1102 prefs.js:1151
+#: prefs.js:1140 prefs.js:1184
 msgid "Left"
 msgstr "Sol"
 
-#: prefs.js:1103
-msgid "Position ArcMenu on the left side of the panel"
-msgstr "ArcMenu'yü panelin solunda konumlandır"
-
-#: prefs.js:1107 prefs.js:1152
+#: prefs.js:1144 prefs.js:1185
 msgid "Center"
 msgstr "Orta"
 
-#: prefs.js:1109
-msgid "Position ArcMenu in the center of the panel"
-msgstr "ArcMenu'yü panelin ortasında konumlandır"
-
-#: prefs.js:1113 prefs.js:1153
+#: prefs.js:1149 prefs.js:1186
 msgid "Right"
 msgstr "Sağ"
 
-#: prefs.js:1115
-msgid "Position ArcMenu on the right side of the panel"
-msgstr "ArcMenu'yü panelin sağında konumlandır"
-
-#: prefs.js:1139
+#: prefs.js:1174
 msgid "Menu Alignment"
 msgstr "Menü Hizalaması"
 
-#: prefs.js:1148
-msgid "Adjust ArcMenu's menu alignment relative to ArcMenu's icon"
-msgstr "ArcMenu menü hizalamasını ArcMenu simgesine göre ayarla"
-
-#: prefs.js:1164 prefs.js:1172
+#: prefs.js:1197
 msgid "Display ArcMenu on all monitors"
 msgstr "ArcMenu'yu tüm ekranlarda görüntüle"
 
-#: prefs.js:1264
+#: prefs.js:1302
 msgid "Activities Hot Corner Action"
 msgstr "Etkinlikler Sıcak Köşe Eylemi"
 
-#: prefs.js:1271
-msgid "Choose the action of the Activities Hot Corner"
-msgstr "Etkinlikler Sıcak Köşesinin eylemini seçin"
-
-#: prefs.js:1273
+#: prefs.js:1310
 msgid "GNOME Default"
 msgstr "GNOME Öntanımlı"
 
-#: prefs.js:1274
+#: prefs.js:1311
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: prefs.js:1275
-msgid "Toggle ArcMenu"
-msgstr "ArcMenu'yü aç/kapat"
+#: prefs.js:1312
+#, fuzzy
+msgid "Open ArcMenu"
+msgstr "ArcMenu"
 
-#: prefs.js:1276
+#: prefs.js:1313
 msgid "Custom"
 msgstr "Özel"
 
-#: prefs.js:1282
+#: prefs.js:1319
 msgid "Custom Activities Hot Corner Action"
 msgstr "Özel Etkinlikler Sıcak Köşe Eylemi"
 
-#: prefs.js:1282
+#: prefs.js:1319
 msgid "Choose from a list of preset commands or use your own terminal command"
 msgstr ""
 "Önceden ayarlanmış komutlar listesinden seçim yapın veya kendi uçbirim "
 "komutunuzu kullanın"
 
-#: prefs.js:1292
+#: prefs.js:1329
 msgid "Preset commands"
 msgstr "Önayar komutları"
 
-#: prefs.js:1298
-msgid "Choose from a list of preset Activities Hot Corner commands"
-msgstr "Önceden ayarlanmış Etkinlikler Sıcak Köşe komutları listesinden seçin"
-
-#: prefs.js:1302
+#: prefs.js:1338
 msgid "Show all Applications"
 msgstr "Tüm Uygulamaları Göster"
 
-#: prefs.js:1303
+#: prefs.js:1339
 msgid "GNOME Terminal"
 msgstr "GNOME Uçbirimi"
 
-#: prefs.js:1304
+#: prefs.js:1340
 msgid "GNOME System Monitor"
 msgstr "GNOME Sistem Gözlemcisi"
 
-#: prefs.js:1305
+#: prefs.js:1341
 msgid "GNOME Calculator"
 msgstr "GNOME Hesap Makinesi"
 
-#: prefs.js:1306
+#: prefs.js:1342
 msgid "GNOME gedit"
 msgstr "GNOME gedit"
 
-#: prefs.js:1307
+#: prefs.js:1343
 msgid "GNOME Screenshot"
 msgstr "GNOME Ekran Görüntüsü"
 
-#: prefs.js:1308
+#: prefs.js:1344
 msgid "GNOME Weather"
 msgstr "GNOME Hava Durumu"
 
-#: prefs.js:1333
+#: prefs.js:1369
 msgid "Terminal Command"
 msgstr "Uç Birim Komutu"
 
-#: prefs.js:1339
-msgid "Set a custom terminal command to launch on active hot corner"
-msgstr "Etkin sıcak köşede başlatmak için özel bir uçbirim komutu ayarla"
-
-#: prefs.js:1361
-msgid "Apply changes and set new hot corner action"
-msgstr "Değişiklikleri uygula ve yeni sıcak köşe eylemi ata"
-
-#: prefs.js:1425
+#: prefs.js:1465
 msgid "Set Custom Hotkey"
 msgstr "Özel Kısayol Ata"
 
-#: prefs.js:1433
+#: prefs.js:1489
 msgid "Choose Modifiers"
 msgstr "Düzenleyicileri Seç"
 
-#: prefs.js:1449
+#: prefs.js:1505
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: prefs.js:1452
+#: prefs.js:1508
 msgid "Super"
 msgstr "Super"
 
-#: prefs.js:1455
+#: prefs.js:1511
 msgid "Shift"
 msgstr "Shift"
 
-#: prefs.js:1458
+#: prefs.js:1514
 msgid "Alt"
 msgstr "Alt"
 
-#: prefs.js:1509
+#: prefs.js:1565
 msgid "Press any key"
 msgstr "Bir tuşa basın"
 
-#: prefs.js:1528
+#: prefs.js:1584
 msgid "New Hotkey"
 msgstr "Yeni Kısayol"
 
-#: prefs.js:1606
+#: prefs.js:1662
 msgid "Menu Button Appearance"
 msgstr "Menü Düğmesi Görünümü"
 
-#: prefs.js:1616
+#: prefs.js:1672
 msgid "Appearance"
 msgstr "Görünüm"
 
-#: prefs.js:1622 prefs.js:1777
+#: prefs.js:1678 prefs.js:1798
 msgid "Icon"
 msgstr "Simge"
 
-#: prefs.js:1623 prefs.js:1725
+#: prefs.js:1679 prefs.js:1767
 msgid "Text"
 msgstr "Metin"
 
-#: prefs.js:1624
+#: prefs.js:1680
 msgid "Icon and Text"
 msgstr "Simge ve Metin"
 
-#: prefs.js:1625
+#: prefs.js:1681
 msgid "Text and Icon"
 msgstr "Metin ve Simge"
 
-#: prefs.js:1626
+#: prefs.js:1682
 msgid "Hidden"
 msgstr "Gizli"
 
-#: prefs.js:1656
+#: prefs.js:1711
 msgid "Show Arrow"
 msgstr "Ok Göster"
 
-#: prefs.js:1676
+#: prefs.js:1731
 msgid "Menu Button Padding"
 msgstr "Menü Düğmesi Dolgusu"
 
-#: prefs.js:1697
+#: prefs.js:1752 menulayouts/tweaks/tweaks.js:541
+#: menulayouts/tweaks/tweaks.js:572 menulayouts/tweaks/tweaks.js:605
 msgid "Default"
 msgstr "Öntanımlı"
 
-#: prefs.js:1708
-msgid "Change the padding of the Menu Button"
-msgstr "Menü Düğmesinin dolgusunu değiştir"
-
-#: prefs.js:1709
-msgid ""
-"You may need to hover over the Menu Button for the changes to take effect."
-msgstr ""
-"Değişikliklerin etkili olması için Menü Düğmesinin üzerine gelmeniz "
-"gerekebilir."
-
-#: prefs.js:1747
-msgid "Restore Activities Button"
-msgstr "Etkinlikler Düğmesini Geri Yükle"
-
-#: prefs.js:1755 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:397
-msgid "Restore Activities Button in panel"
-msgstr "Panelde Etkinlikler Düğmesini geri yükle"
-
-#: prefs.js:1767
+#: prefs.js:1788
 msgid "Icon Appearance"
 msgstr "Simge Görünümü"
 
-#: prefs.js:1784
+#: prefs.js:1805
 msgid "Browse Icons"
 msgstr "Simgelere Göz At"
 
-#: prefs.js:1787
-msgid "Choose from a variety of icons"
-msgstr "Çeşitli simgeler arasından seçim yapın"
-
-#: prefs.js:1805
+#: prefs.js:1826
 msgid "Icon Size"
 msgstr "Simge Boyutu"
 
-#: prefs.js:1839 prefs.js:3070 prefs.js:3403 prefs.js:3492 prefs.js:4446
-#: prefs.js:4592 prefs.js:4818 menulayouts/tweaks/tweaks.js:300
+#: prefs.js:1860 prefs.js:3140 prefs.js:3523 prefs.js:3624 prefs.js:4574
+#: prefs.js:4722 prefs.js:4954 prefs.js:5181 menulayouts/tweaks/tweaks.js:399
 msgid "Restore Defaults"
 msgstr "Öntanımlıları Geri Yükle"
 
-#: prefs.js:1840 prefs.js:3071 prefs.js:3404 prefs.js:3493 prefs.js:4447
-#: prefs.js:4593 prefs.js:4819 menulayouts/tweaks/tweaks.js:301
-msgid "Restore the default settings on this page"
-msgstr "Bu sayfadaki öntanımlı ayarları geri yükle"
-
-#: prefs.js:1848
+#: prefs.js:1868
 msgid "Menu Button Styling"
 msgstr "Menü Düğme Biçimi"
 
-#: prefs.js:1859
+#: prefs.js:1879
 msgid "Color"
 msgstr "Renk"
 
-#: prefs.js:1866
+#: prefs.js:1886
 msgid "Hover Color"
 msgstr "Üzerine Gelindiğinde Renk"
 
-#: prefs.js:1873
+#: prefs.js:1893
 msgid "Active Color"
 msgstr "Etkin Renk"
 
-#: prefs.js:1880
+#: prefs.js:1900
 msgid "Hover Background Color"
 msgstr "Üzerine Gelindiğinde Arkaplan Rengi"
 
-#: prefs.js:1887
+#: prefs.js:1907
 msgid "Active Background Color"
 msgstr "Arka Plan Rengini Etkinleştir"
 
-#: prefs.js:1894
+#: prefs.js:1914
 msgid "Disable Active Indicator"
 msgstr "Etkin Göstergeleri Devre Dışı Bırak"
 
-#: prefs.js:1980
-msgid "Override Theme Color"
-msgstr "Tema Rengini Geçersiz Kıl"
-
-#: prefs.js:2044 prefs.js:2180
+#: prefs.js:2062 prefs.js:2198
 msgid "ArcMenu Icons"
 msgstr "ArcMenu Simgeleri"
 
-#: prefs.js:2126
+#: prefs.js:2150
 msgid "Browse for a Custom Icon"
 msgstr "Özel Simge Arayın"
 
-#: prefs.js:2181
+#: prefs.js:2199
 msgid "Distro Icons"
 msgstr "Dağıtım Simgeleri"
 
-#: prefs.js:2182
+#: prefs.js:2200
 msgid "Custom Icon"
 msgstr "Özel Simge"
 
-#: prefs.js:2247
+#: prefs.js:2265
 msgid "Legal disclaimer for Distro Icons..."
 msgstr "Dağıtım Simgeleri için yasal sorumluluk reddi ..."
 
-#: prefs.js:2329
+#: prefs.js:2347
 msgid "Current Menu Layout"
 msgstr "Geçerli Menü Düzeni"
 
-#: prefs.js:2335
-msgid "Choose New Layout"
-msgstr "Yeni Düzen Seç"
+#: prefs.js:2353
+#, fuzzy
+msgid "Available Menu Layouts"
+msgstr "Menü Düzeni"
 
-#: prefs.js:2368
-msgid "Tweaks for the current menu layout"
-msgstr "Geçerli menü düzeni için ince ayarlar"
+#: prefs.js:2482
+#, javascript-format
+msgid "%s Layout Tweaks"
+msgstr ""
 
-#: prefs.js:2502
+#: prefs.js:2540
 msgid "Enable Custom Menu Theme"
 msgstr "Özel Menü Temasını Etkinleştir"
 
-#: prefs.js:2512
+#: prefs.js:2550
 msgid "Override Menu Theme"
 msgstr "Menü Temasını Geçersiz Kıl"
 
-#: prefs.js:2520
-msgid "Override the ArcMenu extension theme"
-msgstr "ArcMenu uzantı temasını geçersiz kıl"
-
-#: prefs.js:2666
-msgid "Menu Layouts"
+#: prefs.js:2712 prefsWidgets.js:789
+#, fuzzy, javascript-format
+msgid "%s Menu Layouts"
 msgstr "Menü Düzeni"
 
-#: prefs.js:2752 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:307
+#: prefs.js:2803 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:369
 msgid "Menu Height"
 msgstr "Menü Yüksekliği"
 
-#: prefs.js:2767
-msgid "Adjust the menu height"
-msgstr "Menü yüksekliğini ayarla"
-
-#: prefs.js:2767 prefs.js:2815 prefs.js:2861 prefs.js:2908 prefs.js:2930
-#: prefs.js:2979 prefs.js:3178
-msgid "Certain menu layouts only"
-msgstr "Yalnızca belirli menü düzenleri"
-
-#: prefs.js:2806
+#: prefs.js:2856
 msgid "Left-Panel Width"
 msgstr "Sol Panel Genişliği"
 
-#: prefs.js:2815
-msgid "Adjust the left-panel width"
-msgstr "Sol panel genişliğini ayarla"
-
-#: prefs.js:2852
+#: prefs.js:2901
 msgid "Right-Panel Width"
 msgstr "Sağ Panel Genişliği"
 
-#: prefs.js:2861
-msgid "Adjust the right-panel width"
-msgstr "Sağ panel genişliğini ayarla"
+#: prefs.js:2948
+#, fuzzy
+msgid "Override Menu Location"
+msgstr "Menü Temasını Geçersiz Kıl"
 
-#: prefs.js:2900
+#: prefs.js:2957
+msgid "Off"
+msgstr ""
+
+#: prefs.js:2958
+#, fuzzy
+msgid "Top Centered"
+msgstr "Ortalanmış"
+
+#: prefs.js:2959
+#, fuzzy
+msgid "Bottom Centered"
+msgstr "Ortalanmış"
+
+#: prefs.js:2974
 msgid "Large Application Icons"
 msgstr "Büyük Uygulama Simgeleri"
 
-#: prefs.js:2908
-msgid "Enable large application icons"
-msgstr "Büyük uygulama simgelerini etkinleştir"
-
-#: prefs.js:2922
+#: prefs.js:2995
 msgid "Category Sub Menus"
 msgstr "Kategori Alt Menüleri"
 
-#: prefs.js:2930
-msgid "Show nested menus in categories"
-msgstr "İç içe menüleri kategorilerde göster"
-
-#: prefs.js:2946
+#: prefs.js:3018
 msgid "Disable Tooltips"
 msgstr "Araç İpuçlarını Devre Dışı Bırak"
 
-#: prefs.js:2954
-msgid "Disable all tooltips in ArcMenu"
-msgstr "ArcMenu'deki tüm araç ipuçlarını devre dışı bırak"
-
-#: prefs.js:2971 prefs.js:4398
+#: prefs.js:3042 prefs.js:4522
 msgid "Enable Vertical Separator"
 msgstr "Dikey Ayırıcıyı Etkinleştir"
 
-#: prefs.js:2979
-msgid "Enable a Vertical Separator"
-msgstr "Dikey Ayırıcıyı Etkinleştir"
-
-#: prefs.js:2993 prefs.js:4420
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:252
+#: prefs.js:3063 prefs.js:4544
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:314
 msgid "Separator Color"
 msgstr "Ayırıcı Rengi"
 
-#: prefs.js:3001
-msgid "Change the color of all separators"
-msgstr "Tüm ayırıcıların rengini değiştir"
-
-#: prefs.js:3019 prefs.js:3027
+#: prefs.js:3088
 msgid "Disable Recently Installed Apps Indicator"
 msgstr "Son Yüklenen Uygulamalar Göstergesini Devre Dışı Bırak"
 
-#: prefs.js:3042
+#: prefs.js:3110
 msgid "Clear all Applications Marked \"New\""
 msgstr "\"Yeni\" olarak işaretlenmiş tüm Uygulamaları temizle"
 
-#: prefs.js:3050
+#: prefs.js:3118
 msgid "Clear All"
 msgstr "Tümünü Temizle"
 
-#: prefs.js:3051
-msgid "Clear all applications marked \"New\""
-msgstr "\"Yeni\" olarak işaretlenmiş tüm uygulamaları temizle"
-
-#: prefs.js:3170
+#: prefs.js:3250
 msgid "Disable Category Arrows"
 msgstr "Kategori Oklarını Devre Dışı Bırak"
 
-#: prefs.js:3178
-msgid "Disable the arrow on category menu items"
-msgstr "Kategori menüsü ögelerindeki oku devre dışı bırak"
-
-#: prefs.js:3194
+#: prefs.js:3273
 msgid "Disable Searchbox Border"
 msgstr "Arama Kutusu Kenarlığını Devre Dışı Bırak"
 
-#: prefs.js:3202
-msgid "Disable the border on the searchbox"
-msgstr "Arama kutusundaki kenarlığı devre dışı bırak"
-
-#: prefs.js:3218 menulayouts/tweaks/tweaks.js:475
+#: prefs.js:3296
 msgid "Disable Menu Arrow"
 msgstr "Menü Okunu Devre Dışı Bırak"
 
-#: prefs.js:3226 menulayouts/tweaks/tweaks.js:483
-msgid "Disable current theme menu arrow pointer"
-msgstr "Geçerli tema menüsü ok işaretçisini devre dışı bırak"
+#: prefs.js:3319
+msgid "Disable ScrollView Fade Effects"
+msgstr ""
 
-#: prefs.js:3242
+#: prefs.js:3342
+#, fuzzy
+msgid "Search Results - Show Descriptions"
+msgstr "Plasma Menü Açıklamaları Göster"
+
+#: prefs.js:3362
 msgid "Alphabetize 'All Programs' Category"
 msgstr "'Tüm Programlar' Kategorisini Alfabetik Yap"
 
-#: prefs.js:3262 prefs.js:3279
+#: prefs.js:3382 prefs.js:3399
 msgid "Multi-Lined Labels"
 msgstr "Çok Satırlı Etiketler"
 
-#: prefs.js:3280
+#: prefs.js:3400
 msgid "Enable/Disable multi-lined labels on large application icon layouts."
 msgstr ""
 "Büyük uygulama simgesi düzenlerinde çok satırlı etiketleri etkinleştir/devre "
 "dışı bırak."
 
-#: prefs.js:3296
+#: prefs.js:3416
 msgid "Recently Installed Application Indicators"
 msgstr "Son Yüklenen Uygulama Göstergeleri"
 
-#: prefs.js:3307
+#: prefs.js:3427
 msgid "Category Indicator Color"
 msgstr "Kategori Gösterge Rengi"
 
-#: prefs.js:3315
-msgid ""
-"Change the color of the 'recently installed application' category indicator"
-msgstr "'Son yüklenen uygulama' kategori göstergesinin rengini değiştirme"
-
-#: prefs.js:3331
+#: prefs.js:3450
 msgid "Application Indicator Label Color"
 msgstr "Uygulama Göstergesi Etiket Rengi"
 
-#: prefs.js:3339
-msgid ""
-"Change the background color of the 'recently installed application' "
-"indicator label"
-msgstr "'Son yüklenen uygulama' gösterge etiketinin arka plan rengini değiştir"
-
-#: prefs.js:3357 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:322
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:323
+#: prefs.js:3475 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:384
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:385
 msgid "Gap Adjustment"
 msgstr "Boşluk Ayarlama"
 
-#: prefs.js:3369 prefs.js:3384
+#: prefs.js:3501
 msgid "Offset ArcMenu by 1px"
 msgstr "ArcMenu'yu 1 piksel kaydır"
 
-#: prefs.js:3369 prefs.js:3385
+#: prefs.js:3502
 msgid "Useful if you notice a 1px gap or overlap between ArcMenu and the panel"
 msgstr ""
 "ArcMenu ile panel arasında 1 piksellik bir boşluk veya örtüşme fark "
 "ederseniz faydalıdır"
 
-#: prefs.js:3590 prefsWidgets.js:410
-msgid "Enable/Disble"
-msgstr "Aktif/Pasif"
-
-#: prefs.js:3617
+#: prefs.js:3750
 msgid "Color Theme Name"
 msgstr "Renk Teması Adı"
 
-#: prefs.js:3623
+#: prefs.js:3756
 msgid "Name:"
 msgstr "Ad:"
 
-#: prefs.js:3647
+#: prefs.js:3780
 msgid "Save Theme"
 msgstr "Temayı Kaydet"
 
-#: prefs.js:3671
+#: prefs.js:3804
 msgid "Select Themes to Import"
 msgstr "İçe Aktarılacak Temaları Seç"
 
-#: prefs.js:3671
+#: prefs.js:3804
 msgid "Select Themes to Export"
 msgstr "Dışa Aktarılacak Temaları Seç"
 
-#: prefs.js:3687
+#: prefs.js:3820
 msgid "Import"
 msgstr "İçe Aktar"
 
-#: prefs.js:3687
+#: prefs.js:3820
 msgid "Export"
 msgstr "Dışa Aktar"
 
-#: prefs.js:3716
+#: prefs.js:3849
 msgid "Select All"
 msgstr "Tümünü Seç"
 
-#: prefs.js:3783 prefs.js:4068
+#: prefs.js:3916 prefs.js:4192
 msgid "Manage Presets"
 msgstr "Önayarları Yönet"
 
-#: prefs.js:3947 prefs.js:5296
+#: prefs.js:4077 prefs.js:5419
 msgid "Menu Theme Presets"
 msgstr "Menü Teması Önayarları"
 
-#: prefs.js:3957
+#: prefs.js:4087
 msgid "Current Menu Theme Preset"
 msgstr "Geçerli Menü Tema Önayarı"
 
-#: prefs.js:3977
+#: prefs.js:4107
 msgid "Save as Preset"
 msgstr "Önayar Olarak Kaydet"
 
-#: prefs.js:4090
+#: prefs.js:4208
 msgid "Browse Presets"
 msgstr "Önayarlara Göz At"
 
-#: prefs.js:4135
+#: prefs.js:4257
 msgid "Theme Settings"
 msgstr "Tema Ayarları"
 
-#: prefs.js:4153 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:257
+#: prefs.js:4277 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:319
 msgid "Menu Background Color"
 msgstr "Menü Arkaplan Rengi"
 
-#: prefs.js:4175 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:262
+#: prefs.js:4299 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:324
 msgid "Menu Foreground Color"
 msgstr "Menü Ön Plan Rengi"
 
-#: prefs.js:4196
+#: prefs.js:4320 menulayouts/tweaks/tweaks.js:584
 msgid "Font Size"
 msgstr "Yazı Tipi Boyutu"
 
-#: prefs.js:4224 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:267
+#: prefs.js:4348 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:329
 msgid "Border Color"
 msgstr "Kenarlık Rengi"
 
-#: prefs.js:4246
+#: prefs.js:4370
 msgid "Border Size"
 msgstr "Kenarlık Boyutu"
 
-#: prefs.js:4273
+#: prefs.js:4397
 msgid "Active Item Background Color"
 msgstr "Etkin Öge Arka Plan Rengi"
 
-#: prefs.js:4295
+#: prefs.js:4419
 msgid "Active Item Foreground Color"
 msgstr "Etkin Öge Ön Plan Rengi"
 
-#: prefs.js:4317
+#: prefs.js:4441
 msgid "Corner Radius"
 msgstr "Köşe Çapı"
 
-#: prefs.js:4344
+#: prefs.js:4468
 msgid "Menu Arrow Size"
 msgstr "Menü Ok Boyutu"
 
-#: prefs.js:4371
+#: prefs.js:4495
 msgid "Menu Displacement"
 msgstr "Menü Kaydırımı"
 
-#: prefs.js:4606
+#: prefs.js:4735
 msgid "Add Default User Directories"
 msgstr "Öntanımlı Kullanıcı Dizinlerini Ekle"
 
-#: prefs.js:4613
-msgid ""
-"Browse a list of all default User Directories to add to your Directories "
-"Shortcuts"
-msgstr ""
-"Dizin Kısayollarınıza eklemek için tüm öntanımlı Kullanıcı Dizinlerinin "
-"listesine göz atın"
-
-#: prefs.js:4649
-msgid "Create a custom shortcut to add to your Directories Shortcuts"
-msgstr "Dizinler Kısayollarına eklemek için özel kısayol oluştur"
-
-#: prefs.js:4839
-msgid "Browse a list of all applications to add to your Application Shortcuts"
-msgstr ""
-"Uygulama Kısayollarınıza eklemek için tüm uygulamalar listesine göz atın"
-
-#: prefs.js:4875
-msgid "Create a custom shortcut to add to your Application Shortcuts"
-msgstr "Uygulama Kısayollarına eklemek için özel kısayol oluştur"
-
-#: prefs.js:5151
-msgid "External Devices"
-msgstr "Harici Aygıtlar"
-
-#: prefs.js:5157
-msgid "Show all connected external devices in ArcMenu"
-msgstr "ArcMenu'da bağlı tüm harici cihazları göster"
-
-#: prefs.js:5170 menulayouts/plasma.js:291 menulayouts/windows.js:192
-msgid "Bookmarks"
-msgstr "Yer İmleri"
-
-#: prefs.js:5176
-msgid "Show all Nautilus bookmarks in ArcMenu"
-msgstr "ArcMenu'da tüm Nautilus yer imlerini göster"
-
-#: prefs.js:5193 prefs.js:5829
-msgid "Misc"
-msgstr "Çeşitli"
-
-#: prefs.js:5197
+#: prefs.js:5322
 msgid "Export or Import Settings"
 msgstr "Ayarları Dışa veya İçe Aktar"
 
-#: prefs.js:5207
+#: prefs.js:5332
 msgid "All ArcMenu Settings"
 msgstr "Tüm ArcMenu Ayarları"
 
-#: prefs.js:5218
+#: prefs.js:5343
 msgid "Export or Import All ArcMenu Settings"
 msgstr "Tüm ArcMenu Ayarlarını Dışa veya İçe Aktar"
 
-#: prefs.js:5219
+#: prefs.js:5344
 msgid ""
 "Importing settings from file may replace ALL saved settings.\n"
 "This includes all saved pinned apps."
@@ -1414,451 +1148,516 @@ msgstr ""
 "Ayarları dosyadan içe aktarmak TÜM kayıtlı ayarlarınızı değiştirebilir.\n"
 "Buna tüm kayıtlı sık kullanılanlara eklenmiş uygulamalar da dahildir."
 
-#: prefs.js:5229
+#: prefs.js:5354
 msgid "Import from File"
 msgstr "Dosyadan İçe Aktar"
 
-#: prefs.js:5232
-msgid "Import ArcMenu settings from a file"
-msgstr "ArcMenu ayarlarını dosyadan içe aktar"
-
-#: prefs.js:5236
+#: prefs.js:5360
 msgid "Import settings"
 msgstr "İçe aktarma ayarları"
 
-#: prefs.js:5265
+#: prefs.js:5389
 msgid "Export to File"
 msgstr "Dosyaya Dışa Aktar"
 
-#: prefs.js:5268
-msgid "Export and save all your ArcMenu settings to a file"
-msgstr "Tüm ArcMenu ayarlarınızı dışa aktarın ve dosyaya kaydedin"
-
-#: prefs.js:5272
+#: prefs.js:5395
 msgid "Export settings"
 msgstr "Ayarları dışa aktar"
 
-#: prefs.js:5307
+#: prefs.js:5430
 msgid "Export or Import Menu Theme Presets"
 msgstr "Menü Teması Önayarlarını Dışa veya İçe Aktar"
 
-#: prefs.js:5308
+#: prefs.js:5431
 msgid "Menu theme presets are located in the \"Menu Theme\" section"
 msgstr "Menü teması önayarları \"Menü Teması\" bölümünde bulunur"
 
-#: prefs.js:5318 prefs.js:5325
+#: prefs.js:5441 prefs.js:5447
 msgid "Import Theme Preset"
 msgstr "Tema Önayarlarını İçe Aktar"
 
-#: prefs.js:5321
-msgid "Import ArcMenu Theme Presets from a file"
-msgstr "ArcMenu Tema Önayarlarını dosyadan içe aktar"
-
-#: prefs.js:5361 prefs.js:5373
+#: prefs.js:5483 prefs.js:5494
 msgid "Export Theme Preset"
 msgstr "Tema Önayarlarını Dışa Aktar"
 
-#: prefs.js:5364
-msgid "Export and save your ArcMenu Theme Presets to a file"
-msgstr "ArcMenu Tema Önyarlarınızı dışa aktarın ve dosyaya kaydedin"
+#: prefs.js:5526
+#, fuzzy
+msgid "ArcMenu Settings Window Size"
+msgstr "ArcMenu Ayarları"
 
-#: prefs.js:5409
+#: prefs.js:5536
+msgid "Window Width"
+msgstr ""
+
+#: prefs.js:5560
+#, fuzzy
+msgid "Window Height"
+msgstr "Menü Yüksekliği"
+
+#: prefs.js:5589
 msgid "Reset all Settings"
 msgstr "Tüm Ayarları Sıfırla"
 
-#: prefs.js:5410
-msgid "Reset all ArcMenu Settings to Default"
-msgstr "Tüm ArcMenu Ayarlarınızı Öntanımlılara Sıfırla"
-
-#: prefs.js:5416
+#: prefs.js:5595
 msgid "Restore Default Settings?"
 msgstr "Öntanımlı Ayarlar Geri Yüklensin Mi?"
 
-#: prefs.js:5416
+#: prefs.js:5595
 msgid "All ArcMenu settings will be reset to the default value."
 msgstr "Tüm ArcMenu ayarları öntanımlı değerlere sıfırlanır."
 
-#: prefs.js:5524
+#: prefs.js:5704
 msgid "ArcMenu Version"
 msgstr "ArcMenu Sürümü"
 
-#: prefs.js:5541
+#: prefs.js:5721
 msgid "Git Commit"
 msgstr "Git Değişiklik"
 
-#: prefs.js:5561
+#: prefs.js:5741
 msgid "GNOME Version"
 msgstr "GNOME Sürümü"
 
-#: prefs.js:5579
+#: prefs.js:5759
 msgid "OS"
 msgstr "İşletim Sistemi"
 
-#: prefs.js:5611
+#: prefs.js:5791
 msgid "Session Type"
 msgstr "Oturum Türü"
 
-#: prefs.js:5643
-msgid "A Dynamic, Traditional, Modern Menu for GNOME"
+#: prefs.js:5823
+#, fuzzy
+msgid "Application Menu Extension for GNOME"
 msgstr "GNOME için Dinamik, Geleneksel, Modern Menü"
 
-#: prefs.js:5667
-msgid "Donate to the ArcMenu Project"
-msgstr "ArcMenü Projesine Bağışta Bulun"
-
-#: prefs.js:5677
-msgid "ArcMenu GitLab Page"
-msgstr "ArcMenu GitLab Sayfası"
-
-#: prefs.js:5691
+#: prefs.js:5872
 msgid "Maintainers"
 msgstr "Bakımcılar"
 
-#: prefs.js:5693
+#: prefs.js:5874
 msgid "Developers"
 msgstr "Geliştiriciler"
 
-#: prefs.js:5695
+#: prefs.js:5876
 msgid "Translators"
 msgstr "Çevirmenler"
 
-#: prefs.js:5697
+#: prefs.js:5878
 msgid "Contributors"
 msgstr "Katkıda Bulunanlar"
 
-#: prefs.js:5699
+#: prefs.js:5880
 msgid "Artwork"
 msgstr "Grafikler"
 
-#: prefs.js:5825 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:88
+#: prefs.js:5999
+msgid "General"
+msgstr "Genel"
+
+#: prefs.js:6000 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:95
 msgid "Menu Layout"
 msgstr "Menü Düzeni"
 
-#: prefs.js:5826
+#: prefs.js:6001
 msgid "Menu Theme"
 msgstr "Menü Teması"
 
-#: prefs.js:5827 prefs.js:5835
+#: prefs.js:6002
+#, fuzzy
+msgid "Customize Menu"
+msgstr "tognee Menü"
+
+#: prefs.js:6004
+msgid "Misc"
+msgstr "Çeşitli"
+
+#: prefs.js:6010
 msgid "Menu Settings"
 msgstr "Menü Ayarları"
 
-#: prefs.js:5828
-msgid "Button Appearance"
-msgstr "Düğme Görünümü"
+#: prefs.js:6012
+#, fuzzy
+msgid "Directory Shortcuts"
+msgstr "Dizin Kısayollarını Seç"
 
-#: prefs.js:5830
-msgid "About"
-msgstr "Hakkında"
+#: prefs.js:6013 menulayouts/plasma.js:305 menulayouts/windows.js:289
+msgid "Application Shortcuts"
+msgstr "Uygulama Kısayolları"
 
-#: prefs.js:5837 menulayouts/raven.js:329 menulayouts/ubuntudash.js:452
-msgid "Shortcuts"
-msgstr "Kısayollar"
+#: prefs.js:6014 schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:419
+#, fuzzy
+msgid "Power Options"
+msgstr "Kısayol Seçenekleri"
 
-#: prefs.js:5839
+#: prefs.js:6015
+#, fuzzy
+msgid "Extra Categories"
+msgstr "Kategoriler"
+
+#: prefs.js:6016
 msgid "Fine-Tune"
 msgstr "İnce Ayar"
 
-#: prefs.js:5844
-msgid "Directories"
-msgstr "Dizinler"
-
-#: prefs.js:5846
-msgid "Session Buttons"
-msgstr "Oturum Düğmeleri"
-
-#: prefs.js:5847
-msgid "Extra Shortcuts"
-msgstr "İlave Kısayollar"
-
-#: prefs.js:5927
+#: prefs.js:6134
 msgid "Error - Invalid Shortcut"
 msgstr "Hata - Geçersiz Kısayol"
 
-#: prefs.js:5928
+#: prefs.js:6135
 msgid "Invalid Shortcut"
 msgstr "Geçersiz Kısayol"
 
-#: prefsWidgets.js:470
+#: prefsWidgets.js:496
 msgid "Modify"
 msgstr "Değiştir"
 
-#: prefsWidgets.js:482
-msgid "Change"
-msgstr "Değiştir"
-
-#: prefsWidgets.js:509
+#: prefsWidgets.js:534
 msgid "Move Up"
 msgstr "Yukarı Taşı"
 
-#: prefsWidgets.js:525
+#: prefsWidgets.js:550
 msgid "Move Down"
 msgstr "Aşagı Taşı"
 
-#: prefsWidgets.js:542
+#: prefsWidgets.js:567
 msgid "Delete"
 msgstr "Sil"
 
-#: search.js:858
+#: search.js:664
 msgid "Searching..."
 msgstr "Aranıyor..."
 
-#: search.js:860
+#: search.js:666
 msgid "No results."
 msgstr "Sonuç yok."
 
-#: search.js:1037
+#: search.js:799
 #, javascript-format
 msgid "%d more"
 msgid_plural "%d more"
 msgstr[0] "%d daha"
 msgstr[1] "%d daha"
 
-#: menulayouts/arcmenu.js:191 menulayouts/baseMenuLayout.js:464
-#: menulayouts/baseMenuLayout.js:466 menulayouts/mint.js:226
-#: menulayouts/plasma.js:180 menulayouts/raven.js:178
-#: menulayouts/redmond.js:174 menulayouts/tognee.js:155
+#: menulayouts/arcmenu.js:196 menulayouts/baseMenuLayout.js:486
+#: menulayouts/mint.js:228 menulayouts/plasma.js:186 menulayouts/raven.js:171
+#: menulayouts/redmond.js:167 menulayouts/tognee.js:152
 #: menulayouts/ubuntudash.js:196 menulayouts/ubuntudash.js:240
-#: menulayouts/windows.js:146
+#: menulayouts/unity.js:190 menulayouts/unity.js:233 menulayouts/windows.js:148
 msgid "Software"
 msgstr "Yazılım"
 
-#: menulayouts/arcmenu.js:191 menulayouts/plasma.js:180
-#: menulayouts/raven.js:178 menulayouts/redmond.js:174
-#: menulayouts/tognee.js:155 menulayouts/ubuntudash.js:196
-#: menulayouts/windows.js:146
+#: menulayouts/arcmenu.js:196 menulayouts/plasma.js:186
+#: menulayouts/raven.js:171 menulayouts/redmond.js:167
+#: menulayouts/tognee.js:152 menulayouts/ubuntudash.js:196
+#: menulayouts/unity.js:190 menulayouts/windows.js:148
 msgid "Tweaks"
 msgstr "İnce Ayarlar"
 
-#: menulayouts/baseMenuLayout.js:396 menulayouts/insider.js:70
-#: menulayouts/insider.js:213 menulayouts/mint.js:228
-#: menulayouts/ubuntudash.js:235 menulayouts/windows.js:71
+#: menulayouts/baseMenuLayout.js:428 menulayouts/eleven.js:163
+#: menulayouts/insider.js:73 menulayouts/mint.js:230
+#: menulayouts/ubuntudash.js:235 menulayouts/unity.js:228
+#: menulayouts/windows.js:75
 msgid "Documents"
 msgstr "Belgeler"
 
-#: menulayouts/baseMenuLayout.js:396 menulayouts/ubuntudash.js:236
+#: menulayouts/baseMenuLayout.js:428 menulayouts/eleven.js:156
+#: menulayouts/ubuntudash.js:236 menulayouts/unity.js:229
 msgid "Downloads"
 msgstr "İndirilenler"
 
-#: menulayouts/baseMenuLayout.js:396
+#: menulayouts/baseMenuLayout.js:428
 msgid "Music"
 msgstr "Müzik"
 
-#: menulayouts/baseMenuLayout.js:396
+#: menulayouts/baseMenuLayout.js:428
 msgid "Pictures"
 msgstr "Resimler"
 
-#: menulayouts/baseMenuLayout.js:396
+#: menulayouts/baseMenuLayout.js:428
 msgid "Videos"
 msgstr "Videolar"
 
-#: menulayouts/mint.js:230 menulayouts/ubuntudash.js:244
+#: menulayouts/launcher.js:130
+msgid "More"
+msgstr ""
+
+#: menulayouts/launcher.js:161
+#, fuzzy
+msgid "All"
+msgstr "Alt"
+
+#: menulayouts/launcher.js:298 menulayouts/launcher.js:361
+#, fuzzy
+msgid "Search"
+msgstr "Aranıyor..."
+
+#: menulayouts/mint.js:232 menulayouts/ubuntudash.js:244
+#: menulayouts/unity.js:237
 msgid "Files"
 msgstr "Dosyalar"
 
-#: menulayouts/plasma.js:276 menulayouts/windows.js:331
-msgid "Application Shortcuts"
-msgstr "Uygulama Kısayolları"
-
-#: menulayouts/plasma.js:280 menulayouts/windows.js:335
+#: menulayouts/plasma.js:309 menulayouts/windows.js:293
 msgid "Places"
 msgstr "Yerler"
 
-#: menulayouts/plasma.js:299 menulayouts/windows.js:200
+#: menulayouts/plasma.js:320 menulayouts/windows.js:198
+#: menulayouts/tweaks/tweaks.js:1012 menulayouts/tweaks/tweaks.js:1143
+msgid "Bookmarks"
+msgstr "Yer İmleri"
+
+#: menulayouts/plasma.js:328 menulayouts/windows.js:206
 msgid "Devices"
 msgstr "Aygıtlar"
 
-#: menulayouts/plasma.js:341 menulayouts/windows.js:247
-msgid "Session"
-msgstr "Oturum"
+#: menulayouts/raven.js:268 menulayouts/ubuntudash.js:452
+#: menulayouts/unity.js:402
+msgid "Shortcuts"
+msgstr "Kısayollar"
 
-#: menulayouts/plasma.js:350 menulayouts/windows.js:256
-msgid "System"
-msgstr "Sistem"
-
-#: menulayouts/plasma.js:357 menulayouts/windows.js:262
-msgid "Restart..."
-msgstr "Yeniden Başlat..."
-
-#: menulayouts/plasma.js:361 menulayouts/windows.js:266
-msgid "Power Off..."
-msgstr "Gücü Kapat..."
-
-#: menulayouts/windows.js:433
+#: menulayouts/windows.js:383
 msgid "Frequent"
 msgstr "Sık Kullanılanlar"
 
-#: menulayouts/tweaks/tweaks.js:87
+#: menulayouts/tweaks/tweaks.js:149
 msgid "Category Activation"
 msgstr "Kategori Etkinleştirme"
 
-#: menulayouts/tweaks/tweaks.js:93
+#: menulayouts/tweaks/tweaks.js:155
 msgid "Mouse Click"
 msgstr "Fare Tıklaması"
 
-#: menulayouts/tweaks/tweaks.js:94
+#: menulayouts/tweaks/tweaks.js:156
 msgid "Mouse Hover"
 msgstr "Fareyle Üzerine Gelme"
 
-#: menulayouts/tweaks/tweaks.js:113
+#: menulayouts/tweaks/tweaks.js:175
 msgid "Avatar Icon Shape"
 msgstr "Avatar Simge Şekli"
 
-#: menulayouts/tweaks/tweaks.js:118
+#: menulayouts/tweaks/tweaks.js:180
 msgid "Circular"
 msgstr "Dairesel"
 
-#: menulayouts/tweaks/tweaks.js:119
+#: menulayouts/tweaks/tweaks.js:181
 msgid "Square"
 msgstr "Kare"
 
-#: menulayouts/tweaks/tweaks.js:134 menulayouts/tweaks/tweaks.js:212
+#: menulayouts/tweaks/tweaks.js:196 menulayouts/tweaks/tweaks.js:311
 msgid "Searchbar Location"
 msgstr "Arama Çubuğu Konumu"
 
-#: menulayouts/tweaks/tweaks.js:140 menulayouts/tweaks/tweaks.js:218
+#: menulayouts/tweaks/tweaks.js:202 menulayouts/tweaks/tweaks.js:317
 msgid "Bottom"
 msgstr "Alt"
 
-#: menulayouts/tweaks/tweaks.js:141 menulayouts/tweaks/tweaks.js:219
-#: menulayouts/tweaks/tweaks.js:410
+#: menulayouts/tweaks/tweaks.js:203 menulayouts/tweaks/tweaks.js:318
+#: menulayouts/tweaks/tweaks.js:509
 msgid "Top"
 msgstr "Üst"
 
-#: menulayouts/tweaks/tweaks.js:154
+#: menulayouts/tweaks/tweaks.js:216
 msgid "Flip Layout Horizontally"
 msgstr "Düzeni Yatay Çevir"
 
-#: menulayouts/tweaks/tweaks.js:171
+#: menulayouts/tweaks/tweaks.js:233
 msgid "Disable User Avatar"
 msgstr "Kullanıcı Avatarını Devre Dışı Bırak"
 
-#: menulayouts/tweaks/tweaks.js:189
+#: menulayouts/tweaks/tweaks.js:251
 msgid "Show Applications Grid"
 msgstr "Uygulamalar Izgarasını Göster"
 
-#: menulayouts/tweaks/tweaks.js:231
+#: menulayouts/tweaks/tweaks.js:271
+#, fuzzy
+msgid "Disable Frequent Apps"
+msgstr "Sık Kullanılan Uygulamalar"
+
+#: menulayouts/tweaks/tweaks.js:287
+#, fuzzy
+msgid "Disable Pinned Apps"
+msgstr "Sabitlenmiş Uygulamalar"
+
+#: menulayouts/tweaks/tweaks.js:330
 msgid "Activate on Hover"
 msgstr "Üzerine Gelince Etkinleştir"
 
-#: menulayouts/tweaks/tweaks.js:247
+#: menulayouts/tweaks/tweaks.js:346
 msgid "Show Application Descriptions"
 msgstr "Uygulama Açıklamalarını Göster"
 
-#: menulayouts/tweaks/tweaks.js:263
+#: menulayouts/tweaks/tweaks.js:362
 msgid "Selected Button Border Color"
 msgstr "Seçilen Düğme Kenarlık Rengi"
 
-#: menulayouts/tweaks/tweaks.js:281
+#: menulayouts/tweaks/tweaks.js:380
 msgid "Selected Button Background Color"
 msgstr "Seçili Düğme Arka Plan Rengi"
 
-#: menulayouts/tweaks/tweaks.js:339 menulayouts/tweaks/tweaks.js:504
-#: menulayouts/tweaks/tweaks.js:642
+#: menulayouts/tweaks/tweaks.js:400
+msgid "Restore the default settings on this page"
+msgstr "Bu sayfadaki öntanımlı ayarları geri yükle"
+
+#: menulayouts/tweaks/tweaks.js:438 menulayouts/tweaks/tweaks.js:687
+#: menulayouts/tweaks/tweaks.js:803
 msgid "Save"
 msgstr "Kaydet"
 
-#: menulayouts/tweaks/tweaks.js:358
+#: menulayouts/tweaks/tweaks.js:457
 msgid "Brisk Menu Shortcuts"
 msgstr "Brisk Menü Kısayolları"
 
-#: menulayouts/tweaks/tweaks.js:386
+#: menulayouts/tweaks/tweaks.js:485
 msgid "Enable Activities Overview Shortcut"
 msgstr "Etkinlikler Genel Görünüm Kısayolunu Etkinleştir"
 
-#: menulayouts/tweaks/tweaks.js:405
-msgid "KRunner Position"
+#: menulayouts/tweaks/tweaks.js:504
+#, fuzzy
+msgid "Position"
 msgstr "KRunner Konumu"
 
-#: menulayouts/tweaks/tweaks.js:411
+#: menulayouts/tweaks/tweaks.js:510
 msgid "Centered"
 msgstr "Ortalanmış"
 
-#: menulayouts/tweaks/tweaks.js:422 menulayouts/tweaks/tweaks.js:601
-msgid "Show Extra Large Icons with App Descriptions"
-msgstr "Uygulama Açıklamalarıyla Ekstra Büyük Simgeleri Göster"
+#: menulayouts/tweaks/tweaks.js:521
+msgid "Width"
+msgstr ""
 
-#: menulayouts/tweaks/tweaks.js:446
-msgid "Buttons"
-msgstr "Düğmeler"
+#: menulayouts/tweaks/tweaks.js:552
+#, fuzzy
+msgid "Height"
+msgstr "Sağ"
 
-#: menulayouts/tweaks/tweaks.js:454 menulayouts/tweaks/tweaks.js:580
-#: menulayouts/tweaks/tweaks.js:860 menulayouts/tweaks/tweaks.js:889
+#: menulayouts/tweaks/tweaks.js:616
+#, fuzzy
+msgid "Show Frequent Apps"
+msgstr "Sık Kullanılan Uygulamalar"
+
+#: menulayouts/tweaks/tweaks.js:634
+msgid "Inherit Shell Theme Popup Gap"
+msgstr ""
+
+#: menulayouts/tweaks/tweaks.js:658 menulayouts/tweaks/tweaks.js:763
+#: menulayouts/tweaks/tweaks.js:1067 menulayouts/tweaks/tweaks.js:1094
 msgid "Default Screen"
 msgstr "Öntanımlı Ekran"
 
-#: menulayouts/tweaks/tweaks.js:459 menulayouts/tweaks/tweaks.js:585
+#: menulayouts/tweaks/tweaks.js:663 menulayouts/tweaks/tweaks.js:768
 msgid "Home Screen"
 msgstr "Giriş Ekranı"
 
-#: menulayouts/tweaks/tweaks.js:523
-msgid "Ubuntu Dash Buttons"
+#: menulayouts/tweaks/tweaks.js:706
+#, fuzzy
+msgid "Unity Layout Buttons"
 msgstr "Ubuntu Dash Düğmeleri"
 
-#: menulayouts/tweaks/tweaks.js:532
+#: menulayouts/tweaks/tweaks.js:715
 msgid "Button Separator Position"
 msgstr "Düğme Ayırıcı Korumu"
 
-#: menulayouts/tweaks/tweaks.js:541 menulayouts/tweaks/tweaks.js:673
+#: menulayouts/tweaks/tweaks.js:724 menulayouts/tweaks/tweaks.js:834
 msgid "Separator Position"
 msgstr "Ayırıcı Konumu"
 
-#: menulayouts/tweaks/tweaks.js:562 menulayouts/tweaks/tweaks.js:694
+#: menulayouts/tweaks/tweaks.js:745 menulayouts/tweaks/tweaks.js:855
 msgid "Adjust the position of the separator in the button panel"
 msgstr "Ayırıcının düğme panelindeki konumunu ayarlayın"
 
-#: menulayouts/tweaks/tweaks.js:630
-msgid "Mint Menu Shortcuts"
+#: menulayouts/tweaks/tweaks.js:792
+#, fuzzy
+msgid "Mint Layout Shortcuts"
 msgstr "Mint Menü Kısayolları"
 
-#: menulayouts/tweaks/tweaks.js:664
+#: menulayouts/tweaks/tweaks.js:825
 msgid "Shortcut Separator Position"
 msgstr "Kısayol Ayırıcı Konumu"
 
-#: menulayouts/tweaks/tweaks.js:846
+#: menulayouts/tweaks/tweaks.js:993 menulayouts/tweaks/tweaks.js:1124
+msgid "External Devices"
+msgstr "Harici Aygıtlar"
+
+#: menulayouts/tweaks/tweaks.js:999 menulayouts/tweaks/tweaks.js:1130
+msgid "Show all connected external devices in ArcMenu"
+msgstr "ArcMenu'da bağlı tüm harici cihazları göster"
+
+#: menulayouts/tweaks/tweaks.js:1018 menulayouts/tweaks/tweaks.js:1149
+msgid "Show all Nautilus bookmarks in ArcMenu"
+msgstr "ArcMenu'da tüm Nautilus yer imlerini göster"
+
+#: menulayouts/tweaks/tweaks.js:1030 menulayouts/tweaks/tweaks.js:1161
+msgid "Extra Shortcuts"
+msgstr "İlave Kısayollar"
+
+#: menulayouts/tweaks/tweaks.js:1053
 msgid "Nothing Yet!"
 msgstr "Henüz değil!"
 
-#: menulayouts/tweaks/tweaks.js:867
+#: menulayouts/tweaks/tweaks.js:1074
 msgid "Choose the default screen for tognee Layout"
 msgstr "Tognee Düzeni için öntanımlı ekranı seçin"
 
-#: menulayouts/tweaks/tweaks.js:869 menulayouts/tweaks/tweaks.js:899
+#: menulayouts/tweaks/tweaks.js:1076 menulayouts/tweaks/tweaks.js:1104
 msgid "Categories List"
 msgstr "Kategori Listesi"
 
-#: menulayouts/tweaks/tweaks.js:896
+#: menulayouts/tweaks/tweaks.js:1101
 msgid "Choose the default screen for ArcMenu"
 msgstr "ArcMenu için öntanımlı ekranı seçin"
 
-#: menulayouts/tweaks/tweaks.js:932
+#: menulayouts/tweaks/tweaks.js:1183
 msgid "Enable Weather Widget"
 msgstr "Hava Durumu Parçacığını Etkinleştir"
 
-#: menulayouts/tweaks/tweaks.js:950
+#: menulayouts/tweaks/tweaks.js:1201
 msgid "Enable Clock Widget"
 msgstr "Saat Parçacığını Etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:82
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:89
 msgid "Menu position alignment"
 msgstr "Menü konumu hizalaması"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:83
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:90
 msgid "Menu position alignment 0 = Left, 50 = Center, 100 = Right"
 msgstr "Menü konumu hizalaması 0 = Sol, 50 = Orta, 100 = Sağ"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:87
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:94
 msgid "menu layout"
 msgstr "menü düzeni"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:92
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:99
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:100
+msgid "Force the menu to a specific location"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:104
 msgid "disable hotkey on key release"
 msgstr "tuş bırakıldığında kısayol tuşunu devre dışı bırak"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:93
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:105
 msgid "disable hotkey on key release."
 msgstr "tuş bırakıldığında kısayol tuşunu devre dışı bırak."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:97
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:109
+#, fuzzy
+msgid "ArcMenu Settings Width"
+msgstr "ArcMenu Ayarları"
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:110
+#, fuzzy
+msgid "ArcMenu Settings Width."
+msgstr "ArcMenu Ayarları"
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:114
+#, fuzzy
+msgid "ArcMenu Settings Height"
+msgstr "ArcMenu Ayarları"
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:115
+#, fuzzy
+msgid "ArcMenu Settings Height."
+msgstr "ArcMenu Ayarları"
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:119
 msgid ""
 "Keeps track of available placement for ArcMenu. [Main Panel, Dash to Panel, "
 "Dash to Dock]"
@@ -1866,695 +1665,1128 @@ msgstr ""
 "ArcMenu için mevcut yerleşimin kaydını tutar. [Ana Panel, Dash to Panel, "
 "Dash to Dock]"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:98
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:120
 msgid "false = not avaliable, true = avaliable"
 msgstr "false = kullanılamaz, true = kullanılabilir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:102
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:103
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:124
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:125
 msgid "Embed ArcMenu button into Dash instead of panel"
 msgstr "ArcMenu düğmesini panel yerine Rıhtım'a göm"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:107
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:129
 msgid "Enable Weather Widget raven layout"
 msgstr "Hava Durumu Parçacığı raven düzenini etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:108
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:130
 msgid "Enable Weather Widget raven layout."
 msgstr "Hava Durumu Parçacığı raven düzenini etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:112
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:134
 msgid "Enable Clocks Widget raven layout"
 msgstr "Saat parçacığını raven düzeninde etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:113
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:135
 msgid "Enable Clocks Widget raven layout."
 msgstr "Saat Parçacığını raven düzeninde etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:117
-msgid "Enable Weather Widget ubuntu layout"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:139
+#, fuzzy
+msgid "Enable Weather Widget Unity layout"
 msgstr "Hava Durumu Parçacığı ubunu düzeni"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:118
-msgid "Enable Weather Widget ubuntu layout."
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:140
+#, fuzzy
+msgid "Enable Weather Widget Unity layout."
 msgstr "Hava Durumu Parçacığı ubuntu düzeni."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:122
-msgid "Enable Clocks Widget ubuntu layout"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:144
+#, fuzzy
+msgid "Enable Clocks Widget Unity layout"
 msgstr "Saat Parçacığını ubuntu düzeninde etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:123
-msgid "Enable Clocks Widget ubuntu layout."
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:145
+#, fuzzy
+msgid "Enable Clocks Widget Unity layout."
 msgstr "Saat Parçacığını ubuntu düzeninde etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:127
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:149
 msgid "Enable Category Sub Menus"
 msgstr "Kategori Alt Menülerini Etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:128
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:150
 msgid "Enable Category Sub Menus."
 msgstr "Kategori Alt Menülerini Etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:132
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:133
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:154
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:155
 msgid "disable the arrows on category menu items"
 msgstr "kategori menü ögelerindeki oku devre dışı bırak"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:137
-msgid "KRunner layout show larger icon and app details"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:159
+msgid "disable the fade effect on scrollviews"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:160
+msgid "ddisable the fade effect on scrollviews (may help improve performace)"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:164
+#, fuzzy
+msgid "Show a larger icon and extra app details"
 msgstr "KRunner düzeni daha büyük simge ve uygulama ayrıntıları göster"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:138
-msgid "KRunner layout show larger icon and app details."
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:165
+#, fuzzy
+msgid "Show a larger icon and extra app details."
 msgstr "KRunner düzeni daha büyük simge ve uygulama ayrıntıları göster."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:142
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:169
+msgid "Show search result description label"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:170
+msgid "Show search result description label."
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:174
 msgid "Activate Categories on Hover"
 msgstr "Üzerine Gelince Kategorileri Etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:143
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:175
 msgid "Activate Categories on Hover."
 msgstr "Üzerine Gelince Kategorileri Etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:147
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:179
 msgid "disable recently installed apps"
 msgstr "son yüklenen uygulamaları devre dışı bırak"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:148
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:180
 msgid "disable recently installed apps."
 msgstr "son yüklenen uygulamaları devre dışı bırak."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:152
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:184
 msgid "disable tooltips"
 msgstr "araç ipuçlarını devre dışı bırak"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:153
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:185
 msgid "disable tooltips."
 msgstr "araç ipuçlarını devre dışı bırak."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:157
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:189
 msgid "Separate All Programs by a Character Listing"
 msgstr "Tüm Programları Karakter Listesine Göre Ayır"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:158
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:190
 msgid "Separate All Programs by a Character Listing."
 msgstr "Tüm Programları Karakter Listesine Göre Ayır."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:162
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:194
 msgid "Multi-lined labels for large icon application grid layouts"
 msgstr "Büyük simge uygulama ızgara düzenleri için çok satırlı etiketler"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:163
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:195
 msgid "Multi-lined labels for large icon application grid layouts."
 msgstr "Büyük simge uygulama ızgara düzenleri için çok satırlı etiketler."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:167
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:199
 msgid "Set ArcMenu Layout Default View"
 msgstr "ArcMenu Düzenini Öntanımlı Görünüm Olarak Ayarla"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:168
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:200
 msgid "Set ArcMenu Layout Default View."
 msgstr "ArcMenu Düzenini Öntanımlı Görünüm Olarak Ayarla."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:172
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:204
 msgid "Set Tognee Layout Default View"
 msgstr "Tognee Düzenini Öntanımlı Görünüm Olarak Ayarla"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:173
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:205
 msgid "Set Tognee Layout Default View."
 msgstr "Tognee Düzenini Öntanımlı Görünüm Olarak Ayarla."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:177
-msgid "Set Ubuntu Dash layout to display \"Home Screen\" as default"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:209
+#, fuzzy
+msgid "Set Unity layout to display \"Home Screen\" as default"
 msgstr ""
 "Ubuntu Dash düzenini öntanımlı olarak \"Ana Ekran\"ı gösterecek şekilde "
 "ayarla"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:178
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:210
+#, fuzzy
 msgid ""
-"Set Ubuntu Dash layout to display \"Home Screen\" as default. False = Show "
-"all Apps"
+"Set Unity layout to display \"Home Screen\" as default. False = Show all Apps"
 msgstr ""
 "Ubuntu Dash düzenini öntanımlı olarak \"Ana Ekran\"ı gösterecek şekilde "
 "ayarla. False = Tüm Uygulamaları Göster"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:182
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:183
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:214
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:215
 msgid "Remove the themes menu arrow and displacement"
 msgstr "Temalar menü okunu ve yer değiştirmeyi kaldır"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:187
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:188
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:219
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:220
 msgid "Remove border around the searchbox"
 msgstr "Arama kutusundaki kenarlığı kaldır"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:192
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:193
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:224
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:225
 msgid "Disable the user avatar icon from the menu"
 msgstr "Kullanıcı avatarı simgesini menüden devre dışı bırak"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:197
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:198
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:229
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:230
 msgid "Enable an Activitities Overview Shortcut"
 msgstr "Etkinlikler Genel Görünüm Kısayolunu Etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:202
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:203
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:234
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:235
 msgid "Searchbar location for layouts with default searchbar on bottom"
 msgstr "Altta öntanımlı arama çubuğu olan düzenler için arama çubuğu konumu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:207
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:208
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:239
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:240
 msgid "Searchbar location for layouts with default searchbar on top"
 msgstr "Üstte öntanımlı arama çubuğu olan düzenler için arama çubuğu konumu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:212
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:213
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:244
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:245
 msgid "Flip menu horizontally"
 msgstr "Menüyü yatay çevir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:217
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:218
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:249
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:250
+msgid "Windows layout - disable frequent apps"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:254
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:255
+msgid "Windows layout - disable pinned apps"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:259
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:260
 msgid "GNOME Dash Layout - Show Applications"
 msgstr "GNOME Dash Düzeni - Uygulamaları Göster"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:222
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:223
-msgid "Plasma Menu Show Descriptions"
-msgstr "Plasma Menü Açıklamaları Göster"
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:227
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:264
 msgid "Plasma Selected Item Color"
 msgstr "Plasma Seçili Öge Rengi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:228
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:265
 msgid "Plasma Selected Item Color."
 msgstr "Plasma Seçili Öge Rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:232
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:269
 msgid "Plasma Selected Item Background Color"
 msgstr "Plasma Seçili Oge Arka Plan Rengi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:233
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:270
 msgid "Plasma Selected Item Background Color."
 msgstr "Plasma Seçili Oge Arka Plan Rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:237
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:274
 msgid "Plasma Menu Hover to activate item"
 msgstr "Plazma Menüsü Ögeyi etkinleştirmek için üzerine gelin"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:238
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:275
 msgid "Plasma Menu Hover to activate item."
 msgstr "Plazma Menüsü Ögeyi etkinleştirmek için üzerine gelin."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:242
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:279
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:280
+#, fuzzy
+msgid "Runner layout - show frequent apps"
+msgstr "KRunner düzeni daha büyük simge ve uygulama ayrıntıları göster"
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:284
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:285
+msgid "Runner layout - use current shell theme gap"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:289
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:290
+#, fuzzy
+msgid "Runner layout - menu height"
+msgstr "Menü yüksekliğini ayarla"
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:294
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:295
+msgid "Runner layout - menu width"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:299
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:300
+#, fuzzy
+msgid "Runner layout - font size"
+msgstr "Menü yazı tipi boyutu"
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:304
 msgid "Used to reload theme"
 msgstr "Temayı yeniden yüklemek için kullanılır"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:243
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:305
 msgid "Used to reload theme."
 msgstr "Temayı yeniden yüklemek için kullanılır."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:247
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:309
 msgid "Enable a vertical separator"
 msgstr "Dikey ayırıcıyı etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:248
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:310
 msgid "Enable a vertical separator."
 msgstr "Dikey ayırıcıyı etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:253
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:315
 msgid "Separator Color."
 msgstr "Ayırıcı Rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:258
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:320
 msgid "Menu Background Color."
 msgstr "Menü Arkaplan Rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:263
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:325
 msgid "Menu Foreground Color."
 msgstr "Menü Ön Plan Rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:268
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:330
 msgid "Border Color."
 msgstr "Kenarlık Rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:272
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:334
 msgid "Highlight/Active Menu Item Background Color"
 msgstr "Menü Ogesi Arka Plan Rengini Vurgula/Etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:273
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:335
 msgid "Highlight/Active Menu Item Background Color."
 msgstr "Menü Ogesi Arka Plan Rengini Vurgula/Etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:277
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:339
 msgid "Highlight/Active Menu Item Foreground Color"
 msgstr "Menü Ogesi Ön Plan Rengini Vurgula/Etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:278
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:340
 msgid "Highlight/Active Menu Item Foreground Color."
 msgstr "Menü Ogesi Ön Plan Rengini Vurgula/Etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:282
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:344
 msgid "Menu font size"
 msgstr "Menü yazı tipi boyutu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:283
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:345
 msgid "Menu font size."
 msgstr "Menü yazı tipi boyutu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:287
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:349
 msgid "Menu border size"
 msgstr "Menü kenarlık boyutu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:288
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:350
 msgid "Menu border size."
 msgstr "Menü kenarlık boyutu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:292
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:354
 msgid "Menu corner radius"
 msgstr "Menü köşe çapı"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:293
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:355
 msgid "Menu corner radius."
 msgstr "Menü köşe çapı."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:297
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:359
 msgid "Menu margin"
 msgstr "Menü kenar boşluğu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:298
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:360
 msgid "Menu margin."
 msgstr "Menü kenar boşluğu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:302
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:364
 msgid "Menu arrow size"
 msgstr "Menü ok boyutu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:303
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:365
 msgid "Menu arrow size."
 msgstr "Menü ok boyutu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:308
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:370
 msgid "Menu Height."
 msgstr "Menü Yüksekliği."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:312
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:374
 msgid "Menu width"
 msgstr "Menü genişliği"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:313
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:375
 msgid "Menu width."
 msgstr "Menü genişliği."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:317
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:379
 msgid "Right Panel width"
 msgstr "Sağ Panel genişliği"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:318
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:380
 msgid "Right Panel width."
 msgstr "Sağ Panel genişliği."
 
 # İngilizce cümledeki Inidcator kelimesi aslında Indicator. Typo var ama önemsiz.
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:327
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:389
 msgid "Recently Installed Application Inidcator Color"
 msgstr "Son Yüklenen Uygulamalar Gösterge Rengi"
 
 # İngilizce cümledeki Inidcator kelimesi aslında Indicator. Typo var ama önemsiz.
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:328
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:390
 msgid "Recently Installed Application Inidcator Color.."
 msgstr "Son Yüklenen Uygulamalar Gösterge Rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:332
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:394
 msgid "Recently Installed Application Inidcator Text Background Color"
 msgstr "Son Yüklenen Uygulamalar Göstergesi Metin Arka Plan Rengi"
 
 # Bariz hata olduğu için çift nokta gözardı edildi.
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:333
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:395
 msgid "Recently Installed Application Inidcator Text Background Color.."
 msgstr "Son Yüklenen Uygulamalar Göstergesi Metin Arka Plan Rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:337
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:399
 msgid "Enable Custom ArcMenu Theme"
 msgstr "Özel ArcMenü Temasını Etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:338
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:400
 msgid "Enable Custom ArcMenu Theme."
 msgstr "Özel ArcMenü Temasını Etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:342
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:404
 msgid "Enable Custom ArcMenu Layout"
 msgstr "Özel ArcMenu Düzenini Etkinleştir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:343
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:405
 msgid "Enable Custom ArcMenu Layout."
 msgstr "Özel ArcMenu Düzenini Etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:347
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:409
 msgid "Show External Devices"
 msgstr "Harici Aygıtları Göster"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:348
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:410
 msgid "Show External Devices."
 msgstr "Harici Aygıtları Göster."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:352
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:414
 msgid "Show Bookmarks"
 msgstr "Yer İmlerini Göster"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:353
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:415
 msgid "Show Bookmarks."
 msgstr "Yer İmlerini Göster."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:357
-msgid "Show logout button"
-msgstr "Oturumu kapat düğmesini göster"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:420
+msgid "See Constants.js PowerOptions"
+msgstr ""
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:358
-msgid "Show logout button."
-msgstr "Oturumu kapat düğmesini göster."
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:362
-msgid "Show lock button"
-msgstr "Kilit düğmesini göster"
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:363
-msgid "Show lock button."
-msgstr "Kilit düğmesini göster."
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:367
-msgid "Show suspend button"
-msgstr "Beklet düğmesini göster"
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:368
-msgid "Show suspend button."
-msgstr "Beklet düğmesini göster."
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:372
-msgid "Show restart button"
-msgstr "Yeniden başlat düğmesini göster"
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:373
-msgid "Show restart button."
-msgstr "Yeniden başlat düğmesini göster."
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:377
-msgid "Show power button"
-msgstr "Güç düğmesini göster"
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:378
-msgid "Show power button."
-msgstr "Güç düğmesini göster."
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:382
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:424
 msgid "Display on all monitors"
 msgstr "Tüm ekranlarda görüntüle"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:383
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:425
 msgid "Display the menu on all monitors when using Dash to Panel."
 msgstr "Dash to Panel kullanırken tüm ekranlarda menüyü görüntüle."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:387
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:429
 msgid "Activities hotcorner action"
 msgstr "Etkinlikler sıcak köşe eylemi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:388
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:430
 msgid "Activities hotcorner action."
 msgstr "Etkinlikler sıcak köşe eylemi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:392
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:434
 msgid "Override action of activities hot corner"
 msgstr "Etkinlikler Sıcak Köşe eylemini geçersiz kıl"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:393
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:435
 msgid "Override action of activities hot corner."
 msgstr "Etkinlikler Sıcak Köşe eylemini geçersiz kıl."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:398
-msgid ""
-"Restore Activities Button in panel. Used with \"Hidden\" ArcMenu icon setting"
-msgstr ""
-"Panelde Etkinlikler Düğmesini geri yükle. \"Gizli\" ArcMenu simge ayarı ile "
-"kullanılır"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:439
+#, fuzzy
+msgid "Show/Hide Activities Button in panel"
+msgstr "Etkinlikler Düğmesini panelde devre dışı bırak"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:403
-msgid "Disable Activities Button in panel."
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:440
+#, fuzzy
+msgid "Show/Hide Activities Button in panel."
 msgstr "Etkinlikler Düğmesini panelde devre dışı bırak."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:407
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:444
 msgid "Custom hot corner terminal command"
 msgstr "Özel sıcak köşe uçbirim komutu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:408
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:445
 msgid "Custom hot corner terminal command."
 msgstr "Özel sıcak köşe uçbirim komutu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:412
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:413
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:449
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:450
 msgid "The menu hotkey to open the ArcMenu."
 msgstr "ArchMenu'yu açmak için menü kısayolu."
 
 # keybinding için kısayol çevirisini kullanmayı tercih ediyoruz.
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:417
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:418
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:454
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:455
 msgid "Enable the keybinding for the ArcMenu."
 msgstr "ArcMenu için kısayolu etkinleştir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:422
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:427
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:428
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:459
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:464
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:465
 msgid "Keybinding to open the ArcMenu."
 msgstr "ArcMenu'yu açmak için kısayol."
 
 # Sondaki çift nokta hatalı diye tek noktayla çevirdim.
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:423
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:460
 msgid "Keybinding to open the ArcMenu.."
 msgstr "ArcMenu'yu açmak için kısayol."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:432
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:469
 msgid "The menu position in the panel"
 msgstr "Menünün paneldeki konumu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:433
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:470
 msgid "The menu position in the panel."
 msgstr "Menünün paneldeki konumu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:437
-msgid "KRunner Menu Position"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:474
+#, fuzzy
+msgid "Runner Menu Position"
 msgstr "KRunner Menü Konumu"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:438
-msgid "KRunner Menu Position."
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:475
+#, fuzzy
+msgid "Runner Menu Position."
 msgstr "KRunner Menü Konumu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:442
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:443
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:479
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:480
 msgid "Appearance of the menu button."
 msgstr "Menü düğmesinin görünümü."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:447
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:448
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:484
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:485
 msgid "Appearance of the avatar icon."
 msgstr "Avatar simgesinin görünümü."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:452
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:453
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:489
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:490
 msgid "Enables the default menu button arrow."
 msgstr "Öntanımlı menü düğmesi okunu etkinleştirir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:457
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:494
 msgid "Enables large icons for applications."
 msgstr "Uygulamalar için büyük simgeleri etkinleştirir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:458
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:495
 msgid "Enables large icons for applications and search results."
 msgstr "Uygulamalar ve arama sonuçları için büyük simgeleri etkinleştirir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:462
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:463
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:499
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:500
 msgid "Text of the menu button."
 msgstr "Menü düğmesi metni."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:467
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:468
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:472
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:473
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:477
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:478
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:504
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:505
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:509
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:510
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:514
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:515
 msgid "Icon of the menu button."
 msgstr "Menü düğmesinin simgesi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:482
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:483
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:519
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:520
 msgid "File path of the custom icon for the menu button."
 msgstr "Menü düğmesi için özel simgenin dosya yolu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:487
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:488
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:524
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:525
 msgid "Size of the icon in percentage."
 msgstr "Simge boyutu yüzdesi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:492
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:493
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:529
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:530
 msgid "Menu Button Padding."
 msgstr "Menü Düğmesi Dolgusu."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:497
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:534
 msgid "Disable the active indicator for the menu button"
 msgstr "Menü düğmesi için etkin göstergeyi devre dışı bırak"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:498
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:535
 msgid "Disable the active indicator for the menu button."
 msgstr "Menü düğmesi için etkin göstergeyi devre dışı bırak."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:502
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:539
 msgid "Color for the menu button icon"
 msgstr "Menü düğme simgesinin rengi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:503
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:540
 msgid "Color for the menu button icon."
 msgstr "Menü düğme simgesinin rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:507
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:544
 msgid "Allows changing the menu button icon color"
 msgstr "Menü düğmesi simge rengini değiştirmeye izin verir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:508
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:545
 msgid "Allows changing the menu button icon color."
 msgstr "Menü düğmesi simge rengini değiştirmeye izin verir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:512
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:549
 msgid "Active color for the menu button icon"
 msgstr "Menü düğmesi simgesi için etkin renk"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:513
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:550
 msgid "Active color for the menu button icon."
 msgstr "Menü düğmesi simgesi için etkin renk."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:517
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:554
 msgid "Allows changing the menu button icon active color"
 msgstr "Menü düğmesi simgesinin etkin rengini değiştirmeye izin verir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:518
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:555
 msgid "Allows changing the menu button icon active color."
 msgstr "Menü düğmesi simgesinin etkin rengini değiştirmeye izin verir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:522
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:559
 msgid "Hover color for the menu button icon"
 msgstr "Menü düğmesi simgesi için üzerine gelindiğinde renk"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:523
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:560
 msgid "Hover color for the menu button icon."
 msgstr "Menü düğmesi simgesi için üzerine gelindiğinde renk."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:527
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:564
 msgid "Allows changing the menu button icon hover color"
 msgstr "Menü düğmesi simge üzerinde rengini değiştirmeye izin verir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:528
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:565
 msgid "Allows changing the menu button icon hover color."
 msgstr "Menü düğmesi simge üzerinde rengini değiştirmeye izin verir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:532
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:569
 msgid "Hover background color for the menu button icon"
 msgstr "Menü düğmesi simgesi için üzerine gelindiğinde arka plan rengi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:533
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:570
 msgid "Hover background color for the menu button icon."
 msgstr "Menü düğmesi simgesi için üzerine gelindiğinde arka plan rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:537
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:574
 msgid "Allows changing the menu button hover background color"
 msgstr "Menü düğmesi üzerinde arka plan rengini değiştirmeye izin verir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:538
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:575
 msgid "Allows changing the menu button hover background color."
 msgstr "Menü düğmesi üzerinde arka plan rengini değiştirmeye izin verir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:542
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:579
 msgid "Active background color for the menu button icon"
 msgstr "Menü düğmesi simgesi için etkin arka plan rengi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:543
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:580
 msgid "Active background color for the menu button icon."
 msgstr "Menü düğmesi simgesi için etkin arka plan rengi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:547
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:584
 msgid "Allows changing the menu button active background color"
 msgstr "Menü düğmesi etkin arka plan rengini değiştirmeye izin verir"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:548
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:585
 msgid "Allows changing the menu button active background color."
 msgstr "Menü düğmesi etkin arka plan rengini değiştirmeye izin verir."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:552
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:553
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:557
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:558
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:589
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:590
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:594
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:595
 msgid "List of recently installed apps"
 msgstr "Son yüklenen uygulamaların listesi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:563
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:564
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:600
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:601
 msgid "List of Apps Pinned to Menu"
 msgstr "Menüye Sabitlenmiş Uygulamaların Listesi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:568
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:569
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:605
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:606
 msgid "Toggle for enabling custom shortcuts."
 msgstr "Özel kısayolları etkinleştirmek için aç/kapat."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:574
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:581
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:611
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:618
 msgid ""
 "List of default directory paths used for links on the right side of ArcMenu"
 msgstr ""
 "ArcMenu'nun sağ tarafındaki bağlantılar için kullanılan öntanımlı dizin "
 "yollarının listesi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:575
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:582
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:612
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:619
 msgid ""
 "List of default directory paths used for links on the right side of ArcMenu."
 msgstr ""
 "ArcMenu'nun sağ tarafındaki bağlantılar için kullanılan öntanımlı dizin "
 "yollarının listesi."
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:586
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:587
-msgid "List of Ubuntu-Dash Layout Pinned Apps"
-msgstr "Ubuntu-Dash Düzeni Sabitlenmiş Uygulamaların Listesi"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:623
+#, fuzzy
+msgid "List of Unity Layout Pinned Apps"
+msgstr "Mint Düzeni Sabitlenmiş Uygulamaların Listesi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:591
-msgid "Index of Ubuntu-Dash Layout Pinned App Separator"
-msgstr "Ubuntu-Dash Düzeni Sabitlenmiş Uygulama Ayırıcı Başlangıcı"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:624
+#, fuzzy
+msgid "List of Uniity Layout Pinned Apps"
+msgstr "Mint Düzeni Sabitlenmiş Uygulamaların Listesi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:592
-msgid "Index of Ubuntu-Dash Layout Pinned App Separator, 0 = none"
-msgstr "Ubuntu-Dash Düzeni Sabitlenmiş Uygulama Ayırıcı Başlangıcı, 0 = yok"
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:628
+#, fuzzy
+msgid "Index of Unity Layout Pinned App Separator"
+msgstr "Mint Düzeni Sabitlenmiş Uygulama Ayırıcı Başlangıcı"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:596
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:597
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:629
+#, fuzzy
+msgid "Index of Unity Layout Pinned App Separator, 0 = none"
+msgstr "Mint Düzeni Sabitlenmiş Uygulama Ayırıcı Başlangıcı, 0 = yok"
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:633
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:634
 msgid "List of Brisk Layout Shortcuts"
 msgstr "Brisk Düzeni Kısayollarının Listesi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:601
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:602
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:638
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:639
 msgid "List of Mint Layout Pinned Apps"
 msgstr "Mint Düzeni Sabitlenmiş Uygulamaların Listesi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:606
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:643
 msgid "Index of Mint Layout Pinned App Separator"
 msgstr "Mint Düzeni Sabitlenmiş Uygulama Ayırıcı Başlangıcı"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:607
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:644
 msgid "Index of Mint Layout Pinned App Separator, 0 = none"
 msgstr "Mint Düzeni Sabitlenmiş Uygulama Ayırıcı Başlangıcı, 0 = yok"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:613
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:650
 msgid "List of color-themes"
 msgstr "Renk temalarının listesi"
 
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:614
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:651
 msgid "List of color themes."
 msgstr "Renk temalarının listesi."
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:656
+msgid "Handles which page to open in ArcMenu Settings"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:657
+msgid "See Constants.js PrefsVisiblePage"
+msgstr ""
+
+#~ msgid "ArcMenu Tweaks"
+#~ msgstr "ArcMenu İnce Ayarları"
+
+#~ msgid "Brisk Menu Style"
+#~ msgstr "Brisk Menü Biçimi"
+
+#~ msgid "Brisk Menu Style Tweaks"
+#~ msgstr "Brisk Menü Biçimi İnce Ayarları"
+
+#~ msgid "Whisker Menu Style"
+#~ msgstr "Whisker Menü Biçimi"
+
+#~ msgid "Whisker Menu Style Tweaks"
+#~ msgstr "Whisker Menü Biçimi İnce Ayarları"
+
+#~ msgid "GNOME Menu Style Tweaks"
+#~ msgstr "GNOME Menü Biçimi İnce Ayarları"
+
+#~ msgid "Mint Menu Style"
+#~ msgstr "Mint Menü Biçimi"
+
+#~ msgid "Mint Menu Style Tweaks"
+#~ msgstr "Mint Menü Biçimi İnce Ayarları"
+
+#~ msgid "Budgie Style Tweaks"
+#~ msgstr "Budgie Biçimi İnce Ayarları"
+
+#~ msgid "Ubuntu Dash Style"
+#~ msgstr "Ubuntu Dash Biçimi"
+
+#~ msgid "Ubuntu Dash Style Tweaks"
+#~ msgstr "Ubuntu Dash Biçimi İnce Ayarları"
+
+#~ msgid "Plasma Style Tweaks"
+#~ msgstr "Plasma Biçimi İnce Ayarları"
+
+#~ msgid "tognee Menu Tweaks"
+#~ msgstr "tognee Menü İnce Ayarları"
+
+#~ msgid "Insider Menu Tweaks"
+#~ msgstr "Insider Menü İnce Ayarları"
+
+#~ msgid "Redmond Menu Style"
+#~ msgstr "Redmond Menü Biçimi"
+
+#~ msgid "Redmond Menu Style Tweaks"
+#~ msgstr "Redmond Menü Biçimi İnce Ayarları"
+
+#~ msgid "Windows 10 Style"
+#~ msgstr "Windows 10 Biçimi"
+
+#~ msgid "Windows 10 Style Tweaks"
+#~ msgstr "Windows 10 Biçimi İnce Ayarları"
+
+#~ msgid "Elementary Menu Style Tweaks"
+#~ msgstr "Elementary Menü Biçimi İnce Ayarları"
+
+#~ msgid "Chromebook Style Tweaks"
+#~ msgstr "Chromebook Biçimi İnce Ayarları"
+
+#~ msgid "KRunner Style Tweaks"
+#~ msgstr "KRunner Biçimi İnce Ayarları"
+
+#~ msgid "GNOME Dash Style"
+#~ msgstr "GNOME Dash Biçimi"
+
+#~ msgid "GNOME Dash Style Tweaks"
+#~ msgstr "GNOME Dash Biçimi İnce Ayarları"
+
+#~ msgid "Simple Menu Style"
+#~ msgstr "Basit Menü Biçimi"
+
+#~ msgid "Simple Menu Style Tweaks"
+#~ msgstr "Basit Menü Biçimi İnce Ayarları"
+
+#~ msgid "Simple Menu 2 Style"
+#~ msgstr "Basit Menü Biçimi 2"
+
+#~ msgid "Simple Menu 2 Style Tweaks"
+#~ msgstr "Basit Menü Biçimi 2 İnce Ayarları"
+
+#~ msgid "Raven Menu Style"
+#~ msgstr "Raven Menü Biçimi"
+
+#~ msgid "Raven Menu Style Tweaks"
+#~ msgstr "Raven Menü Biçimi İnce Ayarları"
+
+#~ msgid "Traditional Menu Style"
+#~ msgstr "Geleneksel Menü Biçimi"
+
+#~ msgid ""
+#~ "Traditional layouts use a familiar style and have a traditional user "
+#~ "experience."
+#~ msgstr ""
+#~ "Geleneksel düzenler tanıdık bir stil kullanır ve geleneksel bir kullanıcı "
+#~ "deneyimine sahiptir."
+
+#~ msgid "Modern Menu Style"
+#~ msgstr "Modern Menü Biçimi"
+
+#~ msgid ""
+#~ "Modern layouts use a style and UX based approach with a focus on design "
+#~ "and functionality."
+#~ msgstr ""
+#~ "Modern düzenler, tasarım ve işlevsellik odaklı bir stil ve UX tabanlı bir "
+#~ "yaklaşım kullanır."
+
+#~ msgid "Touch Menu Style"
+#~ msgstr "Dokunmatik Menü Biçimi"
+
+#~ msgid ""
+#~ "Touch layouts contain large menu elements that are well suited for touch "
+#~ "based devices."
+#~ msgstr ""
+#~ "Dokunmatik düzenler, dokunmaya dayalı cihazlar için çok uygun büyük menü "
+#~ "ögeleri içerir."
+
+#~ msgid ""
+#~ "Simple layouts are designed for mouse based devices and contain "
+#~ "simplistic menu elements."
+#~ msgstr ""
+#~ "Basit düzenler fare tabanlı cihazlar için tasarlanmıştır ve basit menü "
+#~ "ögeleri içerir."
+
+#~ msgid "Launcher Menu Style"
+#~ msgstr "Başlatıcı Menü Biçimi"
+
+#~ msgid ""
+#~ "Launcher layouts are well suited for keyboard driven devices and provide "
+#~ "the user with quick and simple menu elements."
+#~ msgstr ""
+#~ "Başlatıcı düzenleri klavye ile çalışan cihazlar için çok uygundur ve "
+#~ "kullanıcıya hızlı ve basit menü ögeleri sunar."
+
+#~ msgid "Alternative Menu Style"
+#~ msgstr "Alternatif Menü Biçimi"
+
+#~ msgid ""
+#~ "Alternative layouts have an unconventional style that provide a unique "
+#~ "user experience."
+#~ msgstr ""
+#~ "Alternatif düzenler, benzersiz bir kullanıcı deneyimi sağlayan "
+#~ "alışılmadık bir stile sahiptir."
+
+#~ msgid "Browse a list of all applications to add to your Pinned Apps list."
+#~ msgstr ""
+#~ "Sabitlenmiş Uygulamalar listenize eklemek için tüm uygulamalar listesine "
+#~ "göz atın."
+
+#~ msgid "Create a custom shortcut to add to your Pinned Apps list."
+#~ msgstr ""
+#~ "Sabitlenmiş Uygulamalar listesine eklemek için özel kısayol oluştur."
+
+#~ msgid "Modify the action of the Activities Hot Corner"
+#~ msgstr "Etkinlikler Sıcak Köşe eylemini değiştir"
+
+#~ msgid "Override the default behavoir of the Activities Hot Corner"
+#~ msgstr "Etkinlikler Sıcak Köşe davranışını geçersiz kıl"
+
+#~ msgid "Choose a method for the hotkey activation"
+#~ msgstr "Kısayol etkinleştirmek için bir yöntem seçin"
+
+#~ msgid "Set ArcMenu hotkey to Left Super Key"
+#~ msgstr "ArcMenü kısayol tuşunu Sol Süper Tuş olarak ayarla"
+
+#~ msgid "Set ArcMenu hotkey to Right Super Key"
+#~ msgstr "ArcMenü kısayol tuşunu Sağ Süper Tuş olarak ayarla"
+
+#~ msgid "Set a custom hotkey for ArcMenu"
+#~ msgstr "ArcMenu için özel kısayol ayarla"
+
+#~ msgid "Clear ArcMenu hotkey, use GNOME default"
+#~ msgstr "ArcMenu kısayolunu temizle, GNOME öntanımlı kısayolunu kullan"
+
+#~ msgid "Current custom hotkey"
+#~ msgstr "Geçerli özel kısayol"
+
+#~ msgid "Create your own hotkey combination for ArcMenu"
+#~ msgstr "ArcMenu için kendi kısayolunuzu oluşturun"
+
+#~ msgid "Choose where to place ArcMenu"
+#~ msgstr "ArcMenu'nün nerede konumlanacağını seç"
+
+#~ msgid "Disable Activities Button"
+#~ msgstr "Etkinlikler Düğmesini Devre Dışı Bırak"
+
+#~ msgid "Position ArcMenu on the left side of the panel"
+#~ msgstr "ArcMenu'yü panelin solunda konumlandır"
+
+#~ msgid "Position ArcMenu in the center of the panel"
+#~ msgstr "ArcMenu'yü panelin ortasında konumlandır"
+
+#~ msgid "Position ArcMenu on the right side of the panel"
+#~ msgstr "ArcMenu'yü panelin sağında konumlandır"
+
+#~ msgid "Adjust ArcMenu's menu alignment relative to ArcMenu's icon"
+#~ msgstr "ArcMenu menü hizalamasını ArcMenu simgesine göre ayarla"
+
+#~ msgid "Choose the action of the Activities Hot Corner"
+#~ msgstr "Etkinlikler Sıcak Köşesinin eylemini seçin"
+
+#~ msgid "Toggle ArcMenu"
+#~ msgstr "ArcMenu'yü aç/kapat"
+
+#~ msgid "Choose from a list of preset Activities Hot Corner commands"
+#~ msgstr ""
+#~ "Önceden ayarlanmış Etkinlikler Sıcak Köşe komutları listesinden seçin"
+
+#~ msgid "Set a custom terminal command to launch on active hot corner"
+#~ msgstr "Etkin sıcak köşede başlatmak için özel bir uçbirim komutu ayarla"
+
+#~ msgid "Apply changes and set new hot corner action"
+#~ msgstr "Değişiklikleri uygula ve yeni sıcak köşe eylemi ata"
+
+#~ msgid "Change the padding of the Menu Button"
+#~ msgstr "Menü Düğmesinin dolgusunu değiştir"
+
+#~ msgid ""
+#~ "You may need to hover over the Menu Button for the changes to take effect."
+#~ msgstr ""
+#~ "Değişikliklerin etkili olması için Menü Düğmesinin üzerine gelmeniz "
+#~ "gerekebilir."
+
+#~ msgid "Restore Activities Button in panel"
+#~ msgstr "Panelde Etkinlikler Düğmesini geri yükle"
+
+#~ msgid "Choose from a variety of icons"
+#~ msgstr "Çeşitli simgeler arasından seçim yapın"
+
+#~ msgid "Override Theme Color"
+#~ msgstr "Tema Rengini Geçersiz Kıl"
+
+#~ msgid "Choose New Layout"
+#~ msgstr "Yeni Düzen Seç"
+
+#~ msgid "Tweaks for the current menu layout"
+#~ msgstr "Geçerli menü düzeni için ince ayarlar"
+
+#~ msgid "Override the ArcMenu extension theme"
+#~ msgstr "ArcMenu uzantı temasını geçersiz kıl"
+
+#~ msgid "Certain menu layouts only"
+#~ msgstr "Yalnızca belirli menü düzenleri"
+
+#~ msgid "Adjust the left-panel width"
+#~ msgstr "Sol panel genişliğini ayarla"
+
+#~ msgid "Adjust the right-panel width"
+#~ msgstr "Sağ panel genişliğini ayarla"
+
+#~ msgid "Enable large application icons"
+#~ msgstr "Büyük uygulama simgelerini etkinleştir"
+
+#~ msgid "Show nested menus in categories"
+#~ msgstr "İç içe menüleri kategorilerde göster"
+
+#~ msgid "Disable all tooltips in ArcMenu"
+#~ msgstr "ArcMenu'deki tüm araç ipuçlarını devre dışı bırak"
+
+#~ msgid "Enable a Vertical Separator"
+#~ msgstr "Dikey Ayırıcıyı Etkinleştir"
+
+#~ msgid "Change the color of all separators"
+#~ msgstr "Tüm ayırıcıların rengini değiştir"
+
+#~ msgid "Clear all applications marked \"New\""
+#~ msgstr "\"Yeni\" olarak işaretlenmiş tüm uygulamaları temizle"
+
+#~ msgid "Disable the arrow on category menu items"
+#~ msgstr "Kategori menüsü ögelerindeki oku devre dışı bırak"
+
+#~ msgid "Disable the border on the searchbox"
+#~ msgstr "Arama kutusundaki kenarlığı devre dışı bırak"
+
+#~ msgid "Disable current theme menu arrow pointer"
+#~ msgstr "Geçerli tema menüsü ok işaretçisini devre dışı bırak"
+
+#~ msgid ""
+#~ "Change the color of the 'recently installed application' category "
+#~ "indicator"
+#~ msgstr "'Son yüklenen uygulama' kategori göstergesinin rengini değiştirme"
+
+#~ msgid ""
+#~ "Change the background color of the 'recently installed application' "
+#~ "indicator label"
+#~ msgstr ""
+#~ "'Son yüklenen uygulama' gösterge etiketinin arka plan rengini değiştir"
+
+#~ msgid "Enable/Disble"
+#~ msgstr "Aktif/Pasif"
+
+#~ msgid ""
+#~ "Browse a list of all default User Directories to add to your Directories "
+#~ "Shortcuts"
+#~ msgstr ""
+#~ "Dizin Kısayollarınıza eklemek için tüm öntanımlı Kullanıcı Dizinlerinin "
+#~ "listesine göz atın"
+
+#~ msgid "Create a custom shortcut to add to your Directories Shortcuts"
+#~ msgstr "Dizinler Kısayollarına eklemek için özel kısayol oluştur"
+
+#~ msgid ""
+#~ "Browse a list of all applications to add to your Application Shortcuts"
+#~ msgstr ""
+#~ "Uygulama Kısayollarınıza eklemek için tüm uygulamalar listesine göz atın"
+
+#~ msgid "Create a custom shortcut to add to your Application Shortcuts"
+#~ msgstr "Uygulama Kısayollarına eklemek için özel kısayol oluştur"
+
+#~ msgid "Import ArcMenu settings from a file"
+#~ msgstr "ArcMenu ayarlarını dosyadan içe aktar"
+
+#~ msgid "Export and save all your ArcMenu settings to a file"
+#~ msgstr "Tüm ArcMenu ayarlarınızı dışa aktarın ve dosyaya kaydedin"
+
+#~ msgid "Import ArcMenu Theme Presets from a file"
+#~ msgstr "ArcMenu Tema Önayarlarını dosyadan içe aktar"
+
+#~ msgid "Export and save your ArcMenu Theme Presets to a file"
+#~ msgstr "ArcMenu Tema Önyarlarınızı dışa aktarın ve dosyaya kaydedin"
+
+#~ msgid "Reset all ArcMenu Settings to Default"
+#~ msgstr "Tüm ArcMenu Ayarlarınızı Öntanımlılara Sıfırla"
+
+#~ msgid "Donate to the ArcMenu Project"
+#~ msgstr "ArcMenü Projesine Bağışta Bulun"
+
+#~ msgid "ArcMenu GitLab Page"
+#~ msgstr "ArcMenu GitLab Sayfası"
+
+#~ msgid "Directories"
+#~ msgstr "Dizinler"
+
+#~ msgid "Session Buttons"
+#~ msgstr "Oturum Düğmeleri"
+
+#~ msgid "Change"
+#~ msgstr "Değiştir"
+
+#~ msgid "Restart..."
+#~ msgstr "Yeniden Başlat..."
+
+#~ msgid "Power Off..."
+#~ msgstr "Gücü Kapat..."
+
+#~ msgid "Show Extra Large Icons with App Descriptions"
+#~ msgstr "Uygulama Açıklamalarıyla Ekstra Büyük Simgeleri Göster"
+
+#~ msgid "Buttons"
+#~ msgstr "Düğmeler"
+
+#~ msgid "Show logout button"
+#~ msgstr "Oturumu kapat düğmesini göster"
+
+#~ msgid "Show logout button."
+#~ msgstr "Oturumu kapat düğmesini göster."
+
+#~ msgid "Show lock button"
+#~ msgstr "Kilit düğmesini göster"
+
+#~ msgid "Show lock button."
+#~ msgstr "Kilit düğmesini göster."
+
+#~ msgid "Show suspend button"
+#~ msgstr "Beklet düğmesini göster"
+
+#~ msgid "Show suspend button."
+#~ msgstr "Beklet düğmesini göster."
+
+#~ msgid "Show restart button"
+#~ msgstr "Yeniden başlat düğmesini göster"
+
+#~ msgid "Show restart button."
+#~ msgstr "Yeniden başlat düğmesini göster."
+
+#~ msgid "Show power button"
+#~ msgstr "Güç düğmesini göster"
+
+#~ msgid "Show power button."
+#~ msgstr "Güç düğmesini göster."
+
+#~ msgid ""
+#~ "Restore Activities Button in panel. Used with \"Hidden\" ArcMenu icon "
+#~ "setting"
+#~ msgstr ""
+#~ "Panelde Etkinlikler Düğmesini geri yükle. \"Gizli\" ArcMenu simge ayarı "
+#~ "ile kullanılır"
+
+#~ msgid "List of Ubuntu-Dash Layout Pinned Apps"
+#~ msgstr "Ubuntu-Dash Düzeni Sabitlenmiş Uygulamaların Listesi"
+
+#~ msgid "Index of Ubuntu-Dash Layout Pinned App Separator"
+#~ msgstr "Ubuntu-Dash Düzeni Sabitlenmiş Uygulama Ayırıcı Başlangıcı"
+
+#~ msgid "Index of Ubuntu-Dash Layout Pinned App Separator, 0 = none"
+#~ msgstr "Ubuntu-Dash Düzeni Sabitlenmiş Uygulama Ayırıcı Başlangıcı, 0 = yok"
