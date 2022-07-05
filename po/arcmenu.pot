@@ -1658,7 +1658,7 @@ msgid "disable the fade effect on scrollviews"
 msgstr ""
 
 #: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:160
-msgid "ddisable the fade effect on scrollviews (may help improve performace)"
+msgid "disable the fade effect on scrollviews (may help improve performace)"
 msgstr ""
 
 #: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:164
@@ -2246,12 +2246,9 @@ msgid ""
 "List of default directory paths used for links on the right side of ArcMenu."
 msgstr ""
 
+#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:624
 #: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:623
 msgid "List of Unity Layout Pinned Apps"
-msgstr ""
-
-#: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:624
-msgid "List of Uniity Layout Pinned Apps"
 msgstr ""
 
 #: schemas/org.gnome.shell.extensions.arcmenu.gschema.xml:628
