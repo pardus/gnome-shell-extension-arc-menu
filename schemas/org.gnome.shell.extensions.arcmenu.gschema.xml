@@ -157,7 +157,7 @@
     <key type="b" name="disable-scrollview-fade-effect">
       <default>false</default>
       <summary>disable the fade effect on scrollviews</summary>
-      <description>ddisable the fade effect on scrollviews (may help improve performace)</description>
+      <description>disable the fade effect on scrollviews (may help improve performace)</description>
     </key>
     <key type="b" name="apps-show-extra-details">
       <default>false</default>
@@ -621,7 +621,7 @@
     <key name="unity-pinned-app-list" type="as">
       <default>[]</default>
       <summary>List of Unity Layout Pinned Apps</summary>
-      <description>List of Uniity Layout Pinned Apps</description>
+      <description>List of Unity Layout Pinned Apps</description>
     </key>
     <key name="unity-separator-index" type="i">
       <default>5</default>
