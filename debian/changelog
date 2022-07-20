@@ -1,3 +1,25 @@
+gnome-shell-extension-arc-menu (338.17pardus1) unstable; urgency=medium
+
+  [ yakusha ]
+  * Update Turkish translation
+
+  [ Fatih Altun ]
+  * Import upstream 3.38-17 version
+  * Update static uuids
+  * Add maintainer and Disable paypal due to no access from Turkey
+  * Add pardus.software to SofwareManagerIDS
+  * Add new files to po/POTFILES.in
+  * Update pot file
+  * Update tr.po file
+  * Update metadata uuid
+  * Fix typo
+
+  [ yakusha ]
+  * Correct two typos
+  * Update Turkish Translation
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Wed, 20 Jul 2022 15:53:18 +0300
+
 gnome-shell-extension-arc-menu (338.8pardus1) unstable; urgency=medium
 
   * Import upstream version 3.38-8
